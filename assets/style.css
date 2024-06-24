@@ -1,0 +1,135 @@
+@font-face {
+    src: url("/assets/font.woff2");
+    font-family: "Geist Sans";
+}
+
+body, html {
+    margin: 0;
+    background-color: #000000;
+    color: white;
+    font-family: "Geist Sans", sans-serif;
+}
+
+#navbar {
+    height: 64px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#navbar-inner {
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 1400px;
+    flex: 1;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar-inner-left, #navbar-inner-right {
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+    height: 30px;
+    gap: 12px;
+}
+
+#navbar-inner-right {
+    justify-content: right;
+}
+
+#navbar-navigation {
+    display: flex;
+}
+
+.navbar-navigation-item {
+    border-radius: 999px;
+    padding: 8px 12px;
+    color: hsl(0, 0%, 63%);
+    list-style: none;
+    cursor: pointer;
+    transition: color 150ms ease;
+    font-size: 14px;
+    line-height: 1;
+    height: 14px;
+}
+
+.navbar-navigation-item:hover {
+    color: hsl(0, 0%, 93%);
+}
+
+#navbar-tabs {
+    border-radius: 999px;
+    background-color: hsl(0, 0%, 12%);
+    transition: left 250ms ease, width 250ms ease, opacity 150ms ease;
+    height: 30px;
+    position: fixed;
+    width: 16px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.navbar-navigation-item-chevron {
+    vertical-align: middle;
+}
+
+#navbar-logo-img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+#navbar-logo-link {
+    height: 30px;
+    display: block;
+    padding-right: 5px;
+}
+
+.btn-secondary {
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .14);
+    color: hsl(0, 0%, 93%);
+    background-color: #0a0a0a;
+}
+
+.btn {
+    transition-property: border-color, background-color, color, transform, box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.btn-secondary:hover {
+    background-color: hsl(0, 0%, 12%);
+}
+
+.btn-primary {
+    background-color: hsl(0, 0%, 93%);
+    color: #0a0a0a;
+}
+
+.btn-primary:hover {
+    background-color: #ccc;
+}
+
+
+#debug {
+    position: fixed;
+    color: white;
+    opacity: .5;
+    font-family: "Geist Sans", sans-serif;
+    bottom: 10%;
+    right: 10%;
+    pointer-events: none;
+}

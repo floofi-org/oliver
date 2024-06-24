@@ -2,9 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Codename "Oliver"</title>
+    <title>Technology for creatures who matter – Floofi</title>
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/ua-parser.min.js"></script>
 </head>
 <body>
-    Soon™
+    <nav id="navbar">
+        <header id="navbar-inner">
+            <div id="navbar-inner-left">
+                <div id="navbar-logo">
+                    <a href="/" id="navbar-logo-link">
+                        <img src="/assets/wordmark.png" alt="Floofi" id="navbar-logo-img">
+                    </a>
+                </div>
+                <div id="navbar-tabs"></div>
+                <ul id="navbar-navigation">
+                    <li class="navbar-navigation-item">
+                        Projects
+                        <svg class="navbar-navigation-item-chevron" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 6.74999L11.5303 7.28032L8.7071
+                            10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933
+                            6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11
+                            5.68933L12.0607 6.74999Z" fill="currentColor" />
+                        </svg>
+                    </li>
+                    <li class="navbar-navigation-item">
+                        Research
+                        <svg class="navbar-navigation-item-chevron" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 6.74999L11.5303 7.28032L8.7071
+                            10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933
+                            6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11
+                            5.68933L12.0607 6.74999Z" fill="currentColor" />
+                        </svg>
+                    </li>
+                    <li class="navbar-navigation-item">
+                        Resources
+                        <svg class="navbar-navigation-item-chevron" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 6.74999L11.5303 7.28032L8.7071
+                            10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933
+                            6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11
+                            5.68933L12.0607 6.74999Z" fill="currentColor" />
+                        </svg>
+                    </li>
+                    <li class="navbar-navigation-item">Archives</li>
+                    <li class="navbar-navigation-item">Blog</li>
+                </ul>
+            </div>
+            <div id="navbar-inner-right">
+                <a href="#" class="btn btn-secondary">Contact</a>
+                <a href="#" class="btn btn-primary">Join Floofi</a>
+            </div>
+        </header>
+    </nav>
+
+    <script>
+        Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
+            i.onmouseenter = (e) => {
+                document.getElementById("navbar-tabs").style.left = e.target.getBoundingClientRect().left + "px";
+                document.getElementById("navbar-tabs").style.width = e.target.clientWidth + "px";
+                document.getElementById("navbar-tabs").style.opacity = "1";
+            };
+        });
+
+        document.getElementById("navbar-navigation").onmousemove = () => {
+            document.getElementById("navbar-tabs").style.transition = "left 250ms ease, width 250ms ease, opacity 150ms ease";
+        };
+
+        document.getElementById("navbar-navigation").onmouseleave = () => {
+            document.getElementById("navbar-tabs").style.opacity = "0";
+            document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
+            document.getElementById("navbar-tabs").style.left = "0";
+            document.getElementById("navbar-tabs").style.width = "0";
+        };
+
+        document.getElementById("navbar-tabs").style.opacity = "0";
+        document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
+        document.getElementById("navbar-tabs").style.left = "0";
+        document.getElementById("navbar-tabs").style.width = "0";
+
+        (async () => {
+            if (location.hostname === "floo.fi") return;
+            window.userAgent = new UAParser(navigator.userAgent);
+
+            window.version = await (await fetch("/data/release.json")).json();
+            document.getElementById("debug").innerText = "Floofi Codename \"Oliver\"\n" +
+                "Version " + window.version.version + " (" + window.version.build + ")\n" +
+                new Date(window.version.timestamp).toISOString() + "\n" +
+                window.userAgent.getBrowser().name + " " + window.userAgent.getBrowser().version + " (" + window.userAgent.getOS().name + ")";
+        })();
+    </script>
+    <div id="debug"></div>
 </body>
 </html>
