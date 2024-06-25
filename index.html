@@ -6,6 +6,7 @@
     <link rel="icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/assets/style.css">
     <script src="/assets/ua-parser.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <nav id="mobile-navbar" class="no-border">
@@ -430,6 +431,7 @@
 
         Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
             i.onmouseenter = (e) => {
+                if (document.getElementById("navbar").classList.contains("mobile-open")) return;
                 if (e.target.getAttribute("data-category-id")) {
                     let category = document.getElementById("navbar-category-base-" + e.target.getAttribute("data-category-id"));
                     document.getElementById("navbar-category").style.width = category.clientWidth + "px";
@@ -453,12 +455,14 @@
             };
 
             i.onmouseleave = (e) => {
+                if (document.getElementById("navbar").classList.contains("mobile-open")) return;
                 if (e.target.classList.contains("navbar-navigation-item-with-category")) return;
                 e.target.classList.remove("open");
             }
         });
 
         document.getElementById("navbar-category-outer").onmouseleave = document.body.onmouseleave = (e) => {
+            if (document.getElementById("navbar").classList.contains("mobile-open")) return;
             if (window.categoryNavigationItem) {
                 window.categoryNavigationItem.classList.remove("open");
                 window.categoryNavigationItem = null;
@@ -473,6 +477,7 @@
         }
 
         document.getElementById("navbar-navigation").onmousemove = (e) => {
+            if (document.getElementById("navbar").classList.contains("mobile-open")) return;
             document.getElementById("navbar-category-outer").onmousemove(e);
             document.getElementById("navbar-category").style.transition = "width 150ms ease, height 150ms ease";
             document.getElementById("navbar-tabs").style.transition = "left 250ms ease, width 250ms ease, opacity 150ms ease";
@@ -480,6 +485,7 @@
         };
 
         document.getElementById("navbar-navigation").onmouseleave = () => {
+            if (document.getElementById("navbar").classList.contains("mobile-open")) return;
             if (window.categoryNavigationItem && window.categoryNavigationItem.classList.contains("navbar-navigation-item-with-category")) return;
             document.getElementById("navbar-tabs").style.opacity = "0";
             document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
@@ -490,6 +496,7 @@
         };
 
         document.getElementById("navbar-category-outer").onmousemove = (e) => {
+            if (document.getElementById("navbar").classList.contains("mobile-open")) return;
             if (window.lastPosition === -1) {
                 window.lastPosition = e.clientX;
             }
@@ -516,8 +523,12 @@
 
             window.version = await (await fetch("/data/release.json")).json();
             document.getElementById("debug").innerText = "Floofi Codename \"Oliver\"\n" +
-                "Version " + window.version.version + " (" + window.version.build + ")\n" +
-                new Date(window.version.timestamp).toISOString() + "\n" +
+                (location.hostname === "localhost" ?
+                    "Development Environment\n" +
+                    "Target Ver. " + window.version.version + " (" + window.version.build + ")"
+                :
+                    "Version " + window.version.version + " (" + window.version.build + ")\n" +
+                    new Date(window.version.timestamp).toISOString()) + "\n" +
                 window.userAgent.getBrowser().name + " " + window.userAgent.getBrowser().version + " (" + window.userAgent.getOS().name + ")";
         })();
 
@@ -526,6 +537,12 @@
                 document.getElementById("navbar").classList.remove("mobile-open");
             } else {
                 document.getElementById("navbar").classList.add("mobile-open");
+            }
+        }
+
+        window.onresize = () => {
+            if (window.innerWidth > 900) {
+                document.getElementById("navbar").classList.remove("mobile-open");
             }
         }
     </script>
