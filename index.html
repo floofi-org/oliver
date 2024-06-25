@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Technology for creatures who matter – Floofi</title>
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/assets/style.css">
-    <script src="/assets/ua-parser.min.js"></script>
+    <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/src/ua-parser.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <div id="mobile-navbar-inner-left">
                 <div id="mobile-navbar-logo">
                     <a href="/" id="mobile-navbar-logo-link">
-                        <img src="/assets/wordmark.png" alt="Floofi" id="mobile-navbar-logo-img">
+                        <img src="/assets/img/wordmark.png" alt="Floofi" id="mobile-navbar-logo-img">
                     </a>
                 </div>
             </div>
@@ -359,7 +359,7 @@
                 </div>
                 <div id="navbar-logo">
                     <a href="/" id="navbar-logo-link">
-                        <img src="/assets/wordmark.png" alt="Floofi" id="navbar-logo-img">
+                        <img src="/assets/img/wordmark.png" alt="Floofi" id="navbar-logo-img">
                     </a>
                 </div>
                 <div id="navbar-tabs"></div>
@@ -521,7 +521,7 @@
             if (location.hostname === "floo.fi") return;
             window.userAgent = new UAParser(navigator.userAgent);
 
-            window.version = await (await fetch("/data/release.json")).json();
+            window.version = await (await fetch("/assets/data/release.json")).json();
             document.getElementById("debug").innerText = "Floofi Codename \"Oliver\"\n" +
                 (location.hostname === "localhost" ?
                     "Development Environment\n" +
