@@ -10,6 +10,11 @@ body, html {
     font-family: "Geist Sans", sans-serif;
 }
 
+* {
+    box-sizing: content-box;
+    touch-action: manipulation;
+}
+
 #navbar, #mobile-navbar {
     height: 64px;
     display: flex;
