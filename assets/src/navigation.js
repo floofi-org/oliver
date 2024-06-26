@@ -17,6 +17,8 @@ Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
             category.classList.remove("hide");
             category.classList.add("show");
             window.categorySection = category;
+        } else {
+            document.getElementById("navbar-category-outer").onmouseleave({});
         }
 
         document.getElementById("navbar-tabs").style.left = e.target.getBoundingClientRect().left + "px";
@@ -24,6 +26,9 @@ Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
         document.getElementById("navbar-tabs").style.width = e.target.clientWidth + "px";
         document.getElementById("navbar-tabs").style.opacity = "1";
         e.target.classList.add("open");
+        if (window.categoryNavigationItem) {
+            window.categoryNavigationItem.classList.remove("open");
+        }
         window.categoryNavigationItem = e.target;
     };
 
@@ -35,6 +40,7 @@ Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
 });
 
 document.getElementById("navbar-category-outer").onmouseleave = document.body.onmouseleave = (e) => {
+    console.log(e, !!window.categoryNavigationItem, !!window.categorySection);
     if (document.getElementById("navbar").classList.contains("mobile-open")) return;
     if (window.categoryNavigationItem) {
         window.categoryNavigationItem.classList.remove("open");
@@ -73,8 +79,6 @@ document.getElementById("navbar-category-outer").onmousemove = (e) => {
     if (window.lastPosition === -1) {
         window.lastPosition = e.clientX;
     }
-
-    console.log(e.clientX - window.lastPosition);
 
     if (e.clientX - window.lastPosition < -2) {
         Array.from(document.getElementsByClassName("navbar-category-base")).map(i => i.classList.add("reverse"));
