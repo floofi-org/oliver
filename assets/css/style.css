@@ -24,6 +24,20 @@ body, html {
     right: 0;
     box-shadow: 0 1px 0 0 hsla(0, 0%, 100%, .1);
     transition: box-shadow 150ms ease;
+    z-index: 99;
+}
+
+#loader {
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+}
+
+#loader-img {
+    width: 32px;
 }
 
 #navbar.no-border, #mobile-navbar.no-border {
