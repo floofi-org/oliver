@@ -224,7 +224,7 @@ body, html {
     margin-left: -248px;
 }
 
-#navbar-inner-left:has(.navbar-navigation-item-with-category:hover) #navbar-category-outer, #navbar-inner-left:has(#navbar-category-outer:hover) #navbar-category-outer {
+#navbar-inner-left:has(.navbar-navigation-item-with-category:hover):not(.navigating) #navbar-category-outer, #navbar-inner-left:has(#navbar-category-outer:hover):not(.navigating) #navbar-category-outer {
     opacity: 1;
     pointer-events: auto;
 }
@@ -324,6 +324,31 @@ body, html {
 
 #mobile-navbar {
     display: none;
+}
+
+#app #loader {
+    display: flex;
+}
+
+#app #page {
+    display: none;
+}
+
+#app.loaded #loader {
+    display: none !important;
+}
+
+#app.loaded #page {
+    display: block !important;
+}
+
+#page {
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 @media (max-width: 900px) {

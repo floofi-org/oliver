@@ -40,7 +40,6 @@ Array.from(document.getElementsByClassName("navbar-navigation-item")).map(i => {
 });
 
 document.getElementById("navbar-category-outer").onmouseleave = document.body.onmouseleave = (e) => {
-    console.log(e, !!window.categoryNavigationItem, !!window.categorySection);
     if (document.getElementById("navbar").classList.contains("mobile-open")) return;
     if (window.categoryNavigationItem) {
         window.categoryNavigationItem.classList.remove("open");
@@ -75,6 +74,7 @@ document.getElementById("navbar-navigation").onmouseleave = () => {
 };
 
 document.getElementById("navbar-category-outer").onmousemove = (e) => {
+    document.getElementById("navbar-inner-left").classList.remove("navigating");
     if (document.getElementById("navbar").classList.contains("mobile-open")) return;
     if (window.lastPosition === -1) {
         window.lastPosition = e.clientX;

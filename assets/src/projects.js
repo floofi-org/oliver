@@ -17,4 +17,6 @@
         `).join("")}
     </div>
     `).join("");
+
+    processLinks();
 })();
