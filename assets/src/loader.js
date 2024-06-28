@@ -37,6 +37,7 @@ async function loadPage(page) {
         setInnerHTML(document.getElementById("page"), await res.text());
     }
 
+    processLinks();
     document.getElementById("app").classList.add("loaded");
 }
 
@@ -63,6 +64,6 @@ window.onload = async () => {
     await loadPage(location.pathname);
 }
 
-window.onpopstate = () => {
-    loadPage(location.pathname);
+window.onpopstate = async () => {
+    await loadPage(location.pathname);
 }
