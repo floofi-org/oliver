@@ -16,6 +16,9 @@ function setInnerHTML(elm, html) {
 }
 
 async function loadPage(page) {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     window.temporaryPageData = {};
     if (page === "/") page = "/home";
     document.title = "Floofi";
@@ -39,6 +42,7 @@ async function loadPage(page) {
     }
 
     processLinks();
+    refreshStatus().then(() => {});
     document.getElementById("app").classList.add("loaded");
 }
 
@@ -68,3 +72,5 @@ window.onload = async () => {
 window.onpopstate = async () => {
     await loadPage(location.pathname);
 }
+
+document.getElementById("footer-inner-general-copyright-year").innerText = new Date().getUTCFullYear().toString();

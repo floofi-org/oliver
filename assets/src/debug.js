@@ -1,9 +1,10 @@
 (async () => {
+    window.version = await (await fetch("/assets/data/release.json")).json();
+    document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + " (" + window.version.build + ")";
     if (location.hostname === "floo.fi") return;
+
     document.body.insertAdjacentHTML("beforeend", '<div id="debug"></div>')
     window.userAgent = new UAParser(navigator.userAgent);
-
-    window.version = await (await fetch("/assets/data/release.json")).json();
     document.getElementById("debug").innerText = "Floofi Codename \"Oliver\"\n" +
         (location.hostname === "localhost" ?
             "Development Environment\n" +
