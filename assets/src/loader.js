@@ -16,6 +16,7 @@ function setInnerHTML(elm, html) {
 }
 
 async function loadPage(page) {
+    window.temporaryPageData = {};
     if (page === "/") page = "/home";
     document.title = "Floofi";
 
