@@ -1,0 +1,53 @@
+<script>
+    document.title = "Website Credits – Floofi";
+</script>
+
+<section id="credits" class="text-section">
+    <h2 class="title title-centered">Website Credits</h2>
+
+    <div id="credits-grid">
+        <div class="credits-grid-title">Lead<br>Programming<br>Design</div>
+        <div>Starscouts</div>
+
+        <div class="credits-grid-title">Testing</div>
+        <div>ryze312<br>Hailstorm</div>
+
+        <div class="credits-grid-title">Design Consulting</div>
+        <div>ryze312<br>Hailstorm<br>OliCantDecide<br>Zenko</div>
+
+        <div class="credits-grid-title">Codename<br>Mascot</div>
+        <div>OliCantDecide</div>
+
+        <div class="credits-grid-title">Icons</div>
+        <div>Vercel<br>Lucide<br>loading.io</div>
+
+        <div class="credits-grid-title">Fonts</div>
+        <div>Vercel<br>Belleve Invis</div>
+
+        <div class="credits-grid-title">Fursuit Photos</div>
+        <div>PitouRikou<br>[insert fursuiter here]</div>
+
+        <div class="credits-grid-title">Debugging Tools</div>
+        <div>Faisal Salman</div>
+
+        <div class="credits-grid-title">Special Thanks to</div>
+        <div>JetBrains<br>for giving us access to their tools for free</div>
+    </div>
+
+    <a id="credits-powered" href="https://vercel.com/?utm_source=powered-by-vercel">
+        <img src="/assets/img/powered-by-vercel.svg" id="credits-powered-logo" alt="Powered by Vercel">
+    </a>
+
+    <div id="credits-footer">
+        Codename "Oliver" · <span id="credits-version">-</span><br>
+        © 2024 Floofi Systems, All rights reserved.
+    </div>
+</section>
+
+<script>
+    (async () => {
+        window.version = await (await fetch("/assets/data/release.json")).json();
+        document.getElementById("credits-version").innerText = "Version " + window.version.version + " (" + window.version.build +
+            ") · Built on " + new Date(window.version.timestamp).toUTCString()
+    })();
+</script>
