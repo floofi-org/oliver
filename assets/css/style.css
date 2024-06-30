@@ -48,6 +48,18 @@ body, html {
     width: 32px;
 }
 
+/* Badges */
+.badge-beta {
+    font-size: 11px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background-color: hsl(214, 59%, 15%);
+    color: hsl(210, 100%, 66%);
+    display: flex;
+    align-items: center;
+}
+
 /* Buttons */
 .btn-secondary {
     box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .14);
@@ -109,6 +121,14 @@ body, html {
     border-radius: 999px;
     height: 48px;
     font-size: 16px;
+}
+
+.btn-cta-small {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 999px;
+    height: 40px;
+    font-size: .875rem;
 }
 
 .btn-cta-text {
@@ -737,8 +757,41 @@ body, html {
 #home-cta {
     border-radius: 10px;
     border: 1px solid hsl(0, 0%, 18%);
-    padding: 20px;
+    padding: 48px;
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-gap: 80px;
+}
+
+#home-cta-buttons, #home-cta-orgs-btns {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+#home-cta-left {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#home-cta-right {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#home-cta-orgs {
+    color: hsl(0, 0%, 63%);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -.32px;
+    flex: 1;
+    flex-basis: 100%;
 }
 
 #home .title {
@@ -782,6 +835,23 @@ body, html {
     line-height: 130%;
     letter-spacing: -.4px;
     font-weight: 600;
+    text-wrap: balance;
+}
+
+#home-cta-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -.96px;
+    text-wrap: balance;
+    color: hsl(0, 0%, 63%);
+    flex: 1;
+    flex-basis: 100%;
+}
+
+#home-cta-title-focus, #home-cta-orgs-focus {
+    font-weight: 600;
+    color: hsl(0, 0%, 93%);
 }
 
 /* Mobile home page */
