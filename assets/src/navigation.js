@@ -51,7 +51,11 @@ document.getElementById("navbar-category-outer").onmouseleave = document.body.on
         window.categorySection.classList.add("hide");
         window.categorySection = null;
     }
-    if (!e._switching) document.getElementById("navbar-navigation").onmouseleave(e);
+    if (!e._switching) document.getElementById("navbar-navigation").onmouseleave(null);
+}
+
+document.getElementById("navbar-inner-left").onmouseleave = () => {
+    document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
 }
 
 document.getElementById("navbar-navigation").onmousemove = (e) => {
@@ -62,11 +66,11 @@ document.getElementById("navbar-navigation").onmousemove = (e) => {
     document.getElementById("navbar-category-indicator").style.transition = "left 250ms ease";
 };
 
-document.getElementById("navbar-navigation").onmouseleave = () => {
+document.getElementById("navbar-navigation").onmouseleave = (e) => {
     if (document.getElementById("navbar").classList.contains("mobile-open")) return;
     if (window.categoryNavigationItem && window.categoryNavigationItem.classList.contains("navbar-navigation-item-with-category")) return;
     document.getElementById("navbar-tabs").style.opacity = "0";
-    document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
+    if (e) document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
     document.getElementById("navbar-category").style.transition = "";
     document.getElementById("navbar-category-indicator").style.transition = "";
     document.getElementById("navbar-tabs").style.left = "0";

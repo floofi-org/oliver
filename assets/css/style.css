@@ -709,6 +709,18 @@ body, html {
     border-radius: 10px;
     border: 1px solid hsl(0, 0%, 18%);
     padding: 20px;
+}
+
+#home .title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-section-separator {
+    border-top: 1px solid hsl(0, 0%, 18%);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
     margin-top: 20px;
 }
 
