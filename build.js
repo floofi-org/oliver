@@ -12,3 +12,4 @@ require('child_process').execSync("git commit", { stdio: "inherit" });
 require('child_process').execSync("git tag " + release["version"].split(" ")[0] + "." + release['build']);
 require('child_process').execSync("git push origin " + release["version"].split(" ")[0] + "." + release['build']);
 require('child_process').execSync("git push --all origin");
+require('child_process').execSync("gh release create " + release["version"].split(" ")[0] + "." + release['build'] + " --generate-notes");
