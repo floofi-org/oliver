@@ -27,7 +27,7 @@ async function loadPage(page) {
     document.getElementById("navbar-category-outer").onmouseleave({});
     document.getElementById("app").classList.remove("loaded");
 
-    let res = await fetch("/pages" + page + ".html");
+    let res = await fetch("/pages/" + page.replaceAll("/", "--").replace(/^--/g, "") + ".html");
     if (page === "/home") page = "/";
     if (location.pathname !== page) window.history.pushState(null, null, page);
 

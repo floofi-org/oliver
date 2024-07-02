@@ -1,0 +1,30 @@
+<script>
+    document.title = "Projects – Floofi";
+</script>
+
+<section id="projects" class="text-section">
+    <h2 class="title">Projects</h2>
+    <div id="project-cards"></div>
+
+    <script>
+        (async () => {
+            let data = await (await fetch("/assets/data/projects.json")).json();
+
+            for (let project of Object.values(data).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b])) {
+                document.getElementById("project-cards").insertAdjacentHTML("beforeend", `
+                <a href="/projects/${project[1]['id']}" class="project-card" id="project-card-${project[1]['id']}">
+                    <div class="project-card-header" id="home-card-1-header">
+                        ${project[1]['icon']}
+                        <span class="project-card-title" id="project-card-1-title">${project[0]}</span>
+                    </div>
+                    <div class="project-card-content" id="project-card-1-content">
+                        ${project[1]['longDescription'] ?? project[1]['description']}
+                    </div>
+                </a>
+                `);
+            }
+
+            processLinks();
+        })();
+    </script>
+</section>
