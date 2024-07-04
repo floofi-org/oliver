@@ -897,6 +897,10 @@ body, html {
         min-width: 400px;
         min-height: 400px;
     }
+
+    #home-cta {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
