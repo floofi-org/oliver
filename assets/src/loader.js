@@ -16,6 +16,7 @@ function setInnerHTML(elm, html) {
 }
 
 async function loadPage(page) {
+    document.getElementById("navbar").classList.remove("mobile-open");
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 

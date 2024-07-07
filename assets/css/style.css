@@ -890,6 +890,11 @@ body, html {
         text-align: center;
     }
 
+    #home-hero-title-headline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #home-hero-text {
         justify-content: center;
     }
@@ -1181,4 +1186,25 @@ body, html {
 #project-section-text-buttons {
     display: flex;
     gap: 20px;
+}
+
+/* Mobile projects page */
+@media (max-width: 900px) {
+    .project-section {
+        grid-template-columns: 1fr;
+    }
+
+    #project-section-text {
+        text-align: center;
+    }
+
+    #project-section-text-buttons {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #project-section-text-content, #project-section-text-title, #project-section-text-description {
+        width: 100%;
+    }
 }
