@@ -24,7 +24,7 @@
         <div class="credits-grid-title">Fonts</div>
         <div>Vercel<br>Belleve Invis</div>
 
-        <div class="credits-grid-title">Fursuit Photos</div>
+        <div class="credits-grid-title">Homepage Artwork</div>
         <div>PitouRikou<br>[insert fursuiter here]</div>
 
         <div class="credits-grid-title">Debugging Tools</div>
@@ -39,15 +39,20 @@
     </a>
 
     <div id="credits-footer">
-        Codename "Oliver" · <span id="credits-version">-</span><br>
-        © 2024 Floofi Systems, All rights reserved.
+        <p>Codename "Oliver" · <span id="credits-version">-</span><br>
+            © 2024 Floofi Systems Incorporated, All rights reserved.</p>
+        <p>Floofi, <span id="credits-projects"></span> and their logos are trademarks of Floofi Systems Incorporated
+            and/or are protected by applicable copyright laws in France and other countries.
+        </p>
+        <p>JetBrains, IntelliJ IDEA, PhpStorm, PyCharm, RustRover, WebStorm, JetBrains Toolbox, JetBrains Mono and their
+            logos are registered trademarks of JetBrains s.r.o. GitHub and its logo are registered trademarks of GitHub,
+            Inc. Vercel and its logo are registered trademarks of Vercel Inc.</p>
     </div>
 </section>
 
 <script>
-    (async () => {
-        window.version = await (await fetch("/assets/data/release.json")).json();
-        document.getElementById("credits-version").innerText = "Version " + window.version.version + " (" + window.version.build +
-            ") · Built on " + new Date(window.version.timestamp).toUTCString()
-    })();
+    document.getElementById("credits-version").innerText = "Version " + window.version.version + " (" + window.version.build +
+        ") · Built on " + new Date(window.version.timestamp).toUTCString();
+
+    document.getElementById("credits-projects").innerText = Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b]).map(i => i[0]).join(", ");
 </script>

@@ -1,5 +1,5 @@
-(async () => {
-    let categories = await (await fetch("/assets/data/projects.json")).json();
+function generateProjectsList() {
+    let categories = window.projects;
 
     document.getElementById("navbar-category-base-0").innerHTML = Object.entries(categories).map(i => `
     <div class="navbar-category-section">
@@ -20,4 +20,54 @@
 
     processLinks();
     generateFooter();
-})();
+}
+
+function projectImageError() {
+    document.getElementById("project-section-image-img").outerHTML = "";
+}
+
+function buildProjectPage(id) {
+    let project = Object.values(projects)
+        .map(i => Object.entries(i))
+        .reduce((a, b) => [...a, ...b])
+        .find(i => i[1]['id'] === id);
+    document.title = project[0] + " – Floofi";
+
+    document.getElementById("project-section-placeholder").innerHTML = `
+        <section id="project-faunerie" class="project-section">
+            <div id="project-section-text">
+                <div id="project-section-text-content">
+                    <div id="project-section-text-title">
+                        ${project[0]}
+                    </div>
+                    <div id="project-section-text-description">
+                        ${project[1]['longDescription']}
+                    </div>
+                    <div id="project-section-text-buttons">
+                        ${project[1]['link'] ? `
+                            <a href="${project[1]['link']}" class="btn btn-primary btn-cta" id="home-hero-cta">
+                                ${project[1]['icon']}
+                                <span class="btn-cta-text">Get Started</span>
+                            </a>
+                            ${project[1]['source'] ? `
+                                <a href="${project[1]['source']}" class="btn btn-secondary btn-cta" id="home-hero-cta">
+                                    <span class="btn-cta-text">Source Code</span>
+                                </a>
+                            ` : ``}
+                       ` : `
+                            <a href="${project[1]['source']}" class="btn btn-primary btn-cta" id="home-hero-cta">
+                                ${project[1]['icon']}
+                                <span class="btn-cta-text">Source Code</span>
+                            </a>
+                        `}
+                    </div>
+                </div>
+            </div>
+            <div id="project-section-image">
+                <div id="project-section-image-inner">
+                    <img id="project-section-image-img" src="/assets/projects/${project[1]['id']}.webp" onerror="projectImageError();" alt="">
+                </div>
+            </div>
+        </section>
+    `;
+}

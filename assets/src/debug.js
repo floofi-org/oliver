@@ -1,5 +1,4 @@
-(async () => {
-    window.version = await (await fetch("/assets/data/release.json")).json();
+function showDebugInfo() {
     document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + " (" + window.version.build + ")";
     if (location.hostname === "floo.fi") return;
 
@@ -13,4 +12,4 @@
             "Version " + window.version.version + " (" + window.version.build + ")\n" +
             new Date(window.version.timestamp).toISOString()) + "\n" +
         window.userAgent.getBrowser().name + " " + window.userAgent.getBrowser().version + " (" + window.userAgent.getOS().name + ")";
-})();
+}

@@ -1,6 +1,4 @@
-async function refreshStatus() {
-    window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api-v2.json")).json();
-
+function refreshStatus() {
     switch (window.statusData.code) {
         case 0:
         case 3:

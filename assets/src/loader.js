@@ -27,13 +27,20 @@ async function loadPage(page) {
     document.getElementById("navbar-category-outer").onmouseleave({});
     document.getElementById("app").classList.remove("loaded");
 
-    let res = await fetch("/pages/" + page.replaceAll("/", "--").replace(/^--/g, "") + ".html");
-    if (page === "/home") page = "/";
-    if (location.pathname !== page) window.history.pushState(null, null, page);
+    let originalPage = page;
+    if (originalPage === "/home") originalPage = "/";
+    if (page === "/projects-page") page = "/404";
+    if (page.startsWith("/projects/")) page = "/projects-page";
 
-    if (res.status === 200) {
+    let res = await fetch("/pages/" + page.replaceAll("/", "--").replace(/^--/g, "") + ".html");
+    if (location.pathname !== originalPage) window.history.pushState(null, null, originalPage);
+
+    if (res.status === 200 && ((page === "/projects-page" && Object.values(projects)
+        .map(i => Object.entries(i))
+        .reduce((a, b) => [...a, ...b])
+        .find(i => i[1]['id'] === location.pathname.split("/")[2])) || page !== "/projects-page")) {
         setInnerHTML(document.getElementById("page"), await res.text());
-    } else if (res.status === 404) {
+    } else if (res.status === 404 || page === "/projects-page") {
         let res = await fetch("/pages/404.html");
         setInnerHTML(document.getElementById("page"), await res.text());
     } else {
@@ -42,7 +49,7 @@ async function loadPage(page) {
     }
 
     processLinks();
-    refreshStatus().then(() => {});
+    refreshStatus();
     document.getElementById("app").classList.add("loaded");
 }
 
@@ -64,9 +71,21 @@ function processLinks() {
     }
 }
 
+async function loadData() {
+    window.version = await (await fetch("/assets/data/release.json")).json();
+    window.projects = await (await fetch("/assets/data/projects.json")).json();
+    window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api.json")).json();
+}
+
 window.onload = async () => {
+    await loadData();
+    showDebugInfo();
     processLinks();
+    generateProjectsList();
+    loadNavigation();
     await loadPage(location.pathname);
+
+    setInterval(loadData, 30000);
 }
 
 window.onpopstate = async () => {

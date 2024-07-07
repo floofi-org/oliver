@@ -7,24 +7,40 @@
     <div id="project-cards"></div>
 
     <script>
-        (async () => {
-            let data = await (await fetch("/assets/data/projects.json")).json();
-
-            for (let project of Object.values(data).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b])) {
-                document.getElementById("project-cards").insertAdjacentHTML("beforeend", `
+        for (let project of Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b])) {
+            document.getElementById("project-cards").insertAdjacentHTML("beforeend", `
                 <a href="/projects/${project[1]['id']}" class="project-card" id="project-card-${project[1]['id']}">
-                    <div class="project-card-header" id="home-card-1-header">
-                        ${project[1]['icon']}
-                        <span class="project-card-title" id="project-card-1-title">${project[0]}</span>
-                    </div>
-                    <div class="project-card-content" id="project-card-1-content">
-                        ${project[1]['longDescription'] ?? project[1]['description']}
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-inner">
+                        <div class="project-card-header" id="home-card-1-header">
+                            ${project[1]['icon']}
+                            <span class="project-card-title" id="project-card-1-title">${project[0]}</span>
+                        </div>
+                        <div class="project-card-content" id="project-card-1-content">
+                            ${project[1]['longDescription'] ?? project[1]['description']}
+                        </div>
                     </div>
                 </a>
                 `);
+
+            document.getElementById(`project-card-${project[1]['id']}`).onmousemove = (e) => {
+                let x = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().x;
+                let y = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().y;
+                let bg = document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0];
+                let size = 700;
+                console.log(size, x, y, e.clientX - x, e.clientY - y);
+
+                bg.style.opacity = "1";
+                bg.style.backgroundPosition = (-(size / 2) + (e.clientX - x)) + "px " + (-(size / 2) + (e.clientY - y)) + "px";
+                bg.style.width = document.getElementById(`project-card-${project[1]['id']}`).clientWidth + "px";
+                bg.style.height = document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px";
             }
 
-            processLinks();
-        })();
+            document.getElementById(`project-card-${project[1]['id']}`).onmouseleave = () => {
+                document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0].style.opacity = "0";
+            }
+        }
+
+        processLinks();
     </script>
 </section>
