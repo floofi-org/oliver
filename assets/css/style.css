@@ -672,6 +672,23 @@ body, html {
 }
 
 /* Home page */
+#home-notice {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    justify-content: center;
+}
+
+#home-notice-btn {
+    height: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+}
+
 #home-hero {
     height: calc(100vh - 64px);
     display: flex;
@@ -1207,4 +1224,80 @@ body, html {
     #project-section-text-content, #project-section-text-title, #project-section-text-description {
         width: 100%;
     }
+}
+
+/* Contact */
+#contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#contact-secondary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 32px;
+}
+
+.contact-grid-item {
+    padding: 20px;
+}
+
+.contact-grid-item-icon {
+    width: 52px;
+    height: 52px;
+}
+
+.contact-grid-item-title {
+    margin-top: 20px;
+    color: hsl(0 0 93%);
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -1.28px;
+}
+
+.contact-grid-item-text {
+    color: hsl(0 0 63%);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.contact-grid-item-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+}
+
+.contact-grid-item-button {
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contact-grid-secondary-button {
+    width: max-content;
+}
+
+.contact-grid-item-secondary {
+    margin-top: 20px;
+    color: hsl(0 0 63%);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.contact-grid-item-secondary b {
+    font-weight: 600;
+    letter-spacing: -0.32px;
+    color: hsl(0 0 93%);
+}
+
+#contact-title {
+    font-size: 3.875rem;
+    line-height: 1.25rem;
+    font-weight: 1000;
 }
