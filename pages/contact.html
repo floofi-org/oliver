@@ -11,7 +11,10 @@
             <div class="contact-grid-item-text">Get help directly from the people who created your software, or from our community.</div>
             <div class="contact-grid-item-buttons">
                 <a href="mailto:support@floo.fi" class="contact-grid-item-button btn btn-primary btn-cta">Get Support</a>
-                <a href="https://status.floo.fi" class="contact-grid-item-button btn btn-secondary btn-cta">TODO Status</a>
+                <a href="https://status.floo.fi" class="contact-grid-item-button btn btn-secondary btn-cta" id="contact-status">
+                    <span id="contact-status-indicator"></span>
+                    <span id="contact-status-text">Loading...</span>
+                </a>
             </div>
         </div>
         <div id="contact-grid-item-2" class="contact-grid-item">
@@ -66,3 +69,37 @@
         </div>
     </div>
 </section>
+
+<script>
+    switch (window.statusData.code) {
+        case 0:
+        case 3:
+            document.getElementById("contact-status-text").innerText = "All systems normal.";
+            document.getElementById("contact-status-indicator").classList.remove("status-warning");
+            document.getElementById("contact-status-indicator").classList.remove("status-error");
+            document.getElementById("contact-status-indicator").classList.add("status-success");
+            break;
+
+        case 1:
+            if (window.statusData['outages'].length > 1) {
+                document.getElementById("contact-status-text").innerText = window.statusData['outages'].length + " alerts.";
+            } else {
+                document.getElementById("contact-status-text").innerText = "Temporary alert.";
+            }
+            document.getElementById("contact-status-indicator").classList.add("status-warning");
+            document.getElementById("contact-status-indicator").classList.remove("status-error");
+            document.getElementById("contact-status-indicator").classList.remove("status-success");
+            break;
+
+        case 2:
+            if (window.statusData['outages'].length > 1) {
+                document.getElementById("contact-status-text").innerText = window.statusData['outages'].length + " outages.";
+            } else {
+                document.getElementById("contact-status-text").innerText = "Temporary outage.";
+            }
+            document.getElementById("contact-status-indicator").classList.remove("status-warning");
+            document.getElementById("contact-status-indicator").classList.add("status-error");
+            document.getElementById("contact-status-indicator").classList.remove("status-success");
+            break;
+    }
+</script>

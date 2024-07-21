@@ -994,7 +994,7 @@ body, html {
     background-color: transparent;
 }
 
-#footer-inner-general-status-indicator {
+#footer-inner-general-status-indicator, #contact-status-indicator {
     width: 10px;
     height: 10px;
     border-radius: 999px;
@@ -1010,7 +1010,7 @@ body, html {
     flex: 1;
 }
 
-#footer-inner-general-status-container.status-success #footer-inner-general-status-indicator {
+#footer-inner-general-status-container.status-success #footer-inner-general-status-indicator, #contact-status-indicator.status-success {
     background-color: #0072f5;
 }
 
@@ -1018,7 +1018,7 @@ body, html {
     color: #0072f5;
 }
 
-#footer-inner-general-status-container.status-warning #footer-inner-general-status-indicator {
+#footer-inner-general-status-container.status-warning #footer-inner-general-status-indicator, #contact-status-indicator.status-warning {
     background-color: #ffb224;
 }
 
@@ -1026,7 +1026,7 @@ body, html {
     color: #ffb224;
 }
 
-#footer-inner-general-status-container.status-error #footer-inner-general-status-indicator {
+#footer-inner-general-status-container.status-error #footer-inner-general-status-indicator, #contact-status-indicator.status-error {
     background-color: #e5484d;
 }
 
@@ -1300,4 +1300,21 @@ body, html {
     font-size: 3.875rem;
     line-height: 1.25rem;
     font-weight: 1000;
+}
+
+#contact-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mobile contact */
+@media (max-width: 900px) {
+    #contact-grid, #contact-secondary {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid-item-button.btn-secondary {
+        display: none;
+    }
 }
