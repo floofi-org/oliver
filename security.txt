@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+#
+# Equestria.dev Security Policy
+#
+# Found a vulnerability in an Equestria.dev application or
+# service and you would like to report it to us? Thanks!
+#
+
+Contact: mailto:security@equestria.dev
+Encryption: https://equestria.dev/pubkey
+Encryption: https://github.com/RaindropsSys.gpg
+Acknowledgments: https://journal.equestria.dev/home/security
+Preferred-Languages: en, fr, es
+Canonical: https://equestria.dev/.well-known/security.txt
+Expires: 2024-10-20T22:00:00.000Z
+
+#
+# CAUTION: If this file ever stops being updated, this
+# information must not be trusted anymore, even if it is
+# digitally signed.
+#
+
+# Equestria.dev security.txt  - v.1
+# RFC 9116 compliant
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmYlKRUACgkQ773GhDWl
+dLeXTgv/fKCNDCzLHfkRYM519s8eHNfqWpnm9LrihT6NnhoxrzGoeGRZMAe9+2k9
+ypGwK5xD3suwhd1p2TJ+9SG0IS7rydJowqxTQL+IYriLIxCmvIif8XXOjNl417pO
+xinHnKSBxl2TUN6wP5GEjcsR4yjZQkmCktp3ZczMLMBIHrx6eE0P/cQuXyP0ne7a
+UkQ8ArElbZ5WSV+13mkElxBTLblPS+srPy8qXfovzY8U84qNIprESV/dYVH8w+g0
+F+cKoVDvLDWUWbT5N0mqtO18MvpfX75qPT6oZ28qBVqr6wal4cvQpo3ckp6Yakgd
+aUz3YzhjPynYOi+9pOLzHuFJcDOOxmiBdMKUzf2uQdoDo5Xk8Fsnrpl4jaAJhLZd
+/yekoxXZeXMisXmXI3V+WO80oDuzSL4APeX1/werxfrh67Es2lSmqy+88pPlUKiX
+G0LHa337PHpSNZpfE4MgXAG7CMN37nV270Oko/4KeNVcMbqAFp7Gh+jq40s5KPPy
+fKexxxLF
+=MQ4c
+-----END PGP SIGNATURE-----

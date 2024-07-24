@@ -5,8 +5,22 @@
       "destination": "/assets/img/favicon.png"
     },
     {
-      "source": "/((?!assets|pages))(.*)",
+      "source": "/((?!assets|pages|security.txt|warrant.txt|publickey.txt|.well-known))(.*)",
       "destination": "/"
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "destination": "/security.txt"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pubkey",
+      "destination": "/publickey.txt"
+    },
+    {
+      "source": "/warrant",
+      "destination": "/warrant.txt"
     }
   ]
 }
