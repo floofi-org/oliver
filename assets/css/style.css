@@ -768,7 +768,7 @@ body, html {
     grid-gap: 20px;
 }
 
-.home-card, .project-card {
+.home-card, .project-card, .disclaimers-card {
     border-radius: 10px;
     border: 1px solid hsl(0, 0%, 18%);
     padding: 20px;
@@ -831,7 +831,7 @@ body, html {
     width: max-content;
 }
 
-.home-card-header, .project-card-header {
+.home-card-header, .project-card-header, .disclaimers-card-header {
     color: hsl(0, 0%, 63%);
     display: flex;
     align-items: center;
@@ -840,7 +840,7 @@ body, html {
     flex-basis: 100%;
 }
 
-.home-card, .project-card {
+.home-card, .project-card, .disclaimers-card {
     gap: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -848,7 +848,7 @@ body, html {
     align-items: start;
 }
 
-.home-card-content, .project-card-content {
+.home-card-content, .project-card-content, .disclaimers-card-content {
     flex: 1;
     flex-basis: 100%;
     color: hsl(0, 0%, 93%);
@@ -875,9 +875,45 @@ body, html {
     color: hsl(0, 0%, 93%);
 }
 
+/* Disclaimers */
+#disclaimers-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 35px;
+}
+
+.disclaimers-card-listing {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.disclaimers-card-content {
+    font-size: 1rem;
+}
+
+.text-section a[href].link, .text-section .linked a[href], .text-section.linked a[href] {
+    color: inherit;
+}
+
+.text-section a[href].link:hover, .text-section .linked a[href]:hover, .text-section.linked a[href]:hover {
+    opacity: .75;
+}
+
+blockquote {
+    border-left: 2px solid currentColor;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.limited-width {
+    max-width: 768px;
+}
+
 /* Mobile home page */
 @media (max-width: 1140px) {
-    #home-cards, #project-cards {
+    #home-cards, #project-cards, #disclaimers-header {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -892,7 +928,7 @@ body, html {
         margin-right: auto;
     }
 
-    #home-cards, #project-cards {
+    #home-cards, #project-cards, #disclaimers-header {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -1129,6 +1165,11 @@ body, html {
     margin-top: 20px;
 }
 
+#disclaimers-footer {
+    color: hsl(0, 0%, 63%);
+    margin-top: 20px;
+}
+
 #credits-powered {
     display: block;
     width: max-content;
@@ -1141,7 +1182,7 @@ body, html {
 }
 
 /* Projects page */
-.project-card {
+.project-card, .disclaimers-card {
     border: none;
     padding: 0;
     transition: transform 150ms ease;
@@ -1163,7 +1204,7 @@ body, html {
     z-index: 2;
 }
 
-.project-card-inner {
+.project-card-inner, .disclaimers-card-inner {
     gap: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -1174,6 +1215,7 @@ body, html {
     border: 1px solid rgba(255, 255, 255, .18);
     padding: 20px;
     border-radius: 10px;
+    width: 100%;
 }
 
 .project-section {

@@ -12,11 +12,11 @@
                 <a href="/projects/${project[1]['id']}" class="project-card" id="project-card-${project[1]['id']}">
                     <div class="project-card-bg"></div>
                     <div class="project-card-inner">
-                        <div class="project-card-header" id="home-card-1-header">
+                        <div class="project-card-header" id="project-card-${project[1]['id']}-header">
                             ${project[1]['icon']}
-                            <span class="project-card-title" id="project-card-1-title">${project[0]}</span>
+                            <span class="project-card-title" id="project-card-${project[1]['id']}-title">${project[0]}</span>
                         </div>
-                        <div class="project-card-content" id="project-card-1-content">
+                        <div class="project-card-content" id="project-card-${project[1]['id']}-content">
                             ${project[1]['longDescription'] ?? project[1]['description']}
                         </div>
                     </div>

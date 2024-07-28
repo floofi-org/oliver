@@ -63,7 +63,7 @@ function processLinks() {
 
             let url = new URL(link.href);
 
-            if (url.origin !== location.origin) {
+            if (url.origin !== location.origin || url.pathname.endsWith(".txt")) {
                 window.open(url.href);
             } else {
                 await loadPage(url.pathname);
