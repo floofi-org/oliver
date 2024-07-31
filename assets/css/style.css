@@ -1370,8 +1370,8 @@ blockquote {
 #archives-loader {
     display: block;
     margin: 0 auto;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
 
 .archives-list-item {
