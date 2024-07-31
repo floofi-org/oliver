@@ -51,7 +51,7 @@
 </section>
 
 <script>
-    document.getElementById("credits-version").innerText = "Version " + window.version.version + " (" + window.version.build +
+    document.getElementById("credits-version").innerText = "Version " + window.version.version + " (build " + window.version.build +
         ") · Built on " + new Date(window.version.timestamp).toUTCString();
 
     document.getElementById("credits-projects").innerText = Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b]).map(i => i[0]).join(", ");

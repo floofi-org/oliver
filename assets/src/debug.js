@@ -1,5 +1,5 @@
 function showDebugInfo() {
-    document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + " (" + window.version.build + ")";
+    document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + " (#" + window.version.build + ")";
     if (location.hostname === "floo.fi") return;
 
     document.body.insertAdjacentHTML("beforeend", '<div id="debug"></div>')
@@ -7,9 +7,9 @@ function showDebugInfo() {
     document.getElementById("debug").innerText = "Floofi Codename \"Oliver\"\n" +
         (location.hostname === "localhost" ?
             "Development Environment\n" +
-            "Target Ver. " + window.version.version + " (" + window.version.build + ")"
+            "Target Ver. " + window.version.version + "." + window.version.build + ""
             :
-            "Version " + window.version.version + " (" + window.version.build + ")\n" +
+            "Version " + window.version.version + "." + window.version.build + "\n" +
             new Date(window.version.timestamp).toISOString()) + "\n" +
         window.userAgent.getBrowser().name + " " + window.userAgent.getBrowser().version + " (" + window.userAgent.getOS().name + ")";
 }
