@@ -302,7 +302,8 @@ body, html {
     margin-left: -248px;
 }
 
-#navbar-inner-left:has(.navbar-navigation-item-with-category:hover):not(.navigating) #navbar-category-outer, #navbar-inner-left:has(#navbar-category-outer:hover):not(.navigating) #navbar-category-outer {
+#navbar-inner-left:has(.navbar-navigation-item-with-category:hover):not(.navigating) #navbar-category-outer,
+#navbar-inner-left:has(#navbar-category-outer:hover):not(.navigating) #navbar-category-outer {
     opacity: 1;
     pointer-events: auto;
 }
@@ -1046,7 +1047,8 @@ blockquote {
     flex: 1;
 }
 
-#footer-inner-general-status-container.status-success #footer-inner-general-status-indicator, #contact-status-indicator.status-success {
+#footer-inner-general-status-container.status-success #footer-inner-general-status-indicator,
+#contact-status-indicator.status-success {
     background-color: #0072f5;
 }
 
@@ -1054,7 +1056,8 @@ blockquote {
     color: #0072f5;
 }
 
-#footer-inner-general-status-container.status-warning #footer-inner-general-status-indicator, #contact-status-indicator.status-warning {
+#footer-inner-general-status-container.status-warning #footer-inner-general-status-indicator,
+#contact-status-indicator.status-warning {
     background-color: #ffb224;
 }
 
@@ -1062,7 +1065,8 @@ blockquote {
     color: #ffb224;
 }
 
-#footer-inner-general-status-container.status-error #footer-inner-general-status-indicator, #contact-status-indicator.status-error {
+#footer-inner-general-status-container.status-error #footer-inner-general-status-indicator,
+#contact-status-indicator.status-error {
     background-color: #e5484d;
 }
 
@@ -1131,7 +1135,8 @@ blockquote {
     color: #fff;
 }
 
-#footer-inner-general-logo #footer-inner-general-version, #footer-inner-general-logo:hover #footer-inner-general-copyright {
+#footer-inner-general-logo #footer-inner-general-version,
+#footer-inner-general-logo:hover #footer-inner-general-copyright {
     display: none;
 }
 
@@ -1359,4 +1364,41 @@ blockquote {
     .contact-grid-item-button.btn-secondary {
         display: none;
     }
+}
+
+/* Archives */
+#archives-loader {
+    display: block;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+}
+
+.archives-list-item {
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: background-color 150ms;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.archives-list-item:hover {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+
+.archives-list-item:nth-last-child(1) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.archives-list-item:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.archives-list-item:not(:nth-last-child(1)) {
+    border-bottom: none;
 }

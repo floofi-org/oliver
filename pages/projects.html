@@ -28,7 +28,6 @@
                 let y = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().y;
                 let bg = document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0];
                 let size = 700;
-                console.log(size, x, y, e.clientX - x, e.clientY - y);
 
                 bg.style.opacity = "1";
                 bg.style.backgroundPosition = (-(size / 2) + (e.clientX - x)) + "px " + (-(size / 2) + (e.clientY - y)) + "px";

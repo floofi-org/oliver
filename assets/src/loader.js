@@ -42,13 +42,21 @@ async function loadPage(page) {
         .find(i => i[1]['id'] === location.pathname.split("/")[2])) || page !== "/projects-page")) {
         setInnerHTML(document.getElementById("page"), await res.text());
     } else if (res.status === 404 || page === "/projects-page") {
-        let res = await fetch("/pages/404.html");
-        setInnerHTML(document.getElementById("page"), await res.text());
+        await displayError(400);
+        return;
     } else {
-        let res = await fetch("/pages/500.html");
-        setInnerHTML(document.getElementById("page"), await res.text());
+        await displayError(500);
+        return;
     }
 
+    processLinks();
+    refreshStatus();
+    document.getElementById("app").classList.add("loaded");
+}
+
+async function displayError(error) {
+    let res = await fetch("/pages/" + error + ".html");
+    setInnerHTML(document.getElementById("page"), await res.text());
     processLinks();
     refreshStatus();
     document.getElementById("app").classList.add("loaded");

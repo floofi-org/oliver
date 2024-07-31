@@ -1,0 +1,68 @@
+<script>
+    document.title = "Archives – Floofi";
+</script>
+
+<section id="archives" class="text-section">
+    <h2 class="title title-centered">We make software. Since 2018.</h2>
+    <img id="archives-loader" src="/assets/img/loading.svg" alt="Loading...">
+    <div id="archives-list" style="display: none;"></div>
+</section>
+
+<script>
+    (async () => {
+        try {
+            let list = await getArchives();
+            document.getElementById("archives-list").innerHTML = list.map(i => `
+            <a href="https://archives.floo.fi/cgit/${i[0]}" class="archives-list-item">
+                <div>${i[1].trim().length > 0 ? i[1] : (i[2].trim().length > 0 ? i[2] : i[0])}</div>
+                <div>${i[3]} ago</div>
+            </a>
+            `).join("");
+
+            document.getElementById("archives-loader").style.display = "none";
+            document.getElementById("archives-list").style.display = "";
+
+            processLinks();
+        } catch (e) {
+            console.error(e);
+
+            if (e.stack.includes("NetworkError") || e.message.includes("NetworkError") || e.name.includes("NetworkError")) {
+                await displayError(502);
+            } else {
+                await displayError(500);
+            }
+        }
+    })();
+
+    async function getArchives() {
+        let list = [];
+        let oldLength = null;
+
+        while (oldLength !== list.length) {
+            oldLength = list.length;
+
+            let dom = document.createElement("html");
+
+            try {
+                dom.innerHTML = await (await fetch("https://archives.floo.fi/cgit/?ofs=" + list.length)).text();
+            } catch (e) {
+                dom.innerHTML = await (await fetch("https://archives.equestria.dev/cgit/?ofs=" + list.length)).text();
+            }
+
+            list.push(...Array.from(dom.getElementsByClassName("toplevel-repo"))
+                .map(i => [
+                    i.innerText,
+                    i.parentElement.children[1].innerText
+                        .split(" - ")
+                        .slice(0, i.parentElement.children[1].innerText.split(" - ").length - 1).join(" - "),
+                    i.parentElement.children[1].innerText
+                        .split(" - ")
+                        .slice(i.parentElement.children[1].innerText.split(" - ").length - 1).join(" - "),
+                    i.parentElement.children[3].innerText
+                ])
+            );
+        }
+
+        return list;
+    }
+</script>
