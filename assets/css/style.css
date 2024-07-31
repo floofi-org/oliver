@@ -1379,10 +1379,17 @@ blockquote {
     transition: background-color 150ms;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    display: block;
+}
+
+.archives-list-item-inner {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent;
     display: grid;
     grid-template-columns: 1fr max-content;
-    border: 1px solid hsla(0, 0%, 100%, .1);
+    padding: 10px 20px;
 }
 
 .archives-list-item:hover {

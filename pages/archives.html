@@ -9,13 +9,50 @@
 </section>
 
 <script>
+    function linearGradient(stops, value) {
+        let stopIndex = 0;
+        while(stops[stopIndex + 1][4] < value){
+            stopIndex++;
+        }
+
+        const remainder = value - stops[stopIndex][4];
+        const stopFraction = remainder / (stops[stopIndex + 1][4] - stops[stopIndex][4]);
+
+        return lerp(stops[stopIndex], stops[stopIndex + 1], stopFraction);
+    }
+
+    function lerp(pointA, pointB, normalValue) {
+        return [
+            pointA[0] + (pointB[0] - pointA[0]) * normalValue,
+            pointA[1] + (pointB[1] - pointA[1]) * normalValue,
+            pointA[2] + (pointB[2] - pointA[2]) * normalValue,
+            pointA[3] + (pointB[3] - pointA[3]) * normalValue,
+        ];
+    }
+
+    let points = [
+        [255, 130, 130, 1, 0],
+        [255, 194, 130, 1, 0.1],
+        [255, 225, 130, 1, 0.2],
+        [213, 255, 130, 1, 0.3],
+        [136, 255, 130, 1, 0.4],
+        [130, 255, 227, 1, 0.5],
+        [130, 188, 255, 1, 0.6],
+        [139, 130, 255, 1, 0.7],
+        [221, 130, 255, 1, 0.8],
+        [255, 130, 247, 1, 0.9],
+        [255, 130, 180, 1, 1],
+    ];
+
     (async () => {
         try {
             let list = await getArchives();
-            document.getElementById("archives-list").innerHTML = list.map(i => `
+            document.getElementById("archives-list").innerHTML = list.map((i, j) => `
             <a href="https://archives.floo.fi/cgit/${i[0]}" class="archives-list-item">
-                <div>${i[1].trim().length > 0 ? i[1] : (i[2].trim().length > 0 ? i[2] : i[0])}</div>
-                <div>${i[3]} ago</div>
+                <div class="archives-list-item-inner" style="background: linear-gradient(90deg, rgba(${linearGradient(points, j / list.length)}) 0%, rgba(255,255,255,1) 20%);">
+                    <div>${i[1].trim().length > 0 ? i[1] : (i[2].trim().length > 0 ? i[2] : i[0])}</div>
+                    <div>${i[3]} ago</div>
+                </div>
             </a>
             `).join("");
 
