@@ -825,7 +825,7 @@ body, html {
     margin-top: 50px;
 }
 
-#home-hero-cta {
+#home-hero-cta, .request-cta {
     font-weight: initial;
     letter-spacing: initial;
     margin-top: 30px;
@@ -1466,4 +1466,13 @@ blockquote {
     resize: vertical;
     min-height: 7ch;
     max-height: 40vh;
+}
+
+.request-alternative-email {
+    margin-top: 20px;
+    color: hsl(0 0 63%);
+}
+
+.request-alternative-email summary {
+    cursor: pointer;
 }

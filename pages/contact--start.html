@@ -4,10 +4,32 @@
 
 <section id="request" class="text-section">
     <h2 class="title">Send a Request</h2>
+
     <div id="request-loader">
         <img id="request-loader-img" src="/assets/img/loading.svg" alt="Loading...">
         <div>Preparing your request... Please wait.</div>
     </div>
+
+    <div id="request-email" style="display: none;">
+        <p>Thank you for providing this information.</p>
+        <p>To continue, please email us. The button below will automatically open your favorite email client with all the information you provided earlier. If it does not work, email <span id="request-email-address">hi<span style="display: none;">antispam</span>[at]floo[dot]fi<span style="display: none;">.invalid</span></span> manually with the details you can see below.</p>
+
+        <a style="cursor: pointer;" id="request-email-link" class="btn btn-primary btn-cta request-cta">
+            <span class="btn-cta-text">Send an Email</span>
+        </a>
+
+        <details class="request-alternative-email">
+            <summary>View email details</summary>
+            <blockquote>
+                <p>
+                    <b>To:</b> <span id="request-alternative-address"></span><br>
+                    <b>Subject:</b> <span id="request-alternative-subject"></span>
+                </p>
+                <pre id="request-alternative-body"></pre>
+            </blockquote>
+        </details>
+    </div>
+
     <form id="request-form" style="display: none;">
         <label id="request-base" class="request-field">
             <span class="request-form-header">What is the reason for your request?</span>
@@ -83,7 +105,7 @@
         </label>
 
         <label id="request-submit" style="display: none;" class="request-field">
-            <a style="cursor: pointer;" onclick="submitRequest();" class="btn btn-primary btn-cta" id="home-hero-cta">
+            <a style="cursor: pointer;" onclick="submitRequest();" class="btn btn-primary btn-cta request-cta">
                 <span class="btn-cta-text">Continue</span>
             </a>
         </label>
@@ -289,13 +311,73 @@
     }
 
     function submitRequest() {
-        alert("Not implemented");
+        document.getElementById("request-form").style.display = "none";
+        document.getElementById("request-email").style.display = "";
+
+        let subject = "[Submit a Request] " + document.querySelector('#request-main-list > option[value="' + document.getElementById("request-main-list").value + '"]')
+            .innerText;
+        document.getElementById("request-alternative-subject").innerText = subject;
+        let body = "";
+
+        switch (document.getElementById("request-main-list").value) {
+            case "0":
+                body += document.getElementById("request-project").children[0].innerText + ": ";
+                body += document.querySelector('#request-project-list > option[value="' + document.getElementById("request-project-list").value + '"]')
+                    .innerText;
+                body += "\n\n";
+                break;
+            case "1":
+                body += document.getElementById("request-service").children[0].innerText + ": ";
+                body += document.querySelector('#request-service-list > option[value="' + document.getElementById("request-service-list").value + '"]')
+                    .innerText;
+                body += "\n\n";
+                break;
+            case "2":
+                body += document.getElementById("request-security").children[0].innerText + ": ";
+                body += document.querySelector('#request-security-list option[value="' + document.getElementById("request-security-list").value + '"]')
+                    .innerText;
+                body += "\n\n";
+                break;
+            case "3":
+                body += document.getElementById("request-archive").children[0].innerText + ": ";
+                body += document.querySelector('#request-archive-list > option[value="' + document.getElementById("request-archive-list").value + '"]')
+                    .innerText;
+                body += "\n\n";
+                break;
+            case "4":
+                body += document.getElementById("request-active").children[0].innerText + ": ";
+                body += document.querySelector('#request-active-list option[value="' + document.getElementById("request-active-list").value + '"]')
+                    .innerText;
+                body += "\n\n";
+                break;
+            case "5":
+                body += document.getElementById("request-content").children[0].innerText + ": ";
+                body += document.getElementById("request-content-name").value;
+                body += "\n\n";
+                break;
+            case "6":
+            case "7":
+            case "9":
+                body += document.getElementById("request-company").children[0].innerText + ": ";
+                body += document.getElementById("request-company-name").value;
+                body += "\n\n";
+                break;
+        }
+
+        body += document.getElementById("request-description-field").value;
+        body += "\n\n--\nSubmitted using Floofi's \"Send a Request\" utility. v" + version.version + "." + version.build + ". Do not write below this line.";
+        document.getElementById("request-alternative-body").innerText = body;
+        document.getElementById("request-email-link").href = "mailto:hi@floo.fi?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body).replaceAll("%0A", "<br>");
     }
 
     document.getElementById("request-form").reset();
 
-    if (window.queryState.get("i")) {
+    if (window.queryState && window.queryState.get("i")) {
         document.getElementById("request-main-list").value = window.queryState.get("i");
         processMainList();
     }
+
+    document.getElementById("request-email-address").innerText =
+        document.getElementById("request-alternative-address").innerText =
+        atob(decodeURIComponent("aGlAZmxvby5maQ%3D%3D"));
 </script>
