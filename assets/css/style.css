@@ -1409,3 +1409,12 @@ blockquote {
 .archives-list-item:not(:nth-last-child(1)) {
     border-bottom: none;
 }
+
+.archives-title-part {
+    word-break: manual;
+    display: inline-block;
+}
+
+.archives-title {
+    line-height: 1.2;
+}
