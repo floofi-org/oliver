@@ -1,3 +1,5 @@
+window.JsURL = URL;
+
 function setInnerHTML(elm, html) {
     elm.innerHTML = html;
 
@@ -34,7 +36,7 @@ async function loadPage(page) {
     if (page.startsWith("/projects/")) page = "/projects-page";
 
     let res = await fetch("/pages/" + page.replaceAll("/", "--").replace(/^--/g, "") + ".html");
-    if (location.pathname !== originalPage) window.history.pushState(null, null, originalPage);
+    if (location.pathname !== originalPage || new JsURL(location.href).searchParams.size > 0) window.history.pushState(null, null, originalPage);
 
     if (res.status === 200 && ((page === "/projects-page" && Object.values(projects)
         .map(i => Object.entries(i))
@@ -69,11 +71,12 @@ function processLinks() {
         link.onclick = async (e) => {
             e.preventDefault();
 
-            let url = new URL(link.href);
+            let url = new JsURL(link.href);
 
             if (url.origin !== location.origin || url.pathname.endsWith(".txt")) {
                 window.open(url.href);
             } else {
+                window.queryState = url.searchParams;
                 await loadPage(url.pathname);
             }
         }
@@ -92,12 +95,21 @@ window.onload = async () => {
     processLinks();
     generateProjectsList();
     loadNavigation();
+
+    if (new JsURL(location.href).searchParams.size > 0) {
+        window.queryState = new JsURL(location.href).searchParams;
+    }
+
     await loadPage(location.pathname);
 
     setInterval(loadData, 30000);
 }
 
 window.onpopstate = async () => {
+    if (new JsURL(location.href).searchParams.size > 0) {
+        window.queryState = new JsURL(location.href).searchParams;
+    }
+
     await loadPage(location.pathname);
 }
 

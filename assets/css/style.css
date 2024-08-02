@@ -1418,3 +1418,52 @@ blockquote {
 .archives-title {
     line-height: 1.2;
 }
+
+/* Request */
+#request-loader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#request-loader-img {
+    width: 32px;
+    height: 32px;
+}
+
+.request-form-header {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.request-form-control {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid hsla(0, 0%, 100%, .14);
+    color: hsl(0 0 93%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0a0a0a;
+    outline: none !important;
+    width: 512px;
+    max-width: 80vw;
+}
+
+.request-form-control::placeholder, .request-form-control.default {
+    color: hsl(0 0 63%);
+}
+
+.request-form-control:hover, .request-form-control:focus {
+    background-color: hsl(0, 0%, 12%);
+}
+
+#request-form label {
+    margin-top: 20px;
+    display: block;
+}
+
+#request-description-field {
+    resize: vertical;
+    min-height: 7ch;
+    max-height: 40vh;
+}

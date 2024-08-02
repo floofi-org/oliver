@@ -1,0 +1,301 @@
+<script>
+    document.title = "Send a Request – Floofi";
+</script>
+
+<section id="request" class="text-section">
+    <h2 class="title">Send a Request</h2>
+    <div id="request-loader">
+        <img id="request-loader-img" src="/assets/img/loading.svg" alt="Loading...">
+        <div>Preparing your request... Please wait.</div>
+    </div>
+    <form id="request-form" style="display: none;">
+        <label id="request-base" class="request-field">
+            <span class="request-form-header">What is the reason for your request?</span>
+            <select class="request-form-control default" onchange="processMainList();" id="request-main-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="0">Report an issue with an application</option>
+                <option value="1">Report an issue with a service</option>
+                <option value="2">Disclose a security vulnerability</option>
+                <option value="3">Request support for an archived project</option>
+                <option value="4">Request support for an active project</option>
+                <option value="5">Report content or a user on our services</option>
+                <option value="6">Contact for commercial or organizational partnership</option>
+                <option value="7">Discuss a project or an idea for an organization</option>
+                <option value="8">Submit a project or feature request</option>
+                <option value="9">Discuss the Floofi for Nonprofits programme</option>
+                <option value="10">Something else</option>
+            </select>
+        </label>
+
+        <label id="request-project" style="display: none;" class="request-field">
+            <span class="request-form-header">Which application is affected by your issue?</span>
+            <select class="request-form-control default" onchange="processSecondaryList('project');" id="request-project-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="_unlisted">Unlisted application</option>
+            </select>
+        </label>
+
+        <label id="request-service" style="display: none;" class="request-field">
+            <span class="request-form-header">Which service is affected by your issue?</span>
+            <select class="request-form-control default" onchange="processSecondaryList('service');" id="request-service-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="_unlisted">Unlisted service</option>
+            </select>
+        </label>
+
+        <label id="request-archive" style="display: none;" class="request-field">
+            <span class="request-form-header">Which project do you need help with?</span>
+            <select class="request-form-control default" onchange="processSecondaryList('archive');" id="request-archive-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="_unlisted">Unlisted project</option>
+            </select>
+        </label>
+
+        <label id="request-active" style="display: none;" class="request-field">
+            <span class="request-form-header">Which application or service do you need help with?</span>
+            <select class="request-form-control default" onchange="processSecondaryList('active');" id="request-active-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="_unlisted">Unlisted application or service</option>
+            </select>
+        </label>
+
+        <label id="request-security" style="display: none;" class="request-field">
+            <span class="request-form-header">Which project or service is affected by your issue?</span>
+            <select class="request-form-control default" onchange="processSecondaryList('security');" id="request-security-list">
+                <option value="_default" selected disabled>Select an option</option>
+                <option value="_unlisted">Unlisted or other</option>
+            </select>
+        </label>
+
+        <label id="request-content" style="display: none;" class="request-field">
+            <span class="request-form-header">Enter the identifier (ID) of the affected content or user (if applicable)</span>
+            <input class="request-form-control" placeholder="Enter an identifier" id="request-content-name">
+        </label>
+
+        <label id="request-company" style="display: none;" class="request-field">
+            <span class="request-form-header">Enter the name of your organization or your own name</span>
+            <input class="request-form-control" placeholder="Enter a name" onchange="processSecondaryField('company-name');" onkeyup="processSecondaryField('company-name');" id="request-company-name">
+        </label>
+
+        <label id="request-description" style="display: none;" class="request-field">
+            <span class="request-form-header">Describe your request in detail</span>
+            <textarea class="request-form-control" placeholder="Enter a description, at least 10 characters" onchange="processDescription();" onkeyup="processDescription();" id="request-description-field" rows="5"></textarea>
+        </label>
+
+        <label id="request-submit" style="display: none;" class="request-field">
+            <a style="cursor: pointer;" onclick="submitRequest();" class="btn btn-primary btn-cta" id="home-hero-cta">
+                <span class="btn-cta-text">Continue</span>
+            </a>
+        </label>
+    </form>
+</section>
+
+<!--suppress ExceptionCaughtLocallyJS -->
+<script>
+    window.o = {};
+
+    (async () => {
+        if (localStorage.getItem("gh-cache") && new Date() - new Date(JSON.parse(localStorage.getItem("gh-cache")).date) < 3600000) {
+            o.github = JSON.parse(localStorage.getItem("gh-cache")).items;
+        } else {
+            try {
+                try {
+                    o.github = await (await fetch("https://api.github.com/orgs/floofi-org/repos?sort=full_name&per_page=100&type=public")).json();
+                    if (o.github.message) throw new Error();
+                } catch (e) {
+                    o.github = await (await fetch("https://api.github.com/orgs/equestria-dev/repos?sort=full_name&per_page=100&type=public")).json();
+                    if (o.github.message) throw new Error();
+                }
+
+                localStorage.setItem("gh-cache", JSON.stringify({
+                    date: new Date(),
+                    items: o.github
+                }));
+            } catch (e) {
+                console.error(e);
+                o.github = [{ name: "(list unavailable)" }];
+            }
+        }
+
+        try {
+            o.status = await decodeStatusData();
+        } catch (e) {
+            console.error(e);
+            o.status = { services: [{ label: "(list unavailable)" }] };
+        }
+
+        try {
+            o.archives = await getArchives();
+        } catch (e) {
+            console.error(e);
+            o.archives = [["-", "list unavailable"]];
+        }
+
+        try {
+            o.security = [
+                ...o.github.filter(i => !i.name.startsWith(".")).map(i => i.name + " (application)"),
+                ...o.status.services.filter(i => i.type !== "network" && i.type !== "servers").map(i => i.label + " (service)"),
+                ...o.archives.map(i => i[0] + " (archive)")
+            ];
+            o.active = [
+                ...o.github.filter(i => !i.name.startsWith(".")).map(i => i.name + " (application)"),
+                ...o.status.services.filter(i => i.type !== "network" && i.type !== "servers").map(i => i.label + " (service)"),
+            ];
+
+            document.getElementById("request-project-list").innerHTML += o.github.map((k, j) => [k, j]).filter(i => !i[0].name.startsWith(".")).map(i => `
+                <option value="${i[1]}">${i[0].name}</option>
+            `).join("");
+
+            document.getElementById("request-service-list").innerHTML += o.status.services.map((k, j) => [k, j])
+                .filter(i => i[0].type !== "network" && i[0].type !== "servers").sort((a, b) => {
+                return a[0].label.localeCompare(b[0].label);
+            }).map(i => `
+                <option value="${i[1]}">${i[0].label}</option>
+            `).join("");
+
+            document.getElementById("request-archive-list").innerHTML += o.archives.map((k, j) => [k, j]).sort((a, b) => {
+                return a[0][0].localeCompare(b[0][0]);
+            }).map(i => `
+                <option value="${i[1]}">${i[0][0]} (${i[0][1]})</option>
+            `).join("");
+
+            let securityGroups = [...new Set(o.security.map(i => i.split("(")[1].split(")")[0]))]
+                .map(i => [" (" + i + ")", i.substring(0, 1).toUpperCase() + i.substring(1) + "s"]);
+
+            document.getElementById("request-security-list").innerHTML += securityGroups.map(i => `
+                <optgroup label="${i[1]}">
+                    ${o.security.map((k, j) => [k, j]).filter(j => j[0].endsWith(i[0])).sort((a, b) => {
+                        return a[0].localeCompare(b[0]);
+                    }).map(l => {
+                        let k = l[0]; let j = l[1];
+
+                        return `
+                            <option value="${j}">${k.substring(0, k.length - i[0].length)}</option>
+                        `;
+                    }).join("")}
+                </optgroup>
+            `).join("");
+
+            let activeGroups = [...new Set(o.active.map(i => i.split("(")[1].split(")")[0]))]
+                .map(i => [" (" + i + ")", i.substring(0, 1).toUpperCase() + i.substring(1) + "s"]);
+
+            document.getElementById("request-active-list").innerHTML += activeGroups.map(i => `
+                <optgroup label="${i[1]}">
+                    ${o.active.map((k, j) => [k, j]).filter(j => j[0].endsWith(i[0])).sort((a, b) => {
+                return a[0].localeCompare(b[0]);
+            }).map(l => {
+                let k = l[0]; let j = l[1];
+
+                return `
+                            <option value="${j}">${k.substring(0, k.length - i[0].length)}</option>
+                        `;
+            }).join("")}
+                </optgroup>
+            `).join("");
+
+            console.log(o.github, o.status, o.archives);
+            document.getElementById("request-loader").style.display = "none";
+            document.getElementById("request-form").style.display = "";
+        } catch (e) {
+            console.error(e);
+
+            if (e.stack.includes("NetworkError") || e.message.includes("NetworkError") || e.name.includes("NetworkError")) {
+                await displayError(502);
+            } else {
+                await displayError(500);
+            }
+        }
+    })();
+
+    function displayFields(fields) {
+        Array.from(document.getElementsByClassName("request-field")).map(i => i.style.display = "none");
+        for (let field of fields) {
+            document.getElementById(field).style.display = "";
+        }
+    }
+
+    function processMainList() {
+        let value = document.getElementById("request-main-list").value;
+        document.getElementById("request-form").reset();
+        document.getElementById("request-main-list").value = value;
+
+        if (value !== "_default") {
+            document.getElementById("request-main-list").classList.remove("default");
+
+            switch (value) {
+                case "0":
+                    displayFields(["request-base", "request-project"]);
+                    break;
+                case "1":
+                    displayFields(["request-base", "request-service"]);
+                    break;
+                case "2":
+                    displayFields(["request-base", "request-security"]);
+                    break;
+                case "3":
+                    displayFields(["request-base", "request-archive"]);
+                    break;
+                case "4":
+                    displayFields(["request-base", "request-active"]);
+                    break;
+                case "5":
+                    displayFields(["request-base", "request-content", "request-description"]);
+                    break;
+                case "6":
+                case "7":
+                case "9":
+                    displayFields(["request-base", "request-company"]);
+                    break;
+                case "8":
+                case "10":
+                    displayFields(["request-base", "request-description"]);
+                    break;
+            }
+        } else {
+            document.getElementById("request-main-list").classList.add("default");
+        }
+    }
+
+    function processSecondaryList(name) {
+        let value = document.getElementById("request-" + name + "-list").value;
+
+        if (value !== "_default") {
+            document.getElementById("request-" + name + "-list").classList.remove("default");
+            document.getElementById("request-description").style.display = "";
+        } else {
+            document.getElementById("request-" + name + "-list").classList.add("default");
+            document.getElementById("request-description").style.display = "none";
+        }
+    }
+
+    function processSecondaryField(name) {
+        let value = document.getElementById("request-" + name).value;
+
+        if (value.trim() !== "") {
+            document.getElementById("request-description").style.display = "";
+        } else {
+            document.getElementById("request-description").style.display = "none";
+        }
+    }
+
+    function processDescription() {
+        let value = document.getElementById("request-description-field").value;
+
+        if (value.trim().length > 10) {
+            document.getElementById("request-submit").style.display = "";
+        } else {
+            document.getElementById("request-submit").style.display = "none";
+        }
+    }
+
+    function submitRequest() {
+        alert("Not implemented");
+    }
+
+    document.getElementById("request-form").reset();
+
+    if (window.queryState.get("i")) {
+        document.getElementById("request-main-list").value = window.queryState.get("i");
+        processMainList();
+    }
+</script>
