@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Me</title>
+    <title>Starscouts: Programming, AI and servers</title>
     <script>
         if (location.hostname !== "localhost" && location.hostname !== "me.floo.fi") {
             location.href = "https://me.floo.fi";
@@ -11,6 +11,117 @@
     <link rel="stylesheet" href="/assets/css/me.css">
 </head>
 <body>
-    It's-a-me! Morio!
+    <div id="bg"></div>
+    <main>
+        <section id="header">
+            <div id="header-inner">
+                <img id="header-avatar" src="https://www.gravatar.com/avatar/890db7c4dc714ef83d95d4291bd40737.jpg?s=256" alt="Avatar">
+                <div id="header-content">
+                    <div id="header-content-inner">
+                        <h1 id="header-title">Hi, I am Starscouts.</h1>
+                        <div id="header-description">
+                            <p>I design, write, test and deploy software, train AI models, manage servers, learn about tech and dream a lot.</p>
+                            <div>she/her • [insert species here] • lead @ <a href="https://floo.fi" target="_blank">Floofi</a> • student in CS • 🇫🇷</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="header-navigation">
+                <ul>
+                    <li>
+                        <a href="https://floo.fi" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <img src="/assets/img/footer.png" alt="Floofi" width="16" height="16">
+                            </span>
+                            <span class="header-navigation-item-text">
+                                Floofi Systems
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/starscouts" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><g clip-path="url(#clip0_872_3147)"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 12.8057 6.05 12.5957C6.12 12.0759 6.33 11.726 6.56 11.5261C4.78 11.3262 2.92 10.6364 2.92 7.57743C2.92 6.70773 3.23 5.98797 3.74 5.42816C3.66 5.22823 3.38 4.40851 3.82 3.30888C3.82 3.30888 4.49 3.09895 6.02 4.1286C6.66 3.94866 7.34 3.85869 8.02 3.85869C8.7 3.85869 9.38 3.94866 10.02 4.1286C11.55 3.08895 12.22 3.30888 12.22 3.30888C12.66 4.40851 12.38 5.22823 12.3 5.42816C12.81 5.98797 13.12 6.69773 13.12 7.57743C13.12 10.6464 11.25 11.3262 9.47 11.5261C9.76 11.776 10.01 12.2558 10.01 13.0056C10.01 14.0752 10 14.9349 10 15.2049C10 15.4148 10.15 15.6647 10.55 15.5847C12.1381 15.0488 13.5182 14.0284 14.4958 12.6673C15.4735 11.3062 15.9996 9.67293 16 7.99729C16 3.57879 12.42 0 8 0Z" fill="currentColor"></path></g><defs><clipPath id="clip0_872_3147"><rect width="16" height="16" fill="white"></rect></clipPath></defs></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                GitHub
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/miapone_" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 0.5H5.75L9.48421 5.71053L14 0.5H16L10.3895 6.97368L16.5 15.5H11.25L7.51579 10.2895L3 15.5H1L6.61053 9.02632L0.5 0.5ZM12.0204 14L3.42043 2H4.97957L13.5796 14H12.0204Z" fill="currentColor"></path></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                X/Twitter
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/the.starscouts" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                Instagram
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://reddit.com/user/Minteck" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg width="16px" height="16px" viewBox="0 0 1000 890" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"></g><g id="layer102" fill="currentColor" stroke="none"><path d="M353 876 c-156 -38 -278 -152 -287 -270 -2 -29 -11 -50 -29 -68 -48 -48 -44 -122 11 -171 28 -25 83 -32 117 -14 26 13 31 13 60 -4 46 -27 136 -56 198 -64 l54 -7 26 -126 c15 -69 31 -130 36 -135 6 -6 45 -3 101 8 87 17 91 17 111 -1 49 -44 139 -4 139 61 0 50 -33 85 -81 85 -38 0 -61 -15 -84 -54 -10 -17 -134 -51 -145 -39 -3 2 -14 49 -25 103 l-21 98 46 7 c67 10 137 32 185 58 37 21 45 23 66 11 72 -40 169 19 169 103 0 30 -33 93 -50 93 -5 0 -10 17 -10 38 0 23 -12 64 -31 101 -47 93 -147 162 -277 190 -68 14 -213 13 -279 -3z"/></g></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                Reddit
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:me@floo.fi" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                Email (for personal inquiries)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://floo.fi/contact/start" target="_blank" class="header-navigation-item">
+                            <span class="header-navigation-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+                            </span>
+                            <span class="header-navigation-item-text">
+                                Contact form (for professional inquiries)
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="languages">
+            <div id="languages-list">
+                <span id="language-list-text">Writing code in</span>
+                <svg style="margin: -4px;" height="32" width="32" viewBox="0 0 144 144"><path d="m71.05 23.68c-26.06 0-47.27 21.22-47.27 47.27s21.22 47.27 47.27 47.27 47.27-21.22 47.27-47.27-21.22-47.27-47.27-47.27zm-.07 4.2a3.1 3.11 0 0 1 3.02 3.11 3.11 3.11 0 0 1 -6.22 0 3.11 3.11 0 0 1 3.2-3.11zm7.12 5.12a38.27 38.27 0 0 1 26.2 18.66l-3.67 8.28c-.63 1.43.02 3.11 1.44 3.75l7.06 3.13a38.27 38.27 0 0 1 .08 6.64h-3.93c-.39 0-.55.26-.55.64v1.8c0 4.24-2.39 5.17-4.49 5.4-2 .23-4.21-.84-4.49-2.06-1.18-6.63-3.14-8.04-6.24-10.49 3.85-2.44 7.85-6.05 7.85-10.87 0-5.21-3.57-8.49-6-10.1-3.42-2.25-7.2-2.7-8.22-2.7h-40.6a38.27 38.27 0 0 1 21.41-12.08l4.79 5.02c1.08 1.13 2.87 1.18 4 .09zm-44.2 23.02a3.11 3.11 0 0 1 3.02 3.11 3.11 3.11 0 0 1 -6.22 0 3.11 3.11 0 0 1 3.2-3.11zm74.15.14a3.11 3.11 0 0 1 3.02 3.11 3.11 3.11 0 0 1 -6.22 0 3.11 3.11 0 0 1 3.2-3.11zm-68.29.5h5.42v24.44h-10.94a38.27 38.27 0 0 1 -1.24-14.61l6.7-2.98c1.43-.64 2.08-2.31 1.44-3.74zm22.62.26h12.91c.67 0 4.71.77 4.71 3.8 0 2.51-3.1 3.41-5.65 3.41h-11.98zm0 17.56h9.89c.9 0 4.83.26 6.08 5.28.39 1.54 1.26 6.56 1.85 8.17.59 1.8 2.98 5.4 5.53 5.4h16.14a38.27 38.27 0 0 1 -3.54 4.1l-6.57-1.41c-1.53-.33-3.04.65-3.37 2.18l-1.56 7.28a38.27 38.27 0 0 1 -31.91-.15l-1.56-7.28c-.33-1.53-1.83-2.51-3.36-2.18l-6.43 1.38a38.27 38.27 0 0 1 -3.32-3.92h31.27c.35 0 .59-.06.59-.39v-11.06c0-.32-.24-.39-.59-.39h-9.15zm-14.43 25.33a3.11 3.11 0 0 1 3.02 3.11 3.11 3.11 0 0 1 -6.22 0 3.11 3.11 0 0 1 3.2-3.11zm46.05.14a3.11 3.11 0 0 1 3.02 3.11 3.11 3.11 0 0 1 -6.22 0 3.11 3.11 0 0 1 3.2-3.11z" fill="currentColor"/><path d="m115.68 70.95a44.63 44.63 0 0 1 -44.63 44.63 44.63 44.63 0 0 1 -44.63-44.63 44.63 44.63 0 0 1 44.63-44.63 44.63 44.63 0 0 1 44.63 44.63zm-.84-4.31 6.96 4.31-6.96 4.31 5.98 5.59-7.66 2.87 4.78 6.65-8.09 1.32 3.4 7.46-8.19-.29 1.88 7.98-7.98-1.88.29 8.19-7.46-3.4-1.32 8.09-6.65-4.78-2.87 7.66-5.59-5.98-4.31 6.96-4.31-6.96-5.59 5.98-2.87-7.66-6.65 4.78-1.32-8.09-7.46 3.4.29-8.19-7.98 1.88 1.88-7.98-8.19.29 3.4-7.46-8.09-1.32 4.78-6.65-7.66-2.87 5.98-5.59-6.96-4.31 6.96-4.31-5.98-5.59 7.66-2.87-4.78-6.65 8.09-1.32-3.4-7.46 8.19.29-1.88-7.98 7.98 1.88-.29-8.19 7.46 3.4 1.32-8.09 6.65 4.78 2.87-7.66 5.59 5.98 4.31-6.96 4.31 6.96 5.59-5.98 2.87 7.66 6.65-4.78 1.32 8.09 7.46-3.4-.29 8.19 7.98-1.88-1.88 7.98 8.19-.29-3.4 7.46 8.09 1.32-4.78 6.65 7.66 2.87z" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke="currentColor" fill="currentColor"/></svg>
+                <svg width="24" height="32" viewBox="0 0 48 48" xml:space="preserve"><g><path d="M48,48L0,48L0,0L48,0L23.505,23.648L48,48Z" fill="currentColor" style="fill-rule:nonzero;"/></g></svg>
+                <svg height="12" width="24" viewBox="0 0 800 400"><g transform="translate(-44.632 -141.55)"><g transform="matrix(8.3528 0 0 8.3119 -727.13 -3759.5)"><path d="m99.974 479.48h14.204c4.1693 0.0354 7.1903 1.2367 9.063 3.604 1.8726 2.3674 2.491 5.6004 1.855 9.699-0.24737 1.8727-0.79504 3.71-1.643 5.512-0.8127 1.802-1.9434 3.4273-3.392 4.876-1.7667 1.8373-3.657 3.0033-5.671 3.498-2.014 0.49467-4.0987 0.742-6.254 0.742h-6.36l-2.014 10.07h-7.367l7.579-38.001m6.201 6.042-3.18 15.9c0.21198 0.0353 0.42398 0.053 0.636 0.053h0.742c3.392 0.0353 6.2186-0.30033 8.48-1.007 2.2613-0.74199 3.7806-3.3213 4.558-7.738 0.63597-3.71-0.00003-5.8476-1.908-6.413-1.8727-0.56531-4.2224-0.83031-7.049-0.795-0.42402 0.0353-0.83035 0.053-1.219 0.053-0.35335 0.00002-0.72435 0.00002-1.113 0l0.053-0.053" fill="currentColor"/><path d="m133.49 469.36h7.314l-2.067 10.123h6.572c3.604 0.0707 6.2893 0.81269 8.056 2.226 1.802 1.4134 2.332 4.0987 1.59 8.056l-3.551 17.649h-7.42l3.392-16.854c0.35328-1.7666 0.2473-3.021-0.318-3.763-0.56536-0.74198-1.7844-1.113-3.657-1.113l-5.883-0.053-4.346 21.783h-7.314l7.632-38.054" fill="currentColor"/><path d="m162.81 479.48h14.204c4.1693 0.0354 7.1903 1.2367 9.063 3.604 1.8726 2.3674 2.491 5.6004 1.855 9.699-0.24737 1.8727-0.79503 3.71-1.643 5.512-0.8127 1.802-1.9434 3.4273-3.392 4.876-1.7667 1.8373-3.657 3.0033-5.671 3.498-2.014 0.49467-4.0987 0.742-6.254 0.742h-6.36l-2.014 10.07h-7.367l7.579-38.001m6.201 6.042-3.18 15.9c0.21199 0.0353 0.42399 0.053 0.636 0.053h0.742c3.392 0.0353 6.2186-0.30033 8.48-1.007 2.2613-0.74199 3.7806-3.3213 4.558-7.738 0.63597-3.71-0.00003-5.8476-1.908-6.413-1.8727-0.56531-4.2224-0.83031-7.049-0.795-0.42402 0.0353-0.83035 0.053-1.219 0.053-0.35335 0.00002-0.72435 0.00002-1.113 0l0.053-0.053" fill="currentColor"/></g></g></svg>
+                <svg height="24" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.5C0 1.11929 1.11929 0 2.5 0H13.5C14.8807 0 16 1.11929 16 2.5V13.5C16 14.8807 14.8807 16 13.5 16H2.5C1.11929 16 0 14.8807 0 13.5V2.5ZM12.125 9.5C11.9179 9.5 11.75 9.66789 11.75 9.875C11.75 10.0821 11.9179 10.25 12.125 10.25C13.1605 10.25 14 11.0895 14 12.125C14 13.1605 13.1605 14 12.125 14H10.5V12.5H12.125C12.3321 12.5 12.5 12.3321 12.5 12.125C12.5 11.9179 12.3321 11.75 12.125 11.75C11.0895 11.75 10.25 10.9105 10.25 9.875C10.25 8.83947 11.0895 8 12.125 8H13.5V9.5H12.125ZM5 9.5H6.25V14H7.75V9.5H9V8H7H5V9.5Z" fill="currentColor"></path></svg>
+                <svg height="24" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.5C0 1.11929 1.11929 0 2.5 0H13.5C14.8807 0 16 1.11929 16 2.5V13.5C16 14.8807 14.8807 16 13.5 16H2.5C1.11929 16 0 14.8807 0 13.5V2.5ZM7.5 8V12.125C7.5 12.3321 7.33211 12.5 7.125 12.5C6.91789 12.5 6.75 12.3321 6.75 12.125V11.75H5.25V12.125C5.25 13.1605 6.08947 14 7.125 14C8.16053 14 9 13.1605 9 12.125V8H7.5ZM11.75 9.875C11.75 9.66789 11.9179 9.5 12.125 9.5H13.5V8H12.125C11.0895 8 10.25 8.83947 10.25 9.875C10.25 10.9105 11.0895 11.75 12.125 11.75C12.3321 11.75 12.5 11.9179 12.5 12.125C12.5 12.3321 12.3321 12.5 12.125 12.5H10.5V14H12.125C13.1605 14 14 13.1605 14 12.125C14 11.0895 13.1605 10.25 12.125 10.25C11.9179 10.25 11.75 10.0821 11.75 9.875Z" fill="currentColor"></path></svg>
+            </div>
+            <div id="languages-btn">
+                <a class="btn" href="https://floo.fi/projects" target="_blank">
+                    <span>View projects</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © <a href="https://floo.fi" target="_blank">Floofi</a> • ❤️🐇
+    </footer>
 </body>
 </html>

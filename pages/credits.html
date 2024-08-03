@@ -48,7 +48,7 @@
     </a>
 
     <div id="credits-footer">
-        <p>Codename "Oliver" · <span id="credits-version">-</span><br>
+        <p>Codename "Oliver" • <span id="credits-version">-</span><br>
             © 2024 Floofi Systems, All rights reserved.</p>
         <p>Floofi, <span id="credits-projects"></span> and their logos are trademarks of Floofi Systems
             and/or are protected by applicable copyright laws in France and other countries.
@@ -61,7 +61,7 @@
 
 <script>
     document.getElementById("credits-version").innerText = "Version " + window.version.version + " (build " + window.version.build +
-        ") · Built on " + new Date(window.version.timestamp).toUTCString();
+        ") • Built on " + new Date(window.version.timestamp).toUTCString();
 
     document.getElementById("credits-projects").innerText = Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b]).map(i => i[0]).join(", ");
 </script>
