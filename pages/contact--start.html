@@ -45,7 +45,8 @@
                 <option value="7">Discuss a project or an idea for an organization</option>
                 <option value="8">Submit a project or feature request</option>
                 <option value="9">Discuss the Floofi for Nonprofits programme</option>
-                <option value="10">Something else</option>
+                <option value="10">Copyright/DMCA takedown or legal request</option>
+                <option value="11">Something else</option>
             </select>
         </label>
 
@@ -266,10 +267,11 @@
                 case "6":
                 case "7":
                 case "9":
+                case "10":
                     displayFields(["request-base", "request-company"]);
                     break;
                 case "8":
-                case "10":
+                case "11":
                     displayFields(["request-base", "request-description"]);
                     break;
             }
@@ -358,6 +360,7 @@
             case "6":
             case "7":
             case "9":
+            case "10":
                 body += document.getElementById("request-company").children[0].innerText + ": ";
                 body += document.getElementById("request-company-name").value;
                 body += "\n\n";
