@@ -13,7 +13,7 @@
           "value": "me.floo.fi"
         }
       ],
-      "destination": "/me"
+      "destination": "/me/index.html"
     },
     {
       "source": "/",
@@ -24,7 +24,7 @@
           "value": "me.floo.fi"
         }
       ],
-      "destination": "/me"
+      "destination": "/me/index.html"
     },
     {
       "source": "/((?!assets|pages|security.txt|warrant.txt|publickey.txt|.well-known))(.*)",
@@ -33,9 +33,14 @@
           "type": "header",
           "key": "host",
           "value": "me.floo.fi"
+        },
+        {
+          "type": "header",
+          "key": "host",
+          "value": "localhost:3000"
         }
       ],
-      "destination": "/"
+      "destination": "/app.html"
     },
     {
       "source": "/.well-known/security.txt",
@@ -78,28 +83,6 @@
     {
       "source": "/assets/img/logo.svg",
       "destination": "/assets/img/wordmark.png"
-    },
-    {
-      "source": "/me/(.*)",
-      "missing": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "me.floo.fi"
-        }
-      ],
-      "destination": "https://me.floo.fi"
-    },
-    {
-      "source": "/me",
-      "missing": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "me.floo.fi"
-        }
-      ],
-      "destination": "https://me.floo.fi"
     }
   ]
 }

@@ -1,0 +1,35 @@
+/* Font */
+@font-face {
+    src: url("/assets/font/mono.woff2");
+    font-family: "DOS";
+    font-weight: 400;
+}
+
+/* Color */
+:root {
+    --ansi-black: #000000;
+    --ansi-red: #800000;
+    --ansi-green: #008000;
+    --ansi-yellow: #808000;
+    --ansi-blue: #000080;
+    --ansi-magenta: #800080;
+    --ansi-cyan: #008080;
+    --ansi-gray: #808080;
+    --ansi-gray-light: #c0c0c0;
+    --ansi-red-light: #ff0000;
+    --ansi-green-light: #00ff00;
+    --ansi-yellow-light: #ffff00;
+    --ansi-blue-light: #0000ff;
+    --ansi-magenta-light: #ff00ff;
+    --ansi-cyan-light: #00ffff;
+    --ansi-white: #ffffff;
+}
+
+/* Core */
+body, html {
+    margin: 0;
+    background-color: var(--ansi-black);
+    color: var(--ansi-gray-light);
+    font-family: "DOS", sans-serif;
+    text-rendering: geometricPrecision;
+}
