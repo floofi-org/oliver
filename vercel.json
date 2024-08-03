@@ -33,6 +33,22 @@
     {
       "source": "/legal/license",
       "destination": "/legal/disclaimers"
+    },
+    {
+      "source": "/assets/favicon2.svg",
+      "destination": "/assets/img/favicon.png"
+    },
+    {
+      "source": "/assets/favicon.svg",
+      "destination": "/assets/img/favicon.png"
+    },
+    {
+      "source": "/assets/img/favicon.svg",
+      "destination": "/assets/img/favicon.png"
+    },
+    {
+      "source": "/assets/img/logo.svg",
+      "destination": "/assets/img/wordmark.png"
     }
   ]
 }

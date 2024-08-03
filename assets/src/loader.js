@@ -44,7 +44,7 @@ async function loadPage(page) {
         .find(i => i[1]['id'] === location.pathname.split("/")[2])) || page !== "/projects-page")) {
         setInnerHTML(document.getElementById("page"), await res.text());
     } else if (res.status === 404 || page === "/projects-page") {
-        await displayError(400);
+        await displayError(404);
         return;
     } else {
         await displayError(500);
