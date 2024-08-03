@@ -21,6 +21,18 @@
     {
       "source": "/warrant",
       "destination": "/warrant.txt"
+    },
+    {
+      "source": "/legal/notices",
+      "destination": "/legal/disclaimers"
+    },
+    {
+      "source": "/legal/branding",
+      "destination": "/legal/disclaimers"
+    },
+    {
+      "source": "/legal/license",
+      "destination": "/legal/disclaimers"
     }
   ]
 }
