@@ -6,7 +6,25 @@
     },
     {
       "source": "/((?!assets|pages|security.txt|warrant.txt|publickey.txt|.well-known))(.*)",
+      "missing": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "me.floo.fi"
+        }
+      ],
       "destination": "/"
+    },
+    {
+      "source": "/((?!assets|security.txt|warrant.txt|publickey.txt|me|.well-known))(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "me.floo.fi"
+        }
+      ],
+      "destination": "/me"
     },
     {
       "source": "/.well-known/security.txt",
@@ -49,6 +67,28 @@
     {
       "source": "/assets/img/logo.svg",
       "destination": "/assets/img/wordmark.png"
+    },
+    {
+      "source": "/me/(.*)",
+      "missing": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "me.floo.fi"
+        }
+      ],
+      "destination": "https://me.floo.fi"
+    },
+    {
+      "source": "/me",
+      "missing": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "me.floo.fi"
+        }
+      ],
+      "destination": "https://me.floo.fi"
     }
   ]
 }
