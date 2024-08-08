@@ -176,4 +176,9 @@ footer {
         flex-flow: row wrap;
         justify-content: center;
     }
+
+    .mobile-break {
+        font-size: 0;
+        display: block;
+    }
 }
