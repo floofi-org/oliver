@@ -6,6 +6,7 @@ release["build"] = (parseInt(release['build'].split(".")[0]) + 1) + "." + releas
 
 require('fs').writeFileSync("./assets/data/release.json", JSON.stringify(release, null, 2));
 require('child_process').execSync("vercel --prod", { stdio: "inherit" });
+require('child_process').execSync("vercel --prod", { stdio: "inherit", cwd: "./shortener" });
 
 require('child_process').execSync("git add -A");
 require('child_process').execSync("git commit", { stdio: "inherit" });
