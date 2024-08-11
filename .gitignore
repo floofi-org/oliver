@@ -1,4 +1,3 @@
 .vercel
 shortener/.vercel
 node_modules
-.env.development.local

@@ -20,17 +20,18 @@ module.exports = {
     },
     GET: async (request) => {
         let url = new URL(request.url);
+        let config = await get("oliver");
 
         if (url.searchParams.has("code")) {
             console.log("Got authentication callback code from server");
             let res = await fetch("https://account.equestria.dev/hub/api/rest/oauth2/token", {
                 method: "POST",
                 headers: {
-                    'Authorization': "Basic " + btoa(await get("oliver.id") + ":" + await get("oliver.secret")),
+                    'Authorization': "Basic " + btoa(config['id'] + ":" + config['secret']),
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Accept': 'application/json'
                 },
-                body: "grant_type=authorization_code&redirect_uri=" + encodeURIComponent(await get("oliver.redirect")) + "&code=" + url.searchParams.get("code")
+                body: "grant_type=authorization_code&redirect_uri=" + encodeURIComponent(config['redirect']) + "&code=" + url.searchParams.get("code")
             });
             let data = await res.json();
 
@@ -43,7 +44,7 @@ module.exports = {
                     }
                 });
                 let userData = await res.json();
-                let allowed = await get("oliver.allowed");
+                let allowed = config['allowed'];
 
                 if (!allowed.includes(userData['id'])) {
                     console.log("User is not allowed: " + userData['id']);
@@ -99,7 +100,7 @@ module.exports = {
         return new Response(null, {
             status: 307,
             headers: {
-                Location: "https://account.equestria.dev/hub/api/rest/oauth2/auth?client_id=" + await get("oliver.id") + "&response_type=code&redirect_uri=" + encodeURIComponent(await get("oliver.redirect")) + "&scope=Hub&request_credentials=default&access_type=offline"
+                Location: "https://account.equestria.dev/hub/api/rest/oauth2/auth?client_id=" + config['id'] + "&response_type=code&redirect_uri=" + encodeURIComponent(config['redirect']) + "&scope=Hub&request_credentials=default&access_type=offline"
             }
         });
     }
