@@ -38,11 +38,6 @@
       "destination": "https://equestria.dev"
     },
     {
-      "source": "/ls(.*)",
-      "destination": "https://delta.equestria.dev/$1",
-      "permanent": true
-    },
-    {
       "source": "/d/:domain([a-z\\d.]*).floo.fi",
       "destination": "https://:domain.equestria.dev",
       "permanent": true
@@ -79,17 +74,12 @@
     },
     {
       "source": "/g",
-      "destination": "https://source.equestria.dev/equestria.dev",
-      "permanent": true
-    },
-    {
-      "source": "/n",
-      "destination": "https://notifications.equestria.dev",
+      "destination": "https://github.com/equestria-dev",
       "permanent": true
     },
     {
       "source": "/pl",
-      "destination": "https://plex.p.equestria.dev",
+      "destination": "https://plex.floo.fi",
       "permanent": true
     },
     {
@@ -109,7 +99,7 @@
     },
     {
       "source": "/gpg",
-      "destination": "https://github.com/RaindropsSys.gpg",
+      "destination": "https://equestria.dev/pubkey",
       "permanent": true
     },
     {
@@ -149,12 +139,7 @@
     },
     {
       "source": "/l",
-      "destination": "https://live.p.equestria.dev/",
-      "permanent": true
-    },
-    {
-      "source": "/cr",
-      "destination": "https://school.equestria.dev/",
+      "destination": "https://live.floo.fi/",
       "permanent": true
     },
     {
@@ -164,7 +149,7 @@
     },
     {
       "source": "/w",
-      "destination": "https://wishlist.p.equestria.dev/",
+      "destination": "https://wishlist.floo.fi/",
       "permanent": true
     },
     {
