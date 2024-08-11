@@ -39,6 +39,14 @@
       "icon": "<svg class=\"navbar-category-section-item-icon-img\" height=\"16\" stroke-linejoin=\"round\" style=\"color: currentcolor;\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5ZM6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C8.02469 13 9.42677 12.475 10.5353 11.596L13.9697 15.0303L14.5 15.5607L15.5607 14.5L15.0303 13.9697L11.596 10.5353C12.475 9.42677 13 8.02469 13 6.5C13 2.91015 10.0899 0 6.5 0Z\" fill=\"currentColor\"></path></svg>",
       "link": "https://status.floo.fi",
       "source": "https://github.com/floofi-org/status"
+    },
+    "Surrounder": {
+      "id": "surrounder",
+      "description": "Spatial audio generation",
+      "longDescription": "Powered by cutting-edge technology, Surrounder can turn any stereo song into a spatial audio or surround version.",
+      "icon": "<svg class=\"navbar-category-section-item-icon-img\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+      "link": "https://equestriadev.gitbook.io/surrounder/",
+      "source": "https://github.com/floofi-org/surrounder"
     }
   }
 }
