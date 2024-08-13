@@ -136,6 +136,9 @@ body, html {
 .btn-cta-text {
     padding-left: 6px;
     padding-right: 6px;
+    word-wrap: unset;
+    word-break: manual;
+    white-space: nowrap;
 }
 
 .btn-cta-icon {
