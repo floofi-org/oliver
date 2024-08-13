@@ -21,6 +21,7 @@ module.exports = {
     GET: async (request) => {
         let url = new URL(request.url);
         let config = await get("oliver");
+        let redirect = process.env.VERCEL_REGION === "dev1" ? "http://localhost:3000/" : config['redirect'];
 
         if (url.searchParams.has("code")) {
             console.log("Got authentication callback code from server");
@@ -31,7 +32,7 @@ module.exports = {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Accept': 'application/json'
                 },
-                body: "grant_type=authorization_code&redirect_uri=" + encodeURIComponent(config['redirect']) + "&code=" + url.searchParams.get("code")
+                body: "grant_type=authorization_code&redirect_uri=" + encodeURIComponent(redirect) + "&code=" + url.searchParams.get("code")
             });
             let data = await res.json();
 
@@ -100,7 +101,7 @@ module.exports = {
         return new Response(null, {
             status: 307,
             headers: {
-                Location: "https://account.equestria.dev/hub/api/rest/oauth2/auth?client_id=" + config['id'] + "&response_type=code&redirect_uri=" + encodeURIComponent(config['redirect']) + "&scope=Hub&request_credentials=default&access_type=offline"
+                Location: "https://account.equestria.dev/hub/api/rest/oauth2/auth?client_id=" + config['id'] + "&response_type=code&redirect_uri=" + encodeURIComponent(redirect) + "&scope=Hub&request_credentials=default&access_type=offline"
             }
         });
     }
