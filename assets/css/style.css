@@ -445,6 +445,11 @@ body, html {
     #app, #loader {
         padding-bottom: 32px;
     }
+
+    .mobile-break {
+        font-size: 0;
+        display: block;
+    }
 }
 
 /* Error page */

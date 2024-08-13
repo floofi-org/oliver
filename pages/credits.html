@@ -49,7 +49,7 @@
         <p>Codename "Oliver" • <span id="credits-version">-</span><br>
             © 2024 Floofi Systems, All rights reserved.</p>
         <p>The Judy Hopps name and character are © Disney, All rights reserved. The Sunny Starscout name and character
-            are © Hasbro, All rights reserved. <a class="link" href="/contact/start?i=10">Contact us to report a
+            are © Hasbro, All rights reserved.<br><a class="link" href="/contact/start?i=10">Contact us to report a
             copyright infrigment.</a></p>
         <p>Floofi, <span id="credits-projects"></span>, all the archived projects and their logos are trademarks of Floofi
             Systems and/or are protected by applicable copyright laws in France and other countries.
@@ -64,8 +64,8 @@
 </section>
 
 <script>
-    document.getElementById("credits-version").innerText = "Version " + window.version.version + " (build " + window.version.build +
-        ") • Built on " + new Date(window.version.timestamp).toUTCString();
+    document.getElementById("credits-version").innerHTML = "Version " + window.version.version + " (build " + window.version.build +
+        ")<span class='mobile-break'> • </span>Built on " + new Date(window.version.timestamp).toUTCString();
 
     document.getElementById("credits-projects").innerText = Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b]).map(i => i[0]).join(", ");
 </script>
