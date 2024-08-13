@@ -677,13 +677,14 @@ body, html {
 
 /* Home page */
 #home-notice {
-    height: 48px;
+    height: max-content;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 9;
     text-align: center;
     justify-content: center;
+    min-height: 48px;
 }
 
 #home-notice-btn {
