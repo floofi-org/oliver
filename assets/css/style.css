@@ -1512,3 +1512,153 @@ blockquote {
         transition: none !important;
     }
 }
+
+@media (prefers-contrast: more) or (prefers-contrast: custom) {
+    *, .footer-inner-listing-item, #home-hero-title-tagline, .navbar-navigation-item, .navbar-category-section-header {
+        color: white;
+    }
+
+    .navbar-category-section-item-text-description, #project-section-text-description {
+        color: white !important;
+    }
+
+    .navbar-category-section-item:hover .navbar-category-section-item-icon-container,
+    .navbar-category-section-item:hover .navbar-category-section-item-icon-container * {
+        color: black !important;
+        background-color: white;
+    }
+
+    .navbar-category-section-item-icon-container, #navbar-category, .disclaimers-card-inner, #home-cta, .home-card {
+        border: 1px solid white;
+    }
+
+    #disclaimers-footer, #credits-footer {
+        font-style: oblique;
+    }
+
+    #debug {
+        text-shadow: 1px 1px 0 black;
+        color: white;
+        opacity: 1;
+    }
+
+    #navbar-category-indicator-icon path:nth-child(2) {
+        fill: white !important;
+    }
+
+    #navbar, #mobile-navbar {
+        box-shadow: none;
+        border-bottom: 1px solid white;
+    }
+
+    #navbar.no-border, #mobile-navbar.no-border {
+        border-bottom-color: transparent;
+    }
+
+    .navbar-navigation-item:hover, .navbar-navigation-item.open, .navbar-navigation-item-chevron-open,
+    .navbar-navigation-item-chevron-open * {
+        color: black !important;
+        background-color: white;
+    }
+
+    .btn-primary {
+        background-color: white;
+        border: 1px solid white;
+    }
+
+    .btn-primary:hover {
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    .btn-secondary {
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    .btn-secondary:hover {
+        background-color: white;
+        border: 1px solid white;
+    }
+
+    .btn-primary, .btn-secondary:hover, .btn-primary *, .btn-secondary:hover * {
+        color: black !important;
+    }
+
+    .btn-primary:hover, .btn-secondary, .btn-primary:hover *, .btn-secondary *, #footer-inner-general-copyright,
+    #footer-inner-general-version, .contact-grid-item-secondary, .contact-grid-item-text {
+        color: white !important;
+    }
+
+    #footer-inner-general-status-indicator, #contact-status-indicator {
+        display: none;
+    }
+
+    .badge-beta {
+        color: black;
+        background-color: white;
+    }
+
+    .footer-inner-listing-title, .navbar-category-section-header {
+        text-decoration: underline;
+    }
+
+    #footer-inner-general-icon {
+        filter: contrast(0%) brightness(2000);
+    }
+
+    .archives-list-item {
+        background: black !important;
+        border-color: white;
+    }
+
+    .archives-list-item:hover {
+        background: white !important;
+    }
+
+    .archives-list-item:hover, .archives-list-item:hover * {
+        color: black !important;
+    }
+
+    .archives-list-item-inner {
+        background: transparent !important;
+        -webkit-background-clip: inherit !important;
+        background-clip: inherit !important;
+        -webkit-text-fill-color: inherit;
+    }
+
+    .text-section a[href].link:hover, .text-section .linked a[href]:hover, .text-section.linked a[href]:hover {
+        opacity: 1 !important;
+        text-decoration: none;
+    }
+
+    #credits-powered-logo {
+        filter: brightness(10);
+    }
+
+    .request-form-control {
+        background-color: black;
+        border-color: white;
+        color: white !important;
+    }
+
+    .request-form-control:hover, .request-form-control:focus {
+        background-color: white;
+        border-color: white;
+        color: black !important;
+    }
+
+    .request-form-control::placeholder {
+        color: white !important;
+        opacity: 1 !important;
+    }
+
+    .request-form-control:hover::placeholder, .request-form-control:focus::placeholder {
+        color: black !important;
+        opacity: 1 !important;
+    }
+
+    .request-form-control::placeholder, .request-form-control.default {
+        font-style: oblique;
+    }
+}
