@@ -171,6 +171,17 @@ footer {
         text-align: center;
     }
 
+    #languages {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    #languages-btn {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #languages-list {
         flex: 1;
         flex-flow: row wrap;
