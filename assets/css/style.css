@@ -491,6 +491,10 @@ body, html {
 
 /* Mobile navbar */
 @media (max-width: 900px) {
+    body:has(.mobile-open) {
+        overflow: hidden;
+    }
+
     #mobile-navbar {
         display: flex;
     }
@@ -1490,4 +1494,12 @@ blockquote {
 
 .request-alternative-email summary {
     cursor: pointer;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }
