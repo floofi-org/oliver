@@ -200,3 +200,35 @@ footer {
         background-color: black;
     }
 }
+
+@media (prefers-contrast: more) or (prefers-contrast: custom) {
+    a:hover {
+        color: white;
+        opacity: 1 !important;
+        text-decoration: none;
+    }
+
+    section, .btn {
+        background-color: black;
+        border-color: white;
+    }
+
+    #header-inner {
+        border-color: white;
+    }
+
+    .header-navigation-item:hover, .btn:hover {
+        background-color: white;
+        border-color: white;
+        color: black;
+    }
+
+    footer, .hc {
+        opacity: 1;
+        filter: contrast(0%) brightness(2000);
+    }
+
+    .header-navigation-item:hover #floofi-logo {
+        filter: contrast(0%) brightness(0);
+    }
+}
