@@ -23,7 +23,7 @@
                 </a>
                 `);
 
-            document.getElementById(`project-card-${project[1]['id']}`).onmousemove = (e) => {
+            document.getElementById(`project-card-${project[1]['id']}`).onmousemove = p1 = (e) => {
                 let x = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().x;
                 let y = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().y;
                 let bg = document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0];
@@ -33,9 +33,11 @@
                 bg.style.backgroundPosition = (-(size / 2) + (e.clientX - x)) + "px " + (-(size / 2) + (e.clientY - y)) + "px";
                 bg.style.width = document.getElementById(`project-card-${project[1]['id']}`).clientWidth + "px";
                 bg.style.height = document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px";
+                document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-inner")[0].style.height =
+                    "calc(" + document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px - 42px)";
             }
 
-            document.getElementById(`project-card-${project[1]['id']}`).onmouseleave = () => {
+            document.getElementById(`project-card-${project[1]['id']}`).onmouseleave = p2 = () => {
                 document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0].style.opacity = "0";
             }
         }

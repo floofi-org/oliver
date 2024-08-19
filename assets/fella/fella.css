@@ -1,0 +1,363 @@
+/* Fella version 0.1.0 */
+
+/* Core */
+@font-face {
+    src: url("font.woff2");
+    font-family: "Geist Sans";
+    font-weight: 400;
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--fella-bg-main);
+    color: var(--fella-text-main);
+    font-family: "Geist Sans", sans-serif;
+    text-rendering: optimizeLegibility;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.fella-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.fella-loader {
+    height: 32px;
+    width: 32px;
+}
+
+.fella-loader-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Colors */
+:root {
+    --fella-bg-main: #000;
+    --fella-bg-secondary: #0a0a0a;
+    --fella-bg-secondary-dim: hsl(0, 0%, 12%);
+    --fella-text-main: #ededed;
+    --fella-text-secondary: #a1a1a1;
+    --fella-text-tertiary: #888;
+    --fella-text-dim: #ccc;
+    --fella-border: #ffffff23;
+    --fella-border-dim: #ffffff19;
+    --fella-border-vercel: #5e5e5e;
+    --fella-border-plain: #2e2e2e;
+
+    --fella-positive-rgb: 0, 114, 245;
+    --fella-positive-0: rgba(var(--fella-positive-rgb), 0);
+    --fella-positive-25: rgba(var(--fella-positive-rgb), .25);
+    --fella-positive-50: rgba(var(--fella-positive-rgb), .5);
+    --fella-positive-75: rgba(var(--fella-positive-rgb), .75);
+    --fella-positive-100: rgb(var(--fella-positive-rgb));
+    --fella-positive-brighter-1-rgb: 61, 147, 245;
+    --fella-positive-brighter-1: rgb(var(--fella-positive-brighter-1-rgb));
+    --fella-positive-brighter-2-rgb: 122, 180, 245;
+    --fella-positive-brighter-2: rgb(var(--fella-positive-brighter-2-rgb));
+    --fella-positive-brighter-2-33: rgb(var(--fella-positive-brighter-2-rgb), .33);
+    --fella-positive-brighter-2-0: rgb(var(--fella-positive-brighter-2-rgb), 0);
+
+    --fella-warning-rgb: 255, 178, 36;
+    --fella-warning-0: rgba(var(--fella-warning-rgb), 0);
+    --fella-warning-25: rgba(var(--fella-warning-rgb), .25);
+    --fella-warning-50: rgba(var(--fella-warning-rgb), .5);
+    --fella-warning-75: rgba(var(--fella-warning-rgb), .75);
+    --fella-warning-100: rgb(var(--fella-warning-rgb));
+    --fella-warning-brighter-1-rgb: 255, 201, 99;
+    --fella-warning-brighter-1: rgb(var(--fella-warning-brighter-1-rgb));
+    --fella-warning-brighter-2-rgb: 255, 223, 163;
+    --fella-warning-brighter-2: rgb(var(--fella-warning-brighter-2-rgb));
+    --fella-warning-brighter-2-33: rgb(var(--fella-warning-brighter-2-rgb), .33);
+    --fella-warning-brighter-2-0: rgb(var(--fella-warning-brighter-2-rgb), 0);
+
+    --fella-negative-rgb: 229, 72, 77;
+    --fella-negative-0: rgba(var(--fella-negative-rgb), 0);
+    --fella-negative-25: rgba(var(--fella-negative-rgb), .25);
+    --fella-negative-50: rgba(var(--fella-negative-rgb), .5);
+    --fella-negative-75: rgba(var(--fella-negative-rgb), .75);
+    --fella-negative-100: rgb(var(--fella-negative-rgb));
+    --fella-negative-brighter-1-rgb: 230, 129, 132;
+    --fella-negative-brighter-1: rgb(var(--fella-negative-brighter-1-rgb));
+    --fella-negative-brighter-2-rgb: 230, 186, 187;
+    --fella-negative-brighter-2: rgb(var(--fella-negative-brighter-2-rgb));
+    --fella-negative-brighter-2-33: rgb(var(--fella-negative-brighter-2-rgb), .33);
+    --fella-negative-brighter-2-0: rgb(var(--fella-negative-brighter-2-rgb), 0);
+
+    --fella-neutral-rgb: 142, 142, 142;
+    --fella-neutral-0: rgba(var(--fella-neutral-rgb), 0);
+    --fella-neutral-25: rgba(var(--fella-neutral-rgb), .25);
+    --fella-neutral-50: rgba(var(--fella-neutral-rgb), .5);
+    --fella-neutral-75: rgba(var(--fella-neutral-rgb), .75);
+    --fella-neutral-100: rgb(var(--fella-neutral-rgb));
+    --fella-neutral-brighter-1-rgb: 206, 206, 206;
+    --fella-neutral-brighter-1: rgb(var(--fella-neutral-brighter-1-rgb));
+    --fella-neutral-brighter-2-rgb: 255, 255, 255;
+    --fella-neutral-brighter-2: rgb(var(--fella-neutral-brighter-2-rgb));
+    --fella-neutral-brighter-2-33: rgb(var(--fella-neutral-brighter-2-rgb), .33);
+    --fella-neutral-brighter-2-0: rgb(var(--fella-neutral-brighter-2-rgb), 0);
+}
+
+/* Buttons */
+.fella-btn-secondary {
+    box-shadow: 0 0 0 1px var(--fella-border);
+    color: var(--fella-text-main);
+    background-color: var(--fella-bg-secondary);
+}
+
+.fella-btn {
+    transition-property: border-color, background-color, color, transform, box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.fella-btn-large {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.fella-btn-flush {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fella-btn-round {
+    border-radius: 9999px;
+    width: 24px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.fella-btn-secondary:hover {
+    background-color: var(--fella-bg-secondary-dim);
+}
+
+.fella-btn-primary {
+    background-color: var(--fella-text-main);
+    color: var(--fella-bg-secondary);
+}
+
+.fella-btn-primary:hover {
+    background-color: var(--fella-text-dim);
+}
+
+.fella-btn-cta {
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 999px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.fella-btn-cta-small {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 999px;
+    height: 40px;
+    font-size: .875rem;
+}
+
+.fella-btn-cta-text {
+    padding-left: 6px;
+    padding-right: 6px;
+    word-wrap: unset;
+    word-break: manual;
+    white-space: nowrap;
+}
+
+.fella-btn-cta-icon {
+    margin-right: 2px;
+    width: 20px;
+}
+
+/* Navigation */
+.fella-nav {
+    background-color: var(--fella-bg-main);
+    box-shadow: 0 1px 0 0 var(--fella-border-dim);
+    backdrop-filter: none;
+    border: none;
+    transition: box-shadow 150ms;
+    height: 64px;
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.fella-nav-inner {
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 1400px;
+    flex: 1;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fella-nav.fella-nav-no-border {
+    box-shadow: none;
+}
+
+.fella-nav-icon {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.fella-nav-subtitle {
+    padding: 8px 12px;
+    color: var(--fella-text-tertiary);
+    font-size: 14px;
+    line-height: 1;
+    height: 14px;
+}
+
+.fella-nav-left, .fella-nav-right {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    height: 30px;
+    gap: 12px;
+}
+
+.fella-nav-right {
+    justify-content: right;
+}
+
+/* Error */
+.fella-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    position: fixed;
+    z-index: 9;
+    text-align: center;
+    background-color: var(--fella-bg-main);
+}
+
+.fella-error-icon {
+    width: 196px;
+    height: 196px;
+}
+
+.fella-error-btn {
+    margin: 12px auto 24px;
+    cursor: pointer;
+}
+
+.fella-error-title {
+    color: var(--fella-text-main);
+    margin: 64px 0 8px;
+    font-weight: 700;
+    letter-spacing: -0.066875rem;
+    line-height: 3.5rem;
+    font-size: 3rem;
+}
+
+.fella-error-message {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin: 12px 0;
+    color: var(--fella-text-secondary);
+    height: 48px;
+}
+
+/* Card */
+.fella-card {
+    border: 1px solid var(--fella-border-plain);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.fella-card-lg {
+    padding: 20px 30px;
+}
+
+/* List */
+.fella-list-item {
+    border-bottom: 1px solid var(--fella-border-plain);
+}
+
+.fella-list-item:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.fella-list-item-lg {
+    padding: 10px 30px;
+}
+
+.fella-list-link {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.fella-list-link:hover {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+
+.fella-list-link:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fella-list-link:nth-last-child(1) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Footer */
+.fella-footnotes {
+    color: var(--fella-text-secondary);
+}
+
+/* Badge */
+.fella-badge-label {
+    color: var(--fella-text-tertiary);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.fella-badge {
+    filter: none !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border: 1px solid var(--fella-border-plain);
+    border-radius: 3px;
+}
+
+.fella-badge-icon {
+    filter: contrast(0%) brightness(0%) invert(1) !important;
+    opacity: 0.533;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
