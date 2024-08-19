@@ -2,11 +2,11 @@
     document.title = "Send a Request – Floofi";
 </script>
 
-<section id="request" class="text-section">
-    <h2 class="title">Send a Request</h2>
+<section id="request" class="fella-section">
+    <h2 class="fella-title">Send a Request</h2>
 
     <div id="request-loader">
-        <img id="request-loader-img" src="/assets/img/loading.svg" alt="Loading...">
+        <img class="fella-loader" id="request-loader-img" src="/assets/img/loading.svg" alt="Loading...">
         <div>Preparing your request... Please wait.</div>
     </div>
 
@@ -14,8 +14,8 @@
         <p>Thank you for providing this information.</p>
         <p>To continue, please email us. The button below will automatically open your favorite email client with all the information you provided earlier. If it does not work, email <span id="request-email-address">hi<span style="display: none;">antispam</span>[at]floo[dot]fi<span style="display: none;">.invalid</span></span> manually with the details you can see below.</p>
 
-        <a style="cursor: pointer;" id="request-email-link" class="btn btn-primary btn-cta request-cta">
-            <span class="btn-cta-text">Send an Email</span>
+        <a style="cursor: pointer;" id="request-email-link" class="fella-btn fella-btn-primary fella-btn-cta fella-cta">
+            <span class="fella-btn-cta-text">Send an Email</span>
         </a>
 
         <details class="request-alternative-email">
@@ -30,10 +30,10 @@
         </details>
     </div>
 
-    <form id="request-form" style="display: none;">
+    <form id="request-form" class="fella-form" style="display: none;">
         <label id="request-base" class="request-field">
-            <span class="request-form-header">What is the reason for your request?</span>
-            <select class="request-form-control default" onchange="processMainList();" id="request-main-list">
+            <span class="fella-form-header">What is the reason for your request?</span>
+            <select class="fella-form-control default" onchange="processMainList();" id="request-main-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="0">Report an issue with an application</option>
                 <option value="1">Report an issue with a service</option>
@@ -51,63 +51,63 @@
         </label>
 
         <label id="request-project" style="display: none;" class="request-field">
-            <span class="request-form-header">Which application is affected by your issue?</span>
-            <select class="request-form-control default" onchange="processSecondaryList('project');" id="request-project-list">
+            <span class="fella-form-header">Which application is affected by your issue?</span>
+            <select class="fella-form-control default" onchange="processSecondaryList('project');" id="request-project-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="_unlisted">Unlisted application</option>
             </select>
         </label>
 
         <label id="request-service" style="display: none;" class="request-field">
-            <span class="request-form-header">Which service is affected by your issue?</span>
-            <select class="request-form-control default" onchange="processSecondaryList('service');" id="request-service-list">
+            <span class="fella-form-header">Which service is affected by your issue?</span>
+            <select class="fella-form-control default" onchange="processSecondaryList('service');" id="request-service-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="_unlisted">Unlisted service</option>
             </select>
         </label>
 
         <label id="request-archive" style="display: none;" class="request-field">
-            <span class="request-form-header">Which project do you need help with?</span>
-            <select class="request-form-control default" onchange="processSecondaryList('archive');" id="request-archive-list">
+            <span class="fella-form-header">Which project do you need help with?</span>
+            <select class="fella-form-control default" onchange="processSecondaryList('archive');" id="request-archive-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="_unlisted">Unlisted project</option>
             </select>
         </label>
 
         <label id="request-active" style="display: none;" class="request-field">
-            <span class="request-form-header">Which application or service do you need help with?</span>
-            <select class="request-form-control default" onchange="processSecondaryList('active');" id="request-active-list">
+            <span class="fella-form-header">Which application or service do you need help with?</span>
+            <select class="fella-form-control default" onchange="processSecondaryList('active');" id="request-active-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="_unlisted">Unlisted application or service</option>
             </select>
         </label>
 
         <label id="request-security" style="display: none;" class="request-field">
-            <span class="request-form-header">Which project or service is affected by your issue?</span>
-            <select class="request-form-control default" onchange="processSecondaryList('security');" id="request-security-list">
+            <span class="fella-form-header">Which project or service is affected by your issue?</span>
+            <select class="fella-form-control default" onchange="processSecondaryList('security');" id="request-security-list">
                 <option value="_default" selected disabled>Select an option</option>
                 <option value="_unlisted">Unlisted or other</option>
             </select>
         </label>
 
         <label id="request-content" style="display: none;" class="request-field">
-            <span class="request-form-header">Enter the identifier (ID) of the affected content or user (if applicable)</span>
-            <input class="request-form-control" placeholder="Enter an identifier" id="request-content-name">
+            <span class="fella-form-header">Enter the identifier (ID) of the affected content or user (if applicable)</span>
+            <input class="fella-form-control" placeholder="Enter an identifier" id="request-content-name">
         </label>
 
         <label id="request-company" style="display: none;" class="request-field">
-            <span class="request-form-header">Enter the name of your organization or your own name</span>
-            <input class="request-form-control" placeholder="Enter a name" onchange="processSecondaryField('company-name');" onkeyup="processSecondaryField('company-name');" id="request-company-name">
+            <span class="fella-form-header">Enter the name of your organization or your own name</span>
+            <input class="fella-form-control" placeholder="Enter a name" onchange="processSecondaryField('company-name');" onkeyup="processSecondaryField('company-name');" id="request-company-name">
         </label>
 
         <label id="request-description" style="display: none;" class="request-field">
-            <span class="request-form-header">Describe your request in detail</span>
-            <textarea class="request-form-control" placeholder="Enter a description, at least 10 characters" onchange="processDescription();" onkeyup="processDescription();" id="request-description-field" rows="5"></textarea>
+            <span class="fella-form-header">Describe your request in detail</span>
+            <textarea class="fella-form-control" placeholder="Enter a description, at least 10 characters" onchange="processDescription();" onkeyup="processDescription();" id="request-description-field" rows="5"></textarea>
         </label>
 
         <label id="request-submit" style="display: none;" class="request-field">
-            <a style="cursor: pointer;" onclick="submitRequest();" class="btn btn-primary btn-cta request-cta">
-                <span class="btn-cta-text">Continue</span>
+            <a style="cursor: pointer;" onclick="submitRequest();" class="fella-btn fella-btn-primary fella-btn-cta fella-cta">
+                <span class="fella-btn-cta-text">Continue</span>
             </a>
         </label>
     </form>

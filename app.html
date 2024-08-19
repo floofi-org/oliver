@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <title>Floofi</title>
     <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/fella/fella.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-    <header id="mobile-navbar" class="no-border">
-        <nav id="mobile-navbar-inner">
-            <div id="mobile-navbar-inner-left">
+    <header id="mobile-navbar" class="fella-nav fella-nav-no-border fella-nav-mobile">
+        <nav id="mobile-navbar-inner" class="fella-nav-inner">
+            <div id="mobile-navbar-inner-left" class="fella-nav-left">
                 <div id="mobile-navbar-logo">
-                    <a href="/" id="mobile-navbar-logo-link">
-                        <img src="/assets/img/wordmark.png" alt="Floofi" id="mobile-navbar-logo-img">
+                    <a href="/" id="mobile-navbar-logo-link" class="fella-nav-icon-outer">
+                        <img src="/assets/img/wordmark.png" alt="Floofi" id="mobile-navbar-logo-img" class="fella-nav-icon">
                     </a>
                 </div>
             </div>
-            <div id="mobile-navbar-inner-right">
-                <a class="btn-round btn btn-secondary" id="mobile-navbar-hamburger-container" onclick="mobileNavbar();">
-                    <svg id="mobile-navbar-hamburger-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+            <div id="mobile-navbar-inner-right" class="fella-nav-right">
+                <a class="fella-btn-round fella-btn fella-btn-secondary fella-nav-hamburger-container" id="mobile-navbar-hamburger-container" onclick="mobileNavbar();">
+                    <svg id="mobile-navbar-hamburger-closed" class="fella-nav-hamburger-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 4H1V5.5H1.75H14.25H15V4H14.25H1.75ZM1.75
                         10.5H1V12H1.75H14.25H15V10.5H14.25H1.75Z" fill="currentColor" />
                     </svg>
-                    <svg id="mobile-navbar-hamburger-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                    <svg id="mobile-navbar-hamburger-open" class="fella-nav-hamburger-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4697 13.5303L13 14.0607L14.0607 13L13.5303
                         12.4697L9.06065 7.99999L13.5303 3.53032L14.0607 2.99999L13 1.93933L12.4697 2.46966L7.99999
                         6.93933L3.53032 2.46966L2.99999 1.93933L1.93933 2.99999L2.46966 3.53032L6.93933 7.99999L2.46966
@@ -33,12 +34,12 @@
             </div>
         </nav>
     </header>
-    <header id="navbar" class="no-border">
-        <nav id="navbar-inner">
-            <div id="navbar-inner-left">
-                <div id="navbar-category-outer">
-                    <div id="navbar-category-indicator">
-                        <svg id="navbar-category-indicator-icon" fill="none" height="46" viewBox="0 0 158 46" width="158">
+    <header id="navbar" class="fella-nav fella-nav-no-border fella-nav-desktop">
+        <nav id="navbar-inner" class="fella-nav-inner">
+            <div id="navbar-inner-left" class="fella-nav-left">
+                <div id="navbar-category-outer" class="fella-nav-category-outer">
+                    <div id="navbar-category-indicator" class="fella-nav-category-indicator">
+                        <svg id="navbar-category-indicator-icon" class="fella-nav-category-indicator-icon" fill="none" height="46" viewBox="0 0 158 46" width="158">
                             <path d="M70.952 36.8018L55.1106 20.9604C47.384 13.2338 43.5207 9.37047 39.0122 6.6077C35.0151
                             4.15823 30.6573 2.35317 26.0988 1.25878C20.9573 0.0244141 15.4938 0.0244141
                             4.56672 0.0244141H153.132C142.205 0.0244141 136.742 0.0244141 131.6 1.25878C127.042
@@ -56,44 +57,44 @@
                             4.15823 127.042 2.35317 131.6 1.25878C136.742 0.0244141 142.205 0.0244141 153.132
                             0.0244141H157.03V5.60877H153.132Z" fill="hsl(0, 0%, 18%)" /></svg>
                     </div>
-                    <div id="navbar-category">
-                        <div id="navbar-category-base-0" class="navbar-category-base"></div>
-                        <div id="navbar-category-base-1" class="navbar-category-base">
-                            <div class="navbar-category-section">
-                                <div class="navbar-category-section-header">Services</div>
-                                <a href="https://id.floo.fi" target="_blank" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                    <div id="navbar-category" class="fella-nav-category">
+                        <div id="navbar-category-base-0" class="fella-nav-category-base"></div>
+                        <div id="navbar-category-base-1" class="fella-nav-category-base">
+                            <div class="fella-nav-category-section">
+                                <div class="fella-nav-category-section-header">Services</div>
+                                <a href="https://id.floo.fi" target="_blank" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
                                     </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Floofi Identity</div>
-                                        <div class="navbar-category-section-item-text-description">Central online account</div>
-                                    </div>
-                                </a>
-                                <a href="https://status.floo.fi" target="_blank" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.51324 3.62367L3.76375 8.34731C3.61845 8.7396 3.24433 8.99999 2.826 8.99999H0.75H0V7.49999H0.75H2.47799L4.56666 1.86057C4.88684 0.996097 6.10683 0.988493 6.43776 1.84891L10.5137 12.4463L12.2408 8.1286C12.3926 7.74894 12.7604 7.49999 13.1693 7.49999H15.25H16V8.99999H15.25H13.5078L11.433 14.1868C11.0954 15.031 9.8976 15.023 9.57122 14.1744L5.51324 3.62367Z" fill="currentColor"></path></svg>
-                                    </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Status Page</div>
-                                        <div class="navbar-category-section-item-text-description">Infrastructure updates</div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Floofi Identity</div>
+                                        <div class="fella-nav-category-section-item-text-description">Central online account</div>
                                     </div>
                                 </a>
-                                <a href="/contact/start" target="_blank" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                                <a href="https://status.floo.fi" target="_blank" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.51324 3.62367L3.76375 8.34731C3.61845 8.7396 3.24433 8.99999 2.826 8.99999H0.75H0V7.49999H0.75H2.47799L4.56666 1.86057C4.88684 0.996097 6.10683 0.988493 6.43776 1.84891L10.5137 12.4463L12.2408 8.1286C12.3926 7.74894 12.7604 7.49999 13.1693 7.49999H15.25H16V8.99999H15.25H13.5078L11.433 14.1868C11.0954 15.031 9.8976 15.023 9.57122 14.1744L5.51324 3.62367Z" fill="currentColor"></path></svg>
                                     </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Send a Request</div>
-                                        <div class="navbar-category-section-item-text-description">Report an issue</div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Status Page</div>
+                                        <div class="fella-nav-category-section-item-text-description">Infrastructure updates</div>
+                                    </div>
+                                </a>
+                                <a href="/contact/start" target="_blank" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                                    </div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Send a Request</div>
+                                        <div class="fella-nav-category-section-item-text-description">Report an issue</div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="navbar-category-section">
-                                <div class="navbar-category-section-header">Legal</div>
-                                <a href="/legal/privacy" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><g clip-path="url(#clip0_4628_1818)">
+                            <div class="fella-nav-category-section">
+                                <div class="fella-nav-category-section-header">Legal</div>
+                                <a href="/legal/privacy" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><g clip-path="url(#clip0_4628_1818)">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0932 7.64904C14.8377 3.56123 11.3168 0.454519 7.22898 0.710006C5.45234 0.821046 3.8593 1.54996 2.64882 2.67365L3.66933 3.77299C4.63533 2.87625 5.90403 2.29574 7.32254 2.20709C10.5835 2.00327 13.3923 4.48161 13.5961 7.74261C13.663 8.81244 14.0605 10.1035 15.1336 10.8299L15.9745 9.58773C15.4544 9.23567 15.1467 8.50463 15.0932 7.64904ZM1.21934 4.48945C0.544864 5.69225 0.197633 7.09732 0.28994 8.57425C0.414316 10.5643 0.700415 12.5343 1.14241 14.4655L2.6046 14.1308C2.1807 12.2786 1.90631 10.3893 1.78702 8.48068C1.71326 7.30048 1.99016 6.18167 2.52767 5.22312L1.21934 4.48945ZM11.9314 8.14996C11.7883 5.86143 9.81714 4.12215 7.5286 4.26518C5.24007 4.40822 3.50079 6.3794 3.64382 8.66793C3.6894 9.3971 3.75974 10.1232 3.85448 10.845L5.34173 10.6498C5.25141 9.9617 5.18435 9.2695 5.1409 8.57437C5.04955 7.11264 6.16045 5.85362 7.62217 5.76226C9.0839 5.67091 10.3429 6.78181 10.4343 8.24353C10.4726 8.85698 10.5332 9.46767 10.6157 10.0745L12.102 9.87246C12.0244 9.30161 11.9674 8.72708 11.9314 8.14996ZM13.0024 13.8749C12.7538 13.0919 12.5457 12.2962 12.379 11.4908L10.9101 11.7947C11.0749 12.5911 11.2779 13.3786 11.5181 14.1546L13.0024 13.8749ZM14.6499 24.8207L10.8508 25.5691C11.9295 25.8912 13.1347 25.7761 14.176 25.1513C14.3437 25.0507 14.5018 24.94 14.6499 24.8207ZM4.79771 15.421C4.62667 14.8172 4.47329 14.2083 4.33781 13.5951C4.27053 13.2906 4.20767 12.985 4.14924 12.6784L5.62272 12.3976C5.67842 12.6899 5.73835 12.9812 5.80249 13.2715C5.94137 13.9001 6.09998 14.5239 6.27803 15.142L4.79771 15.421ZM8.11677 14.7955L8.0783 14.6651L8.0775 14.6624C7.46325 12.5503 7.08106 10.3695 6.94287 8.1585C6.91703 7.7451 7.23122 7.38902 7.64463 7.36318C8.05803 7.33734 8.41411 7.65153 8.43995 8.06494C8.57119 10.1649 8.93413 12.2361 9.51744 14.2421L9.51783 14.2435L9.5983 14.5164L8.11677 14.7955Z" fill="currentColor"></path>
                                         </g>
                                             <defs>
@@ -102,121 +103,111 @@
                                                 </clipPath>
                                             </defs></svg>
                                     </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Privacy Policy</div>
-                                        <div class="navbar-category-section-item-text-description">Data privacy rules</div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Privacy Policy</div>
+                                        <div class="fella-nav-category-section-item-text-description">Data privacy rules</div>
                                     </div>
                                 </a>
-                                <a href="/legal/terms" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+                                <a href="/legal/terms" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
                                     </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Terms of Use</div>
-                                        <div class="navbar-category-section-item-text-description">Access and use conditions</div>
-                                    </div>
-                                </a>
-                                <a href="/legal/disclaimers" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
-                                    </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Disclaimers</div>
-                                        <div class="navbar-category-section-item-text-description">Legal notices and licenses</div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Terms of Use</div>
+                                        <div class="fella-nav-category-section-item-text-description">Access and use conditions</div>
                                     </div>
                                 </a>
-                                <!--<a href="/legal/branding" class="navbar-category-section-item">
-                                    <div class="navbar-category-section-item-icon-container">
-                                        <svg class="navbar-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg>
+                                <a href="/legal/disclaimers" class="fella-nav-category-section-item">
+                                    <div class="fella-nav-category-section-item-icon-container">
+                                        <svg class="fella-nav-category-section-item-icon-img" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
                                     </div>
-                                    <div class="navbar-category-section-item-text-container">
-                                        <div class="navbar-category-section-item-text-title">Branding</div>
-                                        <div class="navbar-category-section-item-text-description">Brand and logo guidelines</div>
+                                    <div class="fella-nav-category-section-item-text-container">
+                                        <div class="fella-nav-category-section-item-text-title">Disclaimers</div>
+                                        <div class="fella-nav-category-section-item-text-description">Legal notices and licenses</div>
                                     </div>
-                                </a>-->
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="navbar-logo">
-                    <a href="/" id="navbar-logo-link">
-                        <img src="/assets/img/wordmark.png" alt="Floofi" id="navbar-logo-img">
+                    <a href="/" id="navbar-logo-link" class="fella-nav-icon-outer">
+                        <img src="/assets/img/wordmark.png" alt="Floofi" id="navbar-logo-img" class="fella-nav-icon">
                     </a>
                 </div>
-                <div id="navbar-tabs"></div>
-                <ul id="navbar-navigation">
-                    <li data-category-id="0" class="navbar-navigation-item navbar-navigation-item-with-category">
+                <div id="navbar-tabs" class="fella-nav-tabs"></div>
+                <ul id="navbar-navigation" class="fella-nav-items">
+                    <li data-category-id="0" class="fella-nav-navigation-item fella-nav-navigation-item-with-category">
                         Projects
-                        <svg class="navbar-navigation-item-chevron-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                        <svg class="fella-nav-navigation-item-chevron-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 6.74999L11.5303 7.28032L8.7071
                             10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933
                             6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11
                             5.68933L12.0607 6.74999Z" fill="currentColor" />
                         </svg>
-                        <svg class="navbar-navigation-item-chevron-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                        <svg class="fella-nav-navigation-item-chevron-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.93933 9.24999L4.46966 8.71966L7.29288
                             5.89644C7.68341 5.50592 8.31657 5.50592 8.7071 5.89644L11.5303 8.71966L12.0607
                             9.24999L11 10.3107L10.4697 9.78032L7.99999 7.31065L5.53032 9.78032L4.99999
                             10.3107L3.93933 9.24999Z" fill="currentColor" />
                         </svg>
                     </li>
-                    <li data-category-id="1" class="navbar-navigation-item navbar-navigation-item-with-category">
+                    <li data-category-id="1" class="fella-nav-navigation-item fella-nav-navigation-item-with-category">
                         Resources
-                        <svg class="navbar-navigation-item-chevron-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                        <svg class="fella-nav-navigation-item-chevron-closed" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 6.74999L11.5303 7.28032L8.7071
                             10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933
                             6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11
                             5.68933L12.0607 6.74999Z" fill="currentColor" />
                         </svg>
-                        <svg class="navbar-navigation-item-chevron-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
+                        <svg class="fella-nav-navigation-item-chevron-open" height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.93933 9.24999L4.46966 8.71966L7.29288
                             5.89644C7.68341 5.50592 8.31657 5.50592 8.7071 5.89644L11.5303 8.71966L12.0607
                             9.24999L11 10.3107L10.4697 9.78032L7.99999 7.31065L5.53032 9.78032L4.99999
                             10.3107L3.93933 9.24999Z" fill="currentColor" />
                         </svg>
                     </li>
-                    <li class="navbar-navigation-item">
-                        <a href="/archives" class="navbar-navigation-item-link">Archives</a>
+                    <li class="fella-nav-navigation-item">
+                        <a href="/archives" class="fella-nav-navigation-item-link">Archives</a>
                     </li>
-                    <li class="navbar-navigation-item">
-                        <a href="https://blog.floo.fi" class="navbar-navigation-item-link">Blog</a>
+                    <li class="fella-nav-navigation-item">
+                        <a href="https://blog.floo.fi" class="fella-nav-navigation-item-link">Blog</a>
                     </li>
-                    <li class="navbar-navigation-item">
-                        <a href="https://me.floo.fi" class="navbar-navigation-item-link">Judy</a>
+                    <li class="fella-nav-navigation-item">
+                        <a href="https://me.floo.fi" class="fella-nav-navigation-item-link">Judy</a>
                     </li>
                 </ul>
             </div>
-            <div id="navbar-inner-right">
-                <a href="/contact" class="btn btn-secondary">Contact</a>
-                <!--<a href="/join" class="btn btn-primary">Join Floofi</a>-->
+            <div id="navbar-inner-right" class="fella-nav-right">
+                <a href="/contact" class="fella-btn fella-btn-secondary">Contact</a>
             </div>
         </nav>
     </header>
 
-    <main id="app">
-        <div id="loader">
-            <img id="loader-img" src="/assets/img/loading.svg" alt="Loading...">
+    <main id="app" class="fella-padded">
+        <div id="loader" class="fella-loader-container fella-padded">
+            <img class="fella-loader" id="loader-img" src="/assets/img/loading.svg" alt="Loading...">
         </div>
 
-        <article id="page"></article>
+        <article id="page" class="fella-container fella-escape"></article>
     </main>
 
-    <footer id="footer-container">
-        <div id="footer-inner">
-            <div id="footer-inner-general">
-                <a id="footer-inner-general-logo" href="/credits">
-                    <img src="/assets/img/footer.png" alt="" id="footer-inner-general-icon">
-                    <span id="footer-inner-general-copyright">© <span id="footer-inner-general-copyright-year"></span></span>
-                    <span id="footer-inner-general-version">-</span>
+    <footer id="footer-container" class="fella-footer">
+        <div id="footer-inner" class="fella-footer-inner">
+            <div id="footer-inner-general" class="fella-footer-brand">
+                <a id="footer-inner-general-logo" href="/credits" class="fella-footer-logo">
+                    <img src="/assets/img/footer.png" alt="" id="footer-inner-general-icon" class="fella-footer-logo-img">
+                    <span id="footer-inner-general-copyright" class="fella-footer-brand-copyright">© <span id="footer-inner-general-copyright-year"></span></span>
+                    <span id="footer-inner-general-version" class="fella-footer-brand-version">-</span>
                 </a>
-                <a href="https://status.floo.fi/" target="_blank" class="btn btn-secondary" id="footer-inner-general-status-container">
-                    <span id="footer-inner-general-status-indicator"></span>
-                    <span id="footer-inner-general-status-text">Loading...</span>
+                <a href="https://status.floo.fi/" target="_blank" class="fella-btn fella-btn-secondary fella-footer-status" id="footer-inner-general-status-container">
+                    <span id="footer-inner-general-status-indicator" class="fella-footer-status-indicator"></span>
+                    <span id="footer-inner-general-status-text" class="fella-footer-status-text">Loading...</span>
                 </a>
-                <div id="footer-inner-general-socials">
-                    <ul id="footer-inner-general-socials-inner">
+                <div id="footer-inner-general-socials" class="fella-footer-socials">
+                    <ul id="footer-inner-general-socials-inner" class="fella-footer-socials-inner">
                         <li>
-                            <a class="social" href="https://github.com/floofi-org">
+                            <a class="fella-footer-social" href="https://github.com/floofi-org">
                                 <svg height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><g clip-path="url(#clip0_872_3147)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 12.8057 6.05 12.5957C6.12 12.0759 6.33 11.726 6.56 11.5261C4.78 11.3262 2.92 10.6364 2.92 7.57743C2.92 6.70773 3.23 5.98797 3.74 5.42816C3.66 5.22823 3.38 4.40851 3.82 3.30888C3.82 3.30888 4.49 3.09895 6.02 4.1286C6.66 3.94866 7.34 3.85869 8.02 3.85869C8.7 3.85869 9.38 3.94866 10.02 4.1286C11.55 3.08895 12.22 3.30888 12.22 3.30888C12.66 4.40851 12.38 5.22823 12.3 5.42816C12.81 5.98797 13.12 6.69773 13.12 7.57743C13.12 10.6464 11.25 11.3262 9.47 11.5261C9.76 11.776 10.01 12.2558 10.01 13.0056C10.01 14.0752 10 14.9349 10 15.2049C10 15.4148 10.15 15.6647 10.55 15.5847C12.1381 15.0488 13.5182 14.0284 14.4958 12.6673C15.4735 11.3062 15.9996 9.67293 16 7.99729C16 3.57879 12.42 0 8 0Z" fill="currentColor"></path>
                                 </g>
@@ -228,7 +219,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="social" href="https://x.com/miapone_">
+                            <a class="fella-footer-social" href="https://x.com/miapone_">
                                 <svg height="16" stroke-linejoin="round" style="color: currentcolor;" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 0.5H5.75L9.48421 5.71053L14 0.5H16L10.3895 6.97368L16.5 15.5H11.25L7.51579 10.2895L3 15.5H1L6.61053 9.02632L0.5 0.5ZM12.0204 14L3.42043 2H4.97957L13.5796 14H12.0204Z" fill="currentColor"></path></svg>
                             </a>
                         </li>
@@ -236,16 +227,16 @@
                 </div>
             </div>
             <div id="footer-inner-projects" class="footer-inner-listing">
-                <h2 class="footer-inner-listing-title">Projects</h2>
-                <ul id="footer-inner-projects-items" class="footer-inner-listing-items"></ul>
+                <h2 class="footer-inner-listing-title fella-footer-title">Projects</h2>
+                <ul id="footer-inner-projects-items" class="footer-inner-listing-items fella-footer-items"></ul>
             </div>
             <div>
-                <h2 id="footer-inner-resources" class="footer-inner-listing-title">Resources</h2>
-                <ul id="footer-inner-resources-items" class="footer-inner-listing-items"></ul>
+                <h2 class="footer-inner-listing-title fella-footer-title">Resources</h2>
+                <ul id="footer-inner-resources-items" class="footer-inner-listing-items fella-footer-items"></ul>
             </div>
             <div id="footer-inner-org">
-                <h2 class="footer-inner-listing-title">Organisation</h2>
-                <ul id="footer-inner-org-items" class="footer-inner-listing-items"></ul>
+                <h2 class="footer-inner-listing-title fella-footer-title">Organization</h2>
+                <ul id="footer-inner-org-items" class="footer-inner-listing-items fella-footer-items"></ul>
             </div>
         </div>
     </footer>

@@ -2,21 +2,21 @@
     document.title = "Projects – Floofi";
 </script>
 
-<section id="projects" class="text-section">
-    <h2 class="title">Projects</h2>
-    <div id="project-cards"></div>
+<section id="projects" class="fella-section">
+    <h2 class="fella-title">Projects</h2>
+    <div id="project-cards" class="fella-card-container"></div>
 
     <script>
         for (let project of Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b])) {
             document.getElementById("project-cards").insertAdjacentHTML("beforeend", `
-                <a href="/projects/${project[1]['id']}" class="project-card" id="project-card-${project[1]['id']}">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-inner">
-                        <div class="project-card-header" id="project-card-${project[1]['id']}-header">
+                <a href="/projects/${project[1]['id']}" class="fella-card-animated fella-card fella-card-sm fella-card-modern" id="project-card-${project[1]['id']}">
+                    <div class="fella-card-bg"></div>
+                    <div class="fella-card-inner">
+                        <div class="fella-card-header" id="project-card-${project[1]['id']}-header">
                             ${project[1]['icon']}
                             <span class="project-card-title" id="project-card-${project[1]['id']}-title">${project[0]}</span>
                         </div>
-                        <div class="project-card-content" id="project-card-${project[1]['id']}-content">
+                        <div class="fella-card-content" id="project-card-${project[1]['id']}-content">
                             ${project[1]['longDescription'] ?? project[1]['description']}
                         </div>
                     </div>
@@ -26,19 +26,19 @@
             document.getElementById(`project-card-${project[1]['id']}`).onmousemove = p1 = (e) => {
                 let x = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().x;
                 let y = document.getElementById(`project-card-${project[1]['id']}`).getBoundingClientRect().y;
-                let bg = document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0];
+                let bg = document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("fella-card-bg")[0];
                 let size = 700;
 
                 bg.style.opacity = "1";
                 bg.style.backgroundPosition = (-(size / 2) + (e.clientX - x)) + "px " + (-(size / 2) + (e.clientY - y)) + "px";
                 bg.style.width = document.getElementById(`project-card-${project[1]['id']}`).clientWidth + "px";
                 bg.style.height = document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px";
-                document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-inner")[0].style.height =
-                    "calc(" + document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px - 42px)";
+                /*document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("fella-card-inner")[0].style.height =
+                    "calc(" + document.getElementById(`project-card-${project[1]['id']}`).clientHeight + "px - 42px)";*/
             }
 
             document.getElementById(`project-card-${project[1]['id']}`).onmouseleave = p2 = () => {
-                document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("project-card-bg")[0].style.opacity = "0";
+                document.getElementById(`project-card-${project[1]['id']}`).getElementsByClassName("fella-card-bg")[0].style.opacity = "0";
             }
         }
 
