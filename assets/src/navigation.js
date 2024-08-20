@@ -69,7 +69,7 @@ function loadNavigation() {
 
     document.getElementById("navbar-navigation").onmouseleave = (e) => {
         if (document.getElementById("navbar").classList.contains("fella-nav-mobile-open")) return;
-        if (window.categoryNavigationItem && window.categoryNavigationItem.classList.contains("navbar-navigation-item-with-category")) return;
+        if (window.categoryNavigationItem && window.categoryNavigationItem.classList.contains("fella-nav-navigation-item-with-category")) return;
         document.getElementById("navbar-tabs").style.opacity = "0";
         if (e) document.getElementById("navbar-tabs").style.transition = "opacity 150ms ease";
         document.getElementById("navbar-category").style.transition = "";
