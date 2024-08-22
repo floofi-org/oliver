@@ -1,7 +1,7 @@
 /* Font */
 @font-face {
-    src: url("/assets/font/font.woff2");
-    font-family: "Geist Sans";
+    src: url("https://fella.floo.fi/font-new.woff2");
+    font-family: "Red Hat Text";
     font-weight: 400;
 }
 
@@ -10,7 +10,7 @@ body, html {
     margin: 0;
     background-color: #000000;
     color: white;
-    font-family: "Geist Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     text-rendering: optimizeLegibility;
 }
 
