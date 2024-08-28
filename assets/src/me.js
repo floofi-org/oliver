@@ -1,6 +1,6 @@
 window.onload = async () => {
-    let languages = ["en", "fr"];
-    let language = localStorage.getItem("language") ?? [...navigator.languages.filter(i => languages.includes(i)), "en"][0];
+    let languages = ["de", "en", "es", "fi", "fr", "pl", "ru", "ua"];
+    let language = localStorage.getItem("language") ?? [...navigator.languages.map(i => i.substring(0, 2)).filter(i => languages.includes(i)), "en"][0];
 
     try {
         window.lang = await (await fetch("/assets/i18n/me/" + language + ".json")).json();
