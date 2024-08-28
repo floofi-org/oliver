@@ -15,9 +15,11 @@ window.onload = async () => {
         }
     }
 
-    document.getElementsByTagName("html")[0].innerHTML.match(/%(.*?)%/gm)?.map(i => {
-        document.getElementsByTagName("html")[0].innerHTML =
-            document.getElementsByTagName("html")[0].innerHTML.replace(i, eval(i.substring(1, i.length - 1)) ?? i.substring(1, i.length - 1));
+    let root = document.getElementsByTagName("html")[0];
+
+    root.innerHTML.match(/%(.*?)%/gm)?.map(i => {
+        let stripped = i.substring(1, i.length - 1);
+        root.innerHTML = root.innerHTML.replace(i, eval(stripped) ?? stripped);
     });
 
     document.title = lang.title;
