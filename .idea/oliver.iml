@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="decoder" level="application" />
     <orderEntry type="library" name="config" level="application" />
+    <orderEntry type="library" name="fella" level="application" />
   </component>
 </module>
