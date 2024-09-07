@@ -6,7 +6,7 @@
       "permanent": true
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!robots.txt)*)",
       "destination": "https://blog.p.equestria.dev/end-of-the-minteck.org-domain",
       "has": [
         {

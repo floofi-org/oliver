@@ -1,0 +1,5 @@
+# Welcome to Floofi's robots.txt
+# Floofi believes in an open internet, but not the misuse of public content.
+
+User-agent: *
+Disallow: /
