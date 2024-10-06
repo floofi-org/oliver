@@ -1,37 +1,37 @@
 {
   "Web and Social": {
     "Voice Generator": {
-      "id": "voice-generator",
+      "id": "chirp",
       "description": "Cartoon text-to-speech",
       "longDescription": "Voice Generator is an AI website designed to mimic the voice of popular characters from cartoons and video games.",
       "icon": "<svg class=\"fella-nav-category-section-item-icon-img\" height=\"16\" stroke-linejoin=\"round\" style=\"color: currentcolor;\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.74421 10.6976L3 10.5H1.5V5.5H3L3.74421 5.30236L8.5 2.58477V13.4152L3.74421 10.6976ZM3 4L8.5 0.857143L10 0V1.72763V14.2724V16L8.5 15.1429L3 12H1C0.447715 12 0 11.5523 0 11V5C0 4.44772 0.447715 4 1 4H3ZM14.2585 2.96051L14.6728 3.58567C15.5116 4.85121 16 6.3697 16 8C16 9.6303 15.5116 11.1488 14.6728 12.4143L14.2585 13.0395L13.0082 12.2108L13.4225 11.5857C14.1034 10.5582 14.5 9.32657 14.5 8C14.5 6.67343 14.1034 5.44176 13.4225 4.41433L13.0082 3.78916L14.2585 2.96051ZM12.059 4.98506L12.4125 5.64655C12.7876 6.34871 13 7.15067 13 8C13 8.84933 12.7876 9.65129 12.4125 10.3534L12.059 11.0149L10.736 10.3081L11.0895 9.64655C11.3513 9.15657 11.5 8.59676 11.5 8C11.5 7.40324 11.3513 6.84344 11.0895 6.35345L10.736 5.69195L12.059 4.98506Z\" fill=\"currentColor\"></path></svg>",
       "link": "https://voice.floo.fi",
-      "source": "https://github.com/floofi-org/voice-generator"
+      "source": "https://github.com/floofi-org/chirp"
     },
-    "Wishing Star": {
-      "id": "wishing-star",
+    "Shopping List": {
+      "id": "wishful",
       "description": "Customisable wishlist",
-      "longDescription": "Wishing Star is an all-integrated solution for a cross-website wishlist deployed in minutes thanks to Rust and Vercel.",
+      "longDescription": "Shopping List is an all-integrated solution for a cross-website wishlist deployed in minutes thanks to Rust and Vercel.",
       "icon": "<svg class=\"fella-nav-category-section-item-icon-img\" height=\"16\" stroke-linejoin=\"round\" style=\"color: currentcolor;\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.5 4C3.19036 4 3.75 3.44036 3.75 2.75C3.75 2.05964 3.19036 1.5 2.5 1.5C1.80964 1.5 1.25 2.05964 1.25 2.75C1.25 3.44036 1.80964 4 2.5 4ZM2.5 9.25C3.19036 9.25 3.75 8.69036 3.75 8C3.75 7.30964 3.19036 6.75 2.5 6.75C1.80964 6.75 1.25 7.30964 1.25 8C1.25 8.69036 1.80964 9.25 2.5 9.25ZM3.75 13.25C3.75 13.9404 3.19036 14.5 2.5 14.5C1.80964 14.5 1.25 13.9404 1.25 13.25C1.25 12.5596 1.80964 12 2.5 12C3.19036 12 3.75 12.5596 3.75 13.25ZM6.75 2H6V3.5H6.75H14.25H15V2H14.25H6.75ZM6.75 7.25H6V8.75H6.75H14.25H15V7.25H14.25H6.75ZM6.75 12.5H6V14H6.75H14.25H15V12.5H14.25H6.75Z\" fill=\"currentColor\"></path></svg>",
-      "source": "https://github.com/floofi-org/wishing-star"
+      "source": "https://github.com/floofi-org/wishful"
     }
   },
   "Server Utilities": {
     "Status Manager": {
-      "id": "status-manager",
+      "id": "hydra",
       "description": "Automated uptime checker",
       "longDescription": "Status Manager is Floofi's highly-configurable in-house solution for server monitoring and outage alerts powered by Rust.",
       "icon": "<svg class=\"fella-nav-category-section-item-icon-img\" height=\"16\" stroke-linejoin=\"round\" style=\"color: currentcolor;\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5ZM6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C8.02469 13 9.42677 12.475 10.5353 11.596L13.9697 15.0303L14.5 15.5607L15.5607 14.5L15.0303 13.9697L11.596 10.5353C12.475 9.42677 13 8.02469 13 6.5C13 2.91015 10.0899 0 6.5 0Z\" fill=\"currentColor\"></path></svg>",
       "link": "https://status.floo.fi",
-      "source": "https://github.com/floofi-org/status-manager"
+      "source": "https://github.com/floofi-org/hydra"
     },
-    "Surrounder": {
-      "id": "surrounder",
-      "description": "Spatial audio generation",
-      "longDescription": "Powered by cutting-edge technology, Surrounder can turn any stereo song into a spatial audio or surround version.",
+    "Spatial Creator": {
+      "id": "spacer",
+      "description": "Surround sound maker",
+      "longDescription": "Powered by cutting-edge technology, Spatial Creator can turn any stereo song into a spatial audio or surround version.",
       "icon": "<svg class=\"fella-nav-category-section-item-icon-img\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
       "link": "https://equestriadev.gitbook.io/surrounder/",
-      "source": "https://github.com/floofi-org/surrounder"
+      "source": "https://github.com/floofi-org/spacer"
     }
   }
 }
