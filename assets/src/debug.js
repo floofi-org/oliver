@@ -1,5 +1,5 @@
 function showDebugInfo() {
-    document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + " (#" + window.version.build + ")";
+    document.getElementById("footer-inner-general-version").innerText = "Version " + window.version.version + "." + window.version.build;
     if (location.hostname === "floo.fi" || location.hostname === "dev.floo.fi") return;
 
     document.body.insertAdjacentHTML("beforeend", '<div id="debug"></div>')
