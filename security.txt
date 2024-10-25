@@ -2,19 +2,19 @@
 Hash: SHA256
 
 #
-# Equestria.dev Security Policy
+# Floofi Systems Security Policy
 #
-# Found a vulnerability in an Equestria.dev application or
+# Found a vulnerability in a Floofi application or
 # service and you would like to report it to us? Thanks!
 #
 
-Contact: mailto:security@equestria.dev
-Encryption: https://equestria.dev/pubkey
-Encryption: https://github.com/RaindropsSys.gpg
-Acknowledgments: https://journal.equestria.dev/home/security
-Preferred-Languages: en, fr, es
-Canonical: https://equestria.dev/.well-known/security.txt
-Expires: 2024-10-20T22:00:00.000Z
+Contact: mailto:hi@floo.fi
+Encryption: https://floo.fi/publickey.txt
+Encryption: https://github.com/starscouts.gpg
+Acknowledgments: https://blog.floo.fi/home/security
+Preferred-Languages: en, fr, es, fi
+Canonical: https://floo.fi/.well-known/security.txt
+Expires: 2025-04-20T23:00:00.000Z
 
 #
 # CAUTION: If this file ever stops being updated, this
@@ -22,19 +22,19 @@ Expires: 2024-10-20T22:00:00.000Z
 # digitally signed.
 #
 
-# Equestria.dev security.txt  - v.1
+# Floofi Systems security.txt  - v.2
 # RFC 9116 compliant
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmYlKRUACgkQ773GhDWl
-dLeXTgv/fKCNDCzLHfkRYM519s8eHNfqWpnm9LrihT6NnhoxrzGoeGRZMAe9+2k9
-ypGwK5xD3suwhd1p2TJ+9SG0IS7rydJowqxTQL+IYriLIxCmvIif8XXOjNl417pO
-xinHnKSBxl2TUN6wP5GEjcsR4yjZQkmCktp3ZczMLMBIHrx6eE0P/cQuXyP0ne7a
-UkQ8ArElbZ5WSV+13mkElxBTLblPS+srPy8qXfovzY8U84qNIprESV/dYVH8w+g0
-F+cKoVDvLDWUWbT5N0mqtO18MvpfX75qPT6oZ28qBVqr6wal4cvQpo3ckp6Yakgd
-aUz3YzhjPynYOi+9pOLzHuFJcDOOxmiBdMKUzf2uQdoDo5Xk8Fsnrpl4jaAJhLZd
-/yekoxXZeXMisXmXI3V+WO80oDuzSL4APeX1/werxfrh67Es2lSmqy+88pPlUKiX
-G0LHa337PHpSNZpfE4MgXAG7CMN37nV270Oko/4KeNVcMbqAFp7Gh+jq40s5KPPy
-fKexxxLF
-=MQ4c
+iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmcbtz0ACgkQ773GhDWl
+dLcNIwwAgimNw4Sv4QNKv5AzZmxITFdNKKSfkXdJnx6nuEv/EQrC5dReYY29y6AM
+zsQya1gAxviItqP63a+cj7hTLW7Vo3kMIe6Asca7jTUEjsfSQ5OKJ9RM60hk9Gxz
+6g3sw9GLpc1LcbBoxwrTAv5o/fMeF37kVJatyBAUkqOJzRMBBdcGUWcFKLDk/z5U
+0nUb47phYLiNzwpG4rumzJCJY0OJVr2+j+Ly5HusvUEHEiCgHCrPJv7EJslynvOE
+/Z6eUWkvPGUdgGxGYGdrhj5sm+TbnnneVZsWi2YU1uXu5dLefLDfEKroy2osvlyj
+5FPtYMzja3/WgAVdgJhWlVa87ShYPvZL41C5P52852sCwAl5TcUI+MaIZBZhHq/j
+NEAs5oUvMPBGHaFm7HRB7rgycdBEjEt07RmrHkc2YX77wouoglasZIWq5716TRER
+Ex9yDatghX5DnfrsLWzIDjYimCHh1P3wORKdNDAIoJnIeTB4C3WNSGtJ2VItFuXW
+arQDgftp
+=GMlP
 -----END PGP SIGNATURE-----
