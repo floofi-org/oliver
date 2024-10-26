@@ -17,7 +17,19 @@ function setInnerHTML(elm, html) {
     });
 }
 
+const redirects = {
+    "/projects/archive": "/archives",
+    "/network/status": "/contact",
+    "/legal/license": "/legal/disclaimers",
+    "/legal/notices": "/legal/disclaimers",
+    "/legal/branding": "/credits"
+}
+
 async function loadPage(page) {
+    if (redirects[page]) {
+        page = redirects[page];
+    }
+
     document.getElementById("navbar").classList.remove("fella-nav-mobile-open");
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
