@@ -4,13 +4,14 @@ if (process.argv.length < 6) {
 }
 
 let full = `
-Equestria.dev warrant canary
+Floofi Systems Warrant Canary
 
 Existing and proposed laws provide for secret warrants, searches and seizures of data, such as library records.
 Some such laws provide for criminal penalties for revealing the warrant, search or seizure, disallowing the disclosure
-of events that would materially affect the users of a platform such as Equestria.dev.  Equestria.dev and its principals
-and members will in fact comply with such warrants and their provisions for secrecy.  Equestria.dev will also make
-available, weekly, a "warrant canary" in the form of a cryptographically signed message containing the following:
+of events that would materially affect the users of a platform such as Floofi Systems.  Floofi Systems and its
+principals and members will in fact comply with such warrants and their provisions for secrecy.  Floofi Systems will
+also make available, weekly, a "warrant canary" in the form of a cryptographically signed message containing the
+following:
 
 - a declaration that, up to that point, no warrants have been served, nor have any searches or seizures taken place
 - a cut and paste headline from a major news source, establishing date
@@ -24,7 +25,7 @@ https://floo.fi/publickey.txt | https://github.com/starscouts.gpg | https://gitl
 Notes:
 
 This scheme is not infallible.  Although signing the declaration makes it impossible for a third party to produce
-arbitrary declarations, it does not prevent them from using force to coerce Equestria.dev to produce false
+arbitrary declarations, it does not prevent them from using force to coerce Floofi Systems to produce false
 declarations.  The news clip in the signed message serves to demonstrate that that update could not have been created
 prior to that date.  It shows that a series of these updates were not created in advance and posted on this page.
 `;
@@ -32,8 +33,8 @@ prior to that date.  It shows that a series of these updates were not created in
 let text = `
 ${new Date().toISOString().split("T")[0]}
 
-No warrants have ever been served to Equestria.dev, or Equestria.dev principals or members.
-No searches or seizures of any kind have ever been performed on any Equestria.dev assets.
+No warrants have ever been served to Floofi Systems, or Floofi Systems principals or members.
+No searches or seizures of any kind have ever been performed on any Floofi Systems assets.
 
 ( from https://www.reuters.com )
 

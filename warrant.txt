@@ -1,11 +1,12 @@
 
-Equestria.dev warrant canary
+Floofi Systems Warrant Canary
 
 Existing and proposed laws provide for secret warrants, searches and seizures of data, such as library records.
 Some such laws provide for criminal penalties for revealing the warrant, search or seizure, disallowing the disclosure
-of events that would materially affect the users of a platform such as Equestria.dev.  Equestria.dev and its principals
-and members will in fact comply with such warrants and their provisions for secrecy.  Equestria.dev will also make
-available, weekly, a "warrant canary" in the form of a cryptographically signed message containing the following:
+of events that would materially affect the users of a platform such as Floofi Systems.  Floofi Systems and its
+principals and members will in fact comply with such warrants and their provisions for secrecy.  Floofi Systems will
+also make available, weekly, a "warrant canary" in the form of a cryptographically signed message containing the
+following:
 
 - a declaration that, up to that point, no warrants have been served, nor have any searches or seizures taken place
 - a cut and paste headline from a major news source, establishing date
@@ -15,32 +16,32 @@ Special note should be taken if these messages ever cease being updated, or are 
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-2024-07-24
+2024-10-26
 
-No warrants have ever been served to Equestria.dev, or Equestria.dev principals or members.
-No searches or seizures of any kind have ever been performed on any Equestria.dev assets.
+No warrants have ever been served to Floofi Systems, or Floofi Systems principals or members.
+No searches or seizures of any kind have ever been performed on any Floofi Systems assets.
 
 ( from https://www.reuters.com )
 
-INVALID INVALID
-INVALID INVALID
-INVALID INVALID
+Harris focuses on abortion in Texas, as Trump heads to Michigan
+Former Abercrombie CEO Jeffries pleads not guilty to sex trafficking
+E. coli infections tied to McDonald's burgers rise to 75, US FDA says
 
-INVALID INVALID
+Saturday, October 26 2024
 
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmagvvAACgkQ773GhDWl
-dLfyjgv/XutPIX4Hec8fUIeXvdPdXIdA+Jg2AHwWaazvQkLZz5G7ZSDGJ/488NpV
-89RrlMpn2Gz93DB6vmUeuDubv55IqFoZHkzmNN9bwUZmcvs3rxkJYTUwo4hdlLxP
-eXJjcj/0NWmA8nQKu+zyzHuAHytoBusz27X01ITWqc0F/hA1f0sZtug1azcv72fj
-tC9XbPArC13XZ0lZaUh73SVbnVlpfu8//lWm2vb0Z+ecol2lzpgoKsgLdEwlgeGh
-0PvgomRqZQJ272UDRu6OZxRqzQjjV+y7p1pyQQpz0BJfKPltGunUVAVQ66Y7M/rk
-J98jiBKRSDWwr3+g1DWhyROerakjalw4mO2f6wTCfee/TnFyZi5kxM+MQOJY6e6w
-ER43i4Ro40hYAZWu/5537qrBMTCjmNIJKhF5PO/Qxt9c9NqdwUdEAl6oTDxx+r8v
-nnAIA0pTRGv1wMrg6yfhHRJE/okIt8nixuDcTBLuKHPmQqphzKn0zHrd5D/9g561
-9uzsw4ZN
-=yfYP
+iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmcck90ACgkQ773GhDWl
+dLfAEQwAmFJzMXzi2vloFf5rU7CkBsWY+lkAWZq21r7G+xmCqG/MSwSibXebf3Jh
+AdIlNs4ktrRfSdD/oyUkHplfwfrE8TJtv/cWej3dEV9gK3UtlF0tJBBmAyrUEUHv
+eJnhXhu/3/q/2Jwjt/gKhzOgpuUGE4DtTAg/pa7F1xJ9Z7gCiaTlDV7kkjtNeJlo
+4crV4lRH1fSwhQ6ZONaG72SzTDQrTWedSswYoq1pvwSz4NFXmV3Fzpdz/8rXhDCA
+Mhr4QkiSeyFeER7bGbzNvTH2TV6iVr6ctl7OmqO3kFAB5hcuVbPRYwW+bxcvPPWr
+TnmOHFPKL0n1uyf4wDYNK9QZC8Ll8v1Nbj7ZVCj4BQvbsvAgTVb3dlluG9fJKEGO
+GHPKxOmNvQTYdlIlSBNCoPN2PBYOvky3M2hV0q6VFXgvkdVpbrBC4RQLd0b03v87
+5mHtVORfW4o8ks9u5UhVUFWm+MKHy2rxkMV0WLBNk1bRFNOP1feaIr3DWufpcv4Y
+VT/8+ZeL
+=H/Wb
 -----END PGP SIGNATURE-----
 
 
@@ -49,6 +50,6 @@ https://floo.fi/publickey.txt | https://github.com/starscouts.gpg | https://gitl
 Notes:
 
 This scheme is not infallible.  Although signing the declaration makes it impossible for a third party to produce
-arbitrary declarations, it does not prevent them from using force to coerce Equestria.dev to produce false
+arbitrary declarations, it does not prevent them from using force to coerce Floofi Systems to produce false
 declarations.  The news clip in the signed message serves to demonstrate that that update could not have been created
 prior to that date.  It shows that a series of these updates were not created in advance and posted on this page.
