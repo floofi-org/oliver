@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://equestria.dev",
+      "destination": "https://floo.fi",
       "permanent": true
     },
     {
       "source": "/((?!robots.txt)*)",
-      "destination": "https://blog.p.equestria.dev/end-of-the-minteck.org-domain",
+      "destination": "https://floofi.gitbook.io/raindrops-blog/end-of-the-minteck.org-domain",
       "has": [
         {
           "type": "header",
@@ -19,62 +19,57 @@
     },
     {
       "source": "/security.txt",
-      "destination": "https://equestria.dev/security.txt"
+      "destination": "https://floo.fi/security.txt"
     },
     {
       "source": "/.well-known/security.txt",
-      "destination": "https://equestria.dev/security.txt"
+      "destination": "https://floo.fi/security.txt"
     },
     {
       "source": "/security",
-      "destination": "https://equestria.dev/security.txt"
+      "destination": "https://floo.fi/security.txt"
     },
     {
       "source": "/sec",
-      "destination": "https://equestria.dev/security.txt"
+      "destination": "https://floo.fi/security.txt"
     },
     {
       "source": "/404.html",
-      "destination": "https://equestria.dev"
-    },
-    {
-      "source": "/d/:domain([a-z\\d.]*).floo.fi",
-      "destination": "https://:domain.equestria.dev",
-      "permanent": true
+      "destination": "https://floo.fi"
     },
     {
       "source": "/a",
-      "destination": "https://equestria.dev/projects/archive",
+      "destination": "https://floo.fi/archives",
       "permanent": true
     },
     {
       "source": "/lp",
-      "destination": "https://equestria.dev/legal/privacy",
+      "destination": "https://floo.fi/legal/privacy",
       "permanent": true
     },
     {
       "source": "/lt",
-      "destination": "https://equestria.dev/legal/terms",
+      "destination": "https://floo.fi/legal/terms",
       "permanent": true
     },
     {
       "source": "/ll",
-      "destination": "https://equestria.dev/legal/license",
+      "destination": "https://floo.fi/legal/disclaimers",
       "permanent": true
     },
     {
       "source": "/ln",
-      "destination": "https://equestria.dev/legal/notices",
+      "destination": "https://floo.fi/legal/disclaimers",
       "permanent": true
     },
     {
       "source": "/s",
-      "destination": "https://status.equestria.dev",
+      "destination": "https://status.floo.fi",
       "permanent": true
     },
     {
       "source": "/g",
-      "destination": "https://github.com/equestria-dev",
+      "destination": "https://github.com/floofi-org",
       "permanent": true
     },
     {
@@ -94,62 +89,52 @@
     },
     {
       "source": "/sec",
-      "destination": "https://equestria.dev/.well-known/security.txt",
+      "destination": "https://floo.fi/security.txt",
       "permanent": true
     },
     {
       "source": "/gpg",
-      "destination": "https://equestria.dev/pubkey",
+      "destination": "https://floo.fi/pubkey",
       "permanent": true
     },
     {
       "source": "/j",
-      "destination": "https://journal.equestria.dev/",
+      "destination": "https://blog.floo.fi/",
       "permanent": true
     },
     {
       "source": "/cl",
-      "destination": "https://journal.equestria.dev/home/recent",
+      "destination": "https://blog.floo.fi/home/recent",
       "permanent": true
     },
     {
       "source": "/sa",
-      "destination": "https://journal.equestria.dev/home/security",
+      "destination": "https://blog.floo.fi/home/security",
       "permanent": true
     },
     {
       "source": "/adm",
-      "destination": "https://admin.equestria.dev/",
+      "destination": "https://admin.fur/",
       "permanent": true
     },
     {
       "source": "/ac",
-      "destination": "https://account.equestria.dev/",
+      "destination": "https://id.floo.fi/",
       "permanent": true
     },
     {
       "source": "/acm",
-      "destination": "https://account.equestria.dev/hub/users/me",
-      "permanent": true
-    },
-    {
-      "source": "/b",
-      "destination": "https://blog.p.equestria.dev/",
-      "permanent": true
-    },
-    {
-      "source": "/l",
-      "destination": "https://live.floo.fi/",
+      "destination": "https://id.floo.fi/hub/users/me",
       "permanent": true
     },
     {
       "source": "/ss",
-      "destination": "https://sunnystarbot.equestria.dev/",
+      "destination": "https://void.floo.fi/",
       "permanent": true
     },
     {
       "source": "/w",
-      "destination": "https://wishlist.floo.fi/",
+      "destination": "https://shopping.floo.fi/",
       "permanent": true
     },
     {
