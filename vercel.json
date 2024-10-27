@@ -45,14 +45,9 @@
           "type": "header",
           "key": "host",
           "value": "me.floo.fi"
-        },
-        {
-          "type": "header",
-          "key": "host",
-          "value": "localhost:3000"
         }
       ],
-      "destination": "/"
+      "destination": "/app.html"
     },
     {
       "source": "/.well-known/security.txt",
