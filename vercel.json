@@ -13,10 +13,6 @@
   ],
   "rewrites": [
     {
-      "source": "/_region",
-      "destination": "/api/region"
-    },
-    {
       "source": "/favicon.ico",
       "destination": "/assets/img/favicon.png"
     },
@@ -56,7 +52,7 @@
           "value": "localhost:3000"
         }
       ],
-      "destination": "/api/index"
+      "destination": "/"
     },
     {
       "source": "/.well-known/security.txt",
@@ -64,16 +60,6 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/app.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/app.html/",
-      "destination": "/",
-      "permanent": true
-    },
     {
       "source": "/pubkey",
       "destination": "/publickey.txt"
