@@ -147,6 +147,8 @@
             o.status = { services: [{ label: "(list unavailable)" }] };
         }
 
+        o.status.services.push({ label: "status.floo.fi" });
+
         try {
             o.archives = await getArchives();
         } catch (e) {
