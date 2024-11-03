@@ -54,4 +54,5 @@ require('child_process').execSync("gpg --clearsign -o warrant pre.txt");
 require('child_process').execSync("gpg --export -a AEA773DB0620C57CFFB07A91EFBDC68435A574B7 > publickey.txt");
 require('fs').writeFileSync("warrant.txt", full.replace("%%", require('fs').readFileSync("warrant").toString()));
 require('fs').unlinkSync("pre.txt");
+require('fs').unlinkSync("warrant");
 require('child_process').execSync("node build.js", { stdio: "inherit" });
