@@ -16,32 +16,32 @@ Special note should be taken if these messages ever cease being updated, or are 
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-2024-11-03
+2024-11-11
 
 No warrants have ever been served to Floofi Systems, or Floofi Systems principals or members.
 No searches or seizures of any kind have ever been performed on any Floofi Systems assets.
 
 ( from https://www.reuters.com )
 
-US Election 2024 Live: Harris and Trump start final push with 48 hours to go
-Protests over Spain flood response interrupt king's visit to stricken Valencia suburb
-Activists rally in Belgrade to protest railway station disaster
+Trump, Putin speak as Biden plans to lobby Trump to stick with Ukraine
+How a Trump presidency could lead to a purge at the Pentagon
+Japan PM Ishiba survives parliament vote as Trump looms large
 
-Sunday, November 3 2024
+Monday, November 11 2024
 
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmcnrX8ACgkQ773GhDWl
-dLd3oQv/e5BRcgF+o23+taWJqYEianmERBJZwYKQNNxM7fLLCtiSp5rf0bDxXJ47
-R0TTJU9bx/HvZKNcUggiBUZocvJm+yXcX2MWkj4KXNv+MgBREvETkecOwZYQr36J
-WFSEazVJTD5gXrMYXr1ea9lB9i1jfRDQSE4kRzyiwCyu7wefXke/jsS5RklPd8CU
-CDMgiata7CXwOPrI+jco9c6CIMA4Z5bK5dH6O1ycBrk8fPmruDTw2Tr3hAur61fY
-cbwH25wL8Bq1eD/z/jjJyTI/qUo8ICINgXgD0029RRRxKxMCmsW4AGxGbsl5M6Hu
-s6pD0wPuYAql0iZ9zE0kaSyRzV+TaItQSeA+Ub0+QYFwJE+lj1QN0P6yTeWIHAFD
-pzt5w8jE4iFN8Cd1UJZnLiafsavay0+ISCm10tvFDEbMpGgSSXdEdN24EwB4/4hm
-cTPkcazrdpoCKUqbr+BfTWh7cGfWyoU9tKiSjs42lOhw2z632O86La+n0Wi8K/Cf
-OUOkYghc
-=NG8c
+iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmcxzWMACgkQ773GhDWl
+dLemYwv9EIhyjWIwkch4VqWkQrhzrI49/fVPNseZRXXsZ1y4wB75/F/ntE647/xp
+lBQhad1eAm+ACLw29s7N1R4yhkDoXDN8CouV4xStWnTjuoK4KH9sSoVPM/5MvNcF
+m47cey0aRXS8YBuAEwHKfzbZcLsyHvK80nGdJ3Yc5PoPAWbdsLzv4YtPu7uej1qP
+tD9zF5owMMldxcbgojLbk+m3SNtbZqdQRh+vDwfCp6KQwFBhwn6dhvQxFi1NRNO5
+FfUYzxdW+x35vykhOwgt464lf6clAKEAcqI3i6rLHoAxfsHmlH7M1w9BbaeMuJ8z
+ePS58zbrA7OgIY6Cf4k+bkclxbEZqKCCju/LniSK3NICsovipwt2GhrDwkou8y5z
+c9mwzBDd3/J6v423wdJGq+HvmQcm5mRWSfXcju+giNhSx9snBimySlzCTWy0ohGb
+yxAj7ITAPmeyniV9C9IZb3XYVBYRUy9dKENQx88MJHcRXqI7nHQiZ3Ll3oyYd18G
+AFkcL3nH
+=VzVm
 -----END PGP SIGNATURE-----
 
 
