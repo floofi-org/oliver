@@ -87,6 +87,7 @@ body.fella-loaded #page {
     width: 100%;
     height: 100%;
     border-radius: .5vw;
+    display: block;
 }
 
 #project-section-text-buttons {
