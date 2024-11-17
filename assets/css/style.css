@@ -19,11 +19,7 @@
     display: none;
 }
 
-#app.loaded #loader {
-    display: none !important;
-}
-
-#app.loaded #page {
+body.fella-loaded #page {
     display: block !important;
 }
 

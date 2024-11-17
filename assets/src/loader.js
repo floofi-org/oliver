@@ -40,7 +40,7 @@ async function loadPage(page) {
 
     document.getElementById("navbar-inner-left").classList.add("navigating");
     document.getElementById("navbar-category-outer").onmouseleave({});
-    document.getElementById("app").classList.remove("loaded");
+    startLoad();
 
     let originalPage = page;
     if (originalPage === "/home") originalPage = "/";
@@ -65,7 +65,8 @@ async function loadPage(page) {
 
     processLinks();
     refreshStatus();
-    document.getElementById("app").classList.add("loaded");
+    completeLoad();
+    document.getElementById("loader").classList.add("fella-loader-ajax");
 }
 
 async function displayError(error) {
@@ -101,12 +102,11 @@ async function loadData() {
     window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api.json")).json();
 }
 
-window.onload = async () => {
+window.addEventListener('load', async () => {
     await loadData();
     showDebugInfo();
     processLinks();
     generateProjectsList();
-    loadNavigation();
 
     if (new JsURL(location.href).searchParams.size > 0) {
         window.queryState = new JsURL(location.href).searchParams;
@@ -115,7 +115,7 @@ window.onload = async () => {
     await loadPage(location.pathname);
 
     setInterval(loadData, 30000);
-}
+});
 
 window.onpopstate = async () => {
     if (new JsURL(location.href).searchParams.size > 0) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Floofi</title>
     <link rel="icon" href="/assets/img/favicon.png">
-    <link rel="stylesheet" href="https://fella.floo.fi/0.3.4/fella.min.css" integrity="sha384-CgGuCRnfADK2xVr1prHidzyuBRNFac8DehAwfqBx2kIXjLZ0Zsq/DTcFysSrRySg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fella.floo.fi/fella.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script defer data-domain="floo.fi" src="https://insights.floo.fi/js/script.file-downloads.hash.outbound-links.js"></script>
@@ -14,6 +14,10 @@
     </script>
 </head>
 <body>
+    <div id="loader" class="fella-loader-container fella-padded">
+        <img class="fella-loader" id="loader-img" src="/assets/img/loading.svg" alt="Loading...">
+    </div>
+
     <header id="mobile-navbar" class="fella-nav fella-nav-no-border fella-nav-mobile">
         <nav id="mobile-navbar-inner" class="fella-nav-inner">
             <div id="mobile-navbar-inner-left" class="fella-nav-left">
@@ -191,10 +195,6 @@
     </header>
 
     <main id="app" class="fella-padded">
-        <div id="loader" class="fella-loader-container fella-padded">
-            <img class="fella-loader" id="loader-img" src="/assets/img/loading.svg" alt="Loading...">
-        </div>
-
         <article id="page" class="fella-container fella-escape"></article>
     </main>
 
@@ -247,11 +247,10 @@
         </div>
     </footer>
 
+    <script src="https://fella.floo.fi/fella.min.js" crossorigin="anonymous"></script>
     <script src="/assets/src/archives.js"></script>
     <script src="/assets/src/projects.js"></script>
-    <script src="/assets/src/navigation.js"></script>
     <script src="/assets/src/loader.js"></script>
-    <script src="/assets/src/scroll.js"></script>
     <script src="/assets/src/footer.js"></script>
     <script src="/assets/src/debug.js"></script>
     <script src="https://status.floo.fi/src/decoder.js"></script>
