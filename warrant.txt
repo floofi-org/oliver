@@ -16,32 +16,32 @@ Special note should be taken if these messages ever cease being updated, or are 
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-2024-11-24
+2024-12-01
 
 No warrants have ever been served to Floofi Systems, or Floofi Systems principals or members.
 No searches or seizures of any kind have ever been performed on any Floofi Systems assets.
 
 ( from https://www.reuters.com )
 
-Donald Trump Jr is helping his father pick the most controversial cabinet of modern times
-Bolivia's heavy rains cause river to flood homes near La Paz
-Ukraine studies debris from new Russian ballistic missile
+Russian, Syrian jets intensify bombing of Syria's rebel-held northwest
+Trudeau promised Trump tougher border controls, says top Canada official
+Volkswagen workers to go on warning strikes across Germany
 
-Sunday, November 24 2024
+Sunday, December 1 2024
 
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmdDfP4ACgkQ773GhDWl
-dLcJZQwAjdaCc59SBXzQyWYBtIiK6EqxexvMg563JmfiQcgNfzOc/iyAkaLBAnw4
-SXV8lzyBrL4kbhdSiDAK2FE5LMaWpHjYR/LM1tRzx5LTWm9nY1q1I7Qq+NZMszFI
-xBgrdIHfcUD8M26pzz0g78IyX0hhAex6iRW01MPcfNDGK3sPPF5hW8UdOSTQnuwy
-AMtQUXgF11gdPzpQbXZmrylZbS4WkNgx8IiVFXDsYfH0H15v1bmUjkxbHqiHk3y6
-LaoiFoc32DE8gMVHeBwzNOmcDpgDRozRSKG0A7U84TJoNRihqthxZj8H0YTqDVD7
-HemOP1Kb2rcCVrGLkU6JUUzCHDKwCQoTQGlTgVdkQnv1gV6IACd2fdIQlWMnAIbS
-zyOv3CtTQxVZfYFn+TCE50+S2MXRcDATLTP7p9iE37CPcPS/gluNZerO7nBwI39k
-kncGzPDTNlRskLpv4zsi5o+mgky2mbtK5BtyXLqcAfHtpoWCL9XsE9FzBn0QONHR
-NSLWDAxP
-=cQ1m
+iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmdMvwMACgkQ773GhDWl
+dLdYKAv+IH1xiXdEt9OOcD05L63cyKWLjQuuPWIs3WnjP8ZEaOHMHQ2IU+9ZLzoq
+LodPB/2QJpn+plbawMWAW7tqYUIqbUfU5DnS6BXRnPi9zlqNFqPhRnRcQQDkyEQu
+xH3HG7N7F3QdEZ0kiiB8x/w5uvFTr8Du8HPhpET7sIw5tufJzUBZgj29EHpVwouP
+seI8HCkqkX6tDlJLmwHlzAbPe6careb2gSBPDHpyfTUBn9PLLoj4N1yRe0S7nvDq
+sAuGBO2wmEIfFii6ZEDY2wpN2FMqa3uaY59z949Fvs8RG3QYGWhxB2NCzp6YD31t
+MhKODW60eXkfDs02Dnhdry1WuXGIhJc5wuSzhWqgVhP8drZ6DQNuTrB8moPT4/on
+nw1d/vt7v/czlNDuPI6WnRRr3WuMDpQfctnwYraCdjhHgEpJqymkDDFTPjIKD4f4
+Vv+lmoUHLOVQRhhVyRIlrrhKdnPwXlLYKgAs/D1qTjr3ebbEytZgDXudKaisAGJz
+lTpYkhs+
+=J9oz
 -----END PGP SIGNATURE-----
 
 
