@@ -1,5 +1,6 @@
 
 Floofi Systems Warrant Canary
+Version 2
 
 Existing and proposed laws provide for secret warrants, searches and seizures of data, such as library records.
 Some such laws provide for criminal penalties for revealing the warrant, search or seizure, disallowing the disclosure
@@ -9,12 +10,9 @@ also make available, weekly, a "warrant canary" in the form of a cryptographical
 following:
 
 - a declaration that, up to that point, no warrants have been served, nor have any searches or seizures taken place
-- a cut and paste headline from a major news source, establishing date
+- a cut-and-paste headline from a major news source, establishing date
 
 Special note should be taken if these messages ever cease being updated, or are removed from this page.
-
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA256
 
 2024-12-08
 
@@ -23,31 +21,35 @@ No searches or seizures of any kind have ever been performed on any Floofi Syste
 
 ( from https://www.reuters.com )
 
-South Korea martial law fallout deepens as prosecutors close in on president, ex-defence minister
-Inside one island's struggle to cope with migrant deaths, disappearances
-Suspect identified in UnitedHealth executive's murder, New York Post reports
+Test 1
+Test 2
+Test 3
 
-Sunday, December 8 2024
+Insert date here
 
------BEGIN PGP SIGNATURE-----
+-- To verify the authenticity of this message: --
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmdVdeIACgkQ773GhDWl
-dLcE+Qv/bw1DwJZvnadSig2ki+GnyQeCX+ZgiJgWidlPCE8C13AczSaEyOJHJpDx
-jCfrGjCUaZEt8PmZiS0r5WKh8Qsx04Dr2hMApsEueoCqBr88NtrlA76k55IZY6Kf
-8c2j1KYWRJe98na0kMs85XATubmE8/pVZ3ROeBsFPiXt1qT7hNsdhdsHq2hGNYzF
-ldpJ2krBcG+8LnpdGLC/cGFA4jQOnwWUD+SiBSAM3RKqmT6mwYrN6A67sfY/LwQs
-EV9OjcbsJoa1pJnM8C65SQ2SJhuWj8T7rLBX2FiR36ad9qT+uwCVA4Tbbz6SvCW6
-cM67lG/cRbj8er2oK3oc99AwaVNO2a9w1Zv9Xof2/JaMFz/yrREh2Hs88aSlC2am
-najaA4/1wZYjHNCNbelJ6suvSTCE2yQBlzjAeygQwVAgdv6GHQ2EXV+bQ8r6RBVq
-PyWxz9L1MHh4mk95wGdE8N2n2qt4tGA8MH9clXtyWP4hc8YWKvFv2BvZVVhQPSpr
-zPlxLJn/
-=K7e+
------END PGP SIGNATURE-----
+1. Download a public key from one of these sources:
+    <https://floo.fi/ssh.txt>
+    <https://blog.floo.fi/changes/2024-12-05-ditching-gpg-in-favor-of-openssh>
+    <https://gitlab.com/starscouts/dotfiles/-/snippets/4777930/raw/main/ssh.txt>
+    <https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt>
+    
+2. Download
+   - the signature for this message at <https://floo.fi/warrant.sig> and
+   - this message itself at <https://floo.fi/warrant.txt>.
+   
+3. On a UNIX system, execute the following command to verify the signature:
+   $ cat warrant.txt | ssh-keygen -Y check-novalidate -n warrant-canary -f ssh.txt -s warrant.sig
+   
+3. On a Windows system, execute the following command to verify the signature:
+   > type warrant.txt | ssh-keygen -Y check-novalidate -n warrant-canary -f ssh.txt -s warrant.sig
+   
+4. If you see:
+   Good "warrant-canary" signature with ED25519 key SHA256:ydtcVI10dm7GApVpzWd0InuuXFsxCYUH1lhdDe2YY4Y
+   the signature is valid.
 
-
-https://floo.fi/publickey.txt | https://github.com/starscouts.gpg | https://gitlab.com/starscouts.gpg
-
-Notes:
+-- Notes: --
 
 This scheme is not infallible.  Although signing the declaration makes it impossible for a third party to produce
 arbitrary declarations, it does not prevent them from using force to coerce Floofi Systems to produce false
