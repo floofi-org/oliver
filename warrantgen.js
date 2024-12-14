@@ -1,4 +1,4 @@
-if (process.argv.length < 6) {
+if (process.argv.length < 5) {
     console.log("Usage: " + process.argv[0] + " " + process.argv[1] + " <news headline 1> <news headline 2> <news headline 3>");
     process.exit();
 }

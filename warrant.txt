@@ -14,25 +14,25 @@ following:
 
 Special note should be taken if these messages ever cease being updated, or are removed from this page.
 
-2024-12-08
+2024-12-14
 
 No warrants have ever been served to Floofi Systems, or Floofi Systems principals or members.
 No searches or seizures of any kind have ever been performed on any Floofi Systems assets.
 
 ( from https://www.reuters.com )
 
-Test 1
-Test 2
-Test 3
+South Korea's Yoon defiant after impeachment over martial law bid
+Exclusive: In search for U.S. journalist Austin Tice, a clue from 11 years ago
+Exclusive: Trump transition recommends scrapping car-crash reporting requirement opposed by Tesla
 
-Insert date here
+Saturday, December 14, 2024
 
 -- To verify the authenticity of this message: --
 
 1. Download a public key from one of these sources:
     <https://floo.fi/ssh.txt>
     <https://blog.floo.fi/changes/2024-12-05-ditching-gpg-in-favor-of-openssh>
-    <https://gitlab.com/starscouts/dotfiles/-/snippets/4777930/raw/main/ssh.txt>
+    <https://gitlab.com/-/snippets/4777932/raw/main/ssh.txt>
     <https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt>
     
 2. Download
