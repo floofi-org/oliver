@@ -47,7 +47,7 @@
 
     <div id="credits-footer" class="fella-footnotes">
         <p>Codename "Oliver" • <span id="credits-version">-</span><br>
-            © 2024 Floofi Systems, All rights reserved.</p>
+            ©<span id="credits-year"></span> Floofi Systems, All rights reserved.</p>
         <p>The Judy Hopps name and character are © Disney, All rights reserved. The Sunny Starscout name and character
             are © Hasbro, All rights reserved.<br><a class="link" href="/contact/start?i=10">Contact us to report a
             copyright infrigment.</a></p>
@@ -66,6 +66,7 @@
 <script>
     document.getElementById("credits-version").innerHTML = "Version " + window.version.version + "." + window.version.build +
         "<span class='mobile-break'> • </span>Built on " + new Date(window.version.timestamp).toUTCString();
+    document.getElementById("credits-year").innerText += " " + new Date().getUTCFullYear();
 
     document.getElementById("credits-projects").innerText = Object.values(projects).map(i => Object.entries(i)).reduce((a, b) => [...a, ...b]).map(i => i[0]).join(", ");
 </script>
