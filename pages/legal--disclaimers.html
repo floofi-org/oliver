@@ -3,7 +3,16 @@
 </script>
 
 <section id="disclaimers" class="fella-section fella-section-linked">
-    <p>Last Update: July 28th, 2024</p>
+    <div>Last Update: February 6th, 2025</div>
+    <details>
+        <summary>Changes</summary>
+        <blockquote>
+            <h3>February 6th, 2025</h3>
+            <ul>
+                <li>Updated the warrant canary section to reflect migrationg from GPG to SSH</li>
+            </ul>
+        </blockquote>
+    </details>
     <h2 class="fella-title">Disclaimers</h2>
 
     <div id="disclaimers-header" class="fella-overview">
@@ -78,7 +87,7 @@
                     </div>
                     <div class="fella-overview-listing">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
-                        <span>Signed with <a href="/publickey.txt">EFBDC68435A574B7</a></span>
+                        <span>Signed with <a href="/ssh.txt">an SSH key</a></span>
                     </div>
                     <div class="fella-overview-listing">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
@@ -168,11 +177,12 @@
         </blockquote>
 
         <h3 class="disclaimers-title" id="warrant">Warrant canary</h3>
-        <p>Floofi System makes available, weekly (± 48 hours), a "warrant canary" in the form of a GPG-signed message,
-            signed with key <a href="/publickey.txt">EFBDC68435A574B7</a>, indicating that no warrants have been served,
-            nor have any searches or seizures taken place up to this point.</p>
+        <p>Floofi System makes available, weekly (± 48 hours), a "warrant canary" in the form of an SSH-signed message,
+            signed with key <a href="/ssh.txt">SHA256:ydtcVI10dm7GApVpzWd0InuuXFsxCYUH1lhdDe2YY4Y</a>, indicating that
+            no warrants have been served, nor have any searches or seizures taken place up to this point.</p>
         <p>Special note should be taken if these messages ever cease being updated, or are removed from this page.</p>
-        <p><a href="https://github.com/starscouts.gpg">Alternative key source</a> • <a href="/warrant.txt">View warrant canary</a></p>
+        <p><a href="https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt">Alternative key source</a>
+            • <a href="/warrant.txt">View warrant canary</a></p>
 
         <div id="disclaimers-footer" class="fella-footnotes">
             <p>Some identifying information is not mentioned on this page for privacy reasons. If you require access to this
