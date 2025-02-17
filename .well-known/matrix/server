@@ -1,3 +1,3 @@
 {
-    "m.server": "matrix.floo.fi"
+    "m.server": "matrix.floo.fi:443"
 }
