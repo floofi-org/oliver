@@ -18,6 +18,15 @@
           "value": "SAMEORIGIN"
         }
       ]
+    },
+    {
+      "source": "/.well-known/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
     }
   ],
   "rewrites": [
