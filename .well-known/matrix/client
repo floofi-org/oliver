@@ -10,5 +10,8 @@
             "type": "livekit",
             "livekit_service_url": "https://livekit-jwt.call.matrix.org"
         }
-    ]
+    ],
+     "org.matrix.msc3575.proxy": {
+         "url": "https://matrix.floo.fi"
+     }
 }
