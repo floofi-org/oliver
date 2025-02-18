@@ -12,6 +12,6 @@
         }
     ],
      "org.matrix.msc3575.proxy": {
-         "url": "https://matrix.floo.fi"
+         "url": "https://matrix-syncv3.floo.fi"
      }
 }
