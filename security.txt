@@ -9,6 +9,8 @@ Hash: SHA256
 #
 
 Contact: mailto:hi@floo.fi
+Encryption: https://floo.fi/ssh.txt
+Encryption: https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt
 Encryption: https://floo.fi/publickey.txt
 Encryption: https://github.com/starscouts.gpg
 Acknowledgments: https://blog.floo.fi/home/security
@@ -22,20 +24,9 @@ Expires: 2025-04-20T23:00:00.000Z
 # digitally signed.
 #
 
-# Floofi Systems security.txt  - v.2
+# Floofi Systems security.txt  - v.3
 # RFC 9116 compliant
------BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCAAdFiEErqdz2wYgxXz/sHqR773GhDWldLcFAmcbtz0ACgkQ773GhDWl
-dLcNIwwAgimNw4Sv4QNKv5AzZmxITFdNKKSfkXdJnx6nuEv/EQrC5dReYY29y6AM
-zsQya1gAxviItqP63a+cj7hTLW7Vo3kMIe6Asca7jTUEjsfSQ5OKJ9RM60hk9Gxz
-6g3sw9GLpc1LcbBoxwrTAv5o/fMeF37kVJatyBAUkqOJzRMBBdcGUWcFKLDk/z5U
-0nUb47phYLiNzwpG4rumzJCJY0OJVr2+j+Ly5HusvUEHEiCgHCrPJv7EJslynvOE
-/Z6eUWkvPGUdgGxGYGdrhj5sm+TbnnneVZsWi2YU1uXu5dLefLDfEKroy2osvlyj
-5FPtYMzja3/WgAVdgJhWlVa87ShYPvZL41C5P52852sCwAl5TcUI+MaIZBZhHq/j
-NEAs5oUvMPBGHaFm7HRB7rgycdBEjEt07RmrHkc2YX77wouoglasZIWq5716TRER
-Ex9yDatghX5DnfrsLWzIDjYimCHh1P3wORKdNDAIoJnIeTB4C3WNSGtJ2VItFuXW
-arQDgftp
-=GMlP
------END PGP SIGNATURE-----
-
+# SSH signature at https://floo.fi/.well-known/security.sig
+# Verify with:
+#     cat security.txt | ssh-keygen -Y check-novalidate -n security-txt -f ssh.txt -s security.sig
