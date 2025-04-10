@@ -97,9 +97,23 @@ function processLinks() {
 }
 
 async function loadData() {
-    window.version = await (await fetch("/assets/data/release.json")).json();
-    window.projects = await (await fetch("/assets/data/projects.json")).json();
-    window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api.json")).json();
+    try {
+        window.version = await (await fetch("/assets/data/release.json")).json();
+    } catch (e) {
+        console.warn(e);
+    }
+
+    try {
+        window.projects = await (await fetch("/assets/data/projects.json")).json();
+    } catch (e) {
+        console.warn(e);
+    }
+
+    try {
+        window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api.json")).json();
+    } catch (e) {
+        console.warn(e);
+    }
 }
 
 window.addEventListener('load', async () => {

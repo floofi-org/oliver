@@ -1,5 +1,5 @@
 function refreshStatus() {
-    switch (window.statusData.code) {
+    switch (window.statusData?.code) {
         case 0:
         case 3:
             document.getElementById("footer-inner-general-status-text").innerText = "All systems normal.";
@@ -9,8 +9,8 @@ function refreshStatus() {
             break;
 
         case 1:
-            if (window.statusData['outages'].length > 1) {
-                document.getElementById("footer-inner-general-status-text").innerText = window.statusData['outages'].length + " alerts.";
+            if (window.statusData?.outages?.length > 1) {
+                document.getElementById("footer-inner-general-status-text").innerText = window.statusData?.outages?.length + " alerts.";
             } else {
                 document.getElementById("footer-inner-general-status-text").innerText = "Temporary alert.";
             }
@@ -20,8 +20,8 @@ function refreshStatus() {
             break;
 
         case 2:
-            if (window.statusData['outages'].length > 1) {
-                document.getElementById("footer-inner-general-status-text").innerText = window.statusData['outages'].length + " outages.";
+            if (window.statusData?.outages?.length > 1) {
+                document.getElementById("footer-inner-general-status-text").innerText = window.statusData?.outages?.length + " outages.";
             } else {
                 document.getElementById("footer-inner-general-status-text").innerText = "Temporary outage.";
             }
