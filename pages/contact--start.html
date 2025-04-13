@@ -101,6 +101,11 @@
             <input class="fella-form-control" placeholder="Enter a name" onchange="processSecondaryField('company-name');" onkeyup="processSecondaryField('company-name');" id="request-company-name">
         </label>
 
+        <label id="request-luxicon" style="display: none;" class="request-field">
+            <span class="fella-form-header">Enter the email address you registered with or your license key</span>
+            <input class="fella-form-control" placeholder="Enter a name" onchange="processSecondaryField('luxicon-name');" onkeyup="processSecondaryField('luxicon-name');" id="request-luxicon-name">
+        </label>
+
         <label id="request-description" style="display: none;" class="request-field">
             <span class="fella-form-header">Describe your request in detail</span>
             <textarea class="fella-form-control" placeholder="Enter a description, at least 10 characters" onchange="processDescription();" onkeyup="processDescription();" id="request-description-field" rows="5"></textarea>
@@ -277,6 +282,9 @@
                 case "11":
                     displayFields(["request-base", "request-description"]);
                     break;
+                case "12":
+                    displayFields(["request-base", "request-luxicon"]);
+                    break;
             }
         } else {
             document.getElementById("request-main-list").classList.add("default");
@@ -366,6 +374,11 @@
             case "10":
                 body += document.getElementById("request-company").children[0].innerText + ": ";
                 body += document.getElementById("request-company-name").value;
+                body += "\n\n";
+                break;
+            case "12":
+                body += document.getElementById("request-luxicon").children[0].innerText + ": ";
+                body += document.getElementById("request-luxicon-name").value;
                 body += "\n\n";
                 break;
         }
