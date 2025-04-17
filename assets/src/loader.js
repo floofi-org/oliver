@@ -64,7 +64,6 @@ async function loadPage(page) {
     }
 
     processLinks();
-    refreshStatus();
     completeLoad();
     document.getElementById("loader").classList.add("fella-loader-ajax");
 }
@@ -73,7 +72,6 @@ async function displayError(error) {
     let res = await fetch("/pages/" + error + ".html");
     setInnerHTML(document.getElementById("page"), await res.text());
     processLinks();
-    refreshStatus();
     document.getElementById("app").classList.add("loaded");
 }
 
@@ -105,12 +103,6 @@ async function loadData() {
 
     try {
         window.projects = await (await fetch("/assets/data/projects.json")).json();
-    } catch (e) {
-        console.warn(e);
-    }
-
-    try {
-        window.statusData = await (await fetch("https://d6gd1hq6b89h1s1v.public.blob.vercel-storage.com/public/api.json")).json();
     } catch (e) {
         console.warn(e);
     }

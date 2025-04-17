@@ -1,37 +1,3 @@
-function refreshStatus() {
-    switch (window.statusData?.code) {
-        case 0:
-        case 3:
-            document.getElementById("footer-inner-general-status-text").innerText = "All systems normal.";
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-warning");
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-error");
-            document.getElementById("footer-inner-general-status-container").classList.add("status-success");
-            break;
-
-        case 1:
-            if (window.statusData?.outages?.length > 1) {
-                document.getElementById("footer-inner-general-status-text").innerText = window.statusData?.outages?.length + " alerts.";
-            } else {
-                document.getElementById("footer-inner-general-status-text").innerText = "Temporary alert.";
-            }
-            document.getElementById("footer-inner-general-status-container").classList.add("status-warning");
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-error");
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-success");
-            break;
-
-        case 2:
-            if (window.statusData?.outages?.length > 1) {
-                document.getElementById("footer-inner-general-status-text").innerText = window.statusData?.outages?.length + " outages.";
-            } else {
-                document.getElementById("footer-inner-general-status-text").innerText = "Temporary outage.";
-            }
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-warning");
-            document.getElementById("footer-inner-general-status-container").classList.add("status-error");
-            document.getElementById("footer-inner-general-status-container").classList.remove("status-success");
-            break;
-    }
-}
-
 function generateFooter() {
     document.getElementById("footer-inner-projects-items").innerHTML = Array.from(document.getElementById("navbar-category-base-0").children)
         .map(i => Array.from(i.children)).reduce((a, b) => [...a, ...b])
