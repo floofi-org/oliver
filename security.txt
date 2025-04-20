@@ -10,9 +10,9 @@ Hash: SHA256
 
 Contact: mailto:hi@floo.fi
 Encryption: https://floo.fi/ssh.txt
-Encryption: https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt
+Encryption: https://gist.githubusercontent.com/kammyfur/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt
 Encryption: https://floo.fi/publickey.txt
-Encryption: https://github.com/starscouts.gpg
+Encryption: https://github.com/kammyfur.gpg
 Acknowledgments: https://blog.floo.fi/home/security
 Preferred-Languages: en, fr, es, fi
 Canonical: https://floo.fi/.well-known/security.txt

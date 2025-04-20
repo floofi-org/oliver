@@ -38,7 +38,7 @@ ${new Date().toLocaleDateString("en-US", { month: 'long', day: 'numeric', year: 
     <https://floo.fi/ssh.txt>
     <https://blog.floo.fi/changes/2024-12-05-ditching-gpg-in-favor-of-openssh>
     <https://gitlab.com/-/snippets/4777932/raw/main/ssh.txt>
-    <https://gist.githubusercontent.com/starscouts/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt>
+    <https://gist.githubusercontent.com/kammyfur/2e74daa659e45c369779e444e971dae7/raw/f138e8d9c94e1f6babad6bb18788cd9ee651242a/ssh.txt>
     
 2. Download
    - the signature for this message at <https://floo.fi/warrant.sig> and
