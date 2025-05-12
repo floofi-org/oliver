@@ -14,4 +14,3 @@ require('child_process').execSync("git push --all origin");
 require('child_process').execSync("gh release create " + release["version"].split(" ")[0] + "." + release['build'] + " --generate-notes");
 
 require('child_process').execSync("vercel --prod", { stdio: "inherit" });
-require('child_process').execSync("vercel --prod", { stdio: "inherit", cwd: "./shortener" });
